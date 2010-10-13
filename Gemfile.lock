@@ -35,6 +35,7 @@ GEM
       activemodel (= 3.0.0)
       activesupport (= 3.0.0)
     activesupport (3.0.0)
+    addressable (2.2.2)
     arel (1.0.1)
       activesupport (~> 3.0.0)
     arrayfields (4.7.4)
@@ -62,6 +63,7 @@ GEM
     colored (1.2)
     compass (0.10.5)
       haml (>= 3.0.4)
+    crack (0.1.8)
     cucumber (0.9.2)
       builder (~> 2.1.2)
       diff-lcs (~> 1.1.2)
@@ -75,6 +77,8 @@ GEM
     devise (1.1.3)
       bcrypt-ruby (~> 2.1.2)
       warden (~> 0.10.7)
+    devise_invitable (0.3.4)
+      devise (~> 1.1.0)
     diff-lcs (1.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
@@ -101,11 +105,6 @@ GEM
       json (~> 1.4.6)
       term-ansicolor (~> 1.0.5)
     haml (3.0.21)
-    haml-rails (0.3.1)
-      actionpack (~> 3.0.0)
-      activesupport (~> 3.0.0)
-      haml (~> 3.0.18)
-      railties (~> 3.0.0)
     has_scope (0.5.0)
     hirb (0.3.4)
     hoe (2.6.2)
@@ -139,6 +138,8 @@ GEM
       reek (>= 1.2.6)
       roodi (>= 2.1.0)
     mime-types (1.16)
+    mocha (0.9.8)
+      rake
     newrelic_rpm (2.13.2)
     nokogiri (1.4.3.1)
     pickle (0.4.2)
@@ -182,10 +183,6 @@ GEM
     remarkable_activemodel (4.0.0.alpha4)
       remarkable (~> 4.0.0.alpha4)
       rspec (>= 2.0.0.alpha11)
-    remarkable_activerecord (4.0.0.alpha4)
-      remarkable (~> 4.0.0.alpha4)
-      remarkable_activemodel (~> 4.0.0.alpha4)
-      rspec (>= 2.0.0.alpha11)
     responders (0.6.2)
     roodi (2.1.0)
       ruby_parser
@@ -224,6 +221,9 @@ GEM
     tzinfo (0.3.23)
     warden (0.10.7)
       rack (>= 1.0.0)
+    webmock (1.3.5)
+      addressable (>= 2.1.1)
+      crack (>= 0.1.7)
     will_paginate (3.0.pre2)
     yard (0.6.1)
 
@@ -231,29 +231,32 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  capybara (>= 0.3.6)
+  bundler (>= 1.0.0)
+  capybara (~> 0.3.9)
   compass (>= 0.10.5)
   cucumber (>= 0.6.3)
   cucumber-rails (>= 0.3.2)
   database_cleaner (>= 0.5.0)
-  devise (>= 1.1.2)
+  devise (>= 1.1.3)
+  devise_invitable (~> 0.3.4)
   factory_girl_rails
   formtastic (>= 1.1.0)
   friendly_id (~> 3.0)
-  haml-rails (>= 0.2)
+  haml
   hoptoad_notifier (>= 2.3.6)
   inherited_resources (>= 1.1.2)
   inploy (>= 1.6.8)
   metric_fu (>= 1.5.1)
+  mocha
   newrelic_rpm (>= 2.12.3)
   pickle (>= 0.4.2)
   rails (= 3.0.0)
   rails3-generators!
   remarkable (>= 4.0.0.alpha4)
   remarkable_activemodel (>= 4.0.0.alpha4)
-  remarkable_activerecord (>= 4.0.0.alpha4)
   rspec (>= 2.0.0.rc)
   rspec-rails (>= 2.0.0.rc)
   spork (>= 0.8.4)
   sqlite3-ruby
+  webmock
   will_paginate (>= 3.0.pre2)
