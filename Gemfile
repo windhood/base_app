@@ -34,7 +34,7 @@ gem "metric_fu", ">=1.5.1", :group => :development
 group :test, :development do
   gem "rspec-rails", ">=2.0.0.rc"
   gem 'factory_girl_rails'
-  gem 'ruby-debug' if RUBY_VERSION.include? "1.8"
+  #gem 'ruby-debug' if RUBY_VERSION.include? "1.8"
 end
 
 group :test do
