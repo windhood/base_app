@@ -22,6 +22,7 @@ gem "html5-boilerplate"
 
 # Deploy 
 gem "inploy", ">=1.6.8"
+gem "heroku"
 
 #Uncatagorized
 gem "friendly_id", "~>3.0"
