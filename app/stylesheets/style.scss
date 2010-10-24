@@ -6,7 +6,7 @@
 
 // Now you can choose to include the whole
 // enchilada by uncommeting this line
-//@include html5-boilerplate;
+@include html5-boilerplate;
 
 // Or, you can pick and choose only the
 // sections you want to include
@@ -18,7 +18,8 @@
 
 // Or else, you can import this partial if you
 // want more controll over which mixins to use
-@import "partials/example";
-
+//@import "partials/example";
+// Put typography
+@import "partials/typography";
 // Finally, put your own styles in this partial
 @import "partials/page";

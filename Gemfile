@@ -19,7 +19,7 @@ gem "will_paginate", ">=3.0.pre2"
 gem "formtastic", ">=1.1.0"
 gem "compass", ">= 0.10.5"
 gem "html5-boilerplate"
-
+gem "compass-960-plugin"
 # Deploy 
 gem "inploy", ">=1.6.8"
 gem "heroku"
