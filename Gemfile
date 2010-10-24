@@ -14,6 +14,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 #Views
 gem 'haml'
 #gem "haml-rails", ">= 0.2"
+gem "haml-rails"
 gem "inherited_resources", ">=1.1.2"
 gem "will_paginate", ">=3.0.pre2"
 gem "formtastic", ">=1.1.0"

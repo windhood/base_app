@@ -1,4 +1,8 @@
 BaseApp::Application.routes.draw do
+  get "pages/home"
+
+  get "pages/contact"
+
   devise_for :admins
 
   devise_for :users

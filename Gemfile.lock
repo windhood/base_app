@@ -116,6 +116,11 @@ GEM
       json (~> 1.4.6)
       term-ansicolor (~> 1.0.5)
     haml (3.0.22)
+    haml-rails (0.3.1)
+      actionpack (~> 3.0.0)
+      activesupport (~> 3.0.0)
+      haml (~> 3.0.18)
+      railties (~> 3.0.0)
     has_scope (0.5.0)
     heroku (1.11.0)
       json_pure (>= 1.2.0, < 1.5.0)
@@ -267,6 +272,7 @@ DEPENDENCIES
   formtastic (>= 1.1.0)
   friendly_id (~> 3.0)
   haml
+  haml-rails
   hassle!
   heroku
   hoptoad_notifier (>= 2.3.6)
