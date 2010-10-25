@@ -2,10 +2,14 @@ BaseApp::Application.routes.draw do
   get "pages/home"
 
   get "pages/contact"
+  
+  get "pages/about"
 
   devise_for :admins
 
   devise_for :users
+  
+  root :to => "pages#home"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

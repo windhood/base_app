@@ -34,18 +34,20 @@ gem 'rails3-generators', :git => 'git://github.com/indirect/rails3-generators.gi
 gem 'metric_fu', '>=1.5.1', :group => :development
 
 group :test, :development do
-  gem 'rspec-rails', '>=2.0.0.rc'
   gem 'factory_girl_rails'
-  #gem 'ruby-debug' if RUBY_VERSION.include? "1.8"
-  gem 'rspec', '>=2.0.0.rc'
-  gem 'remarkable', '>=4.0.0.alpha4'
-  gem 'remarkable_activemodel', '>=4.0.0.alpha4'
-  gem 'cucumber', '>=0.6.3'
-  gem 'cucumber-rails', '>=0.3.2'
-  gem 'capybara', '~> 0.3.9'
+  gem 'factory_girl_generator', '>= 0.0.1'
+  gem 'ruby-debug19' if RUBY_VERSION.include? "1.9"
+  gem 'ruby-debug' if RUBY_VERSION.include? "1.8"
+end
+
+group :test do
+  gem 'capybara', '>= 0.4.0'
+  gem 'cucumber-rails', '0.3.2'
+  gem 'rspec', '>= 2.0.0'
+  gem 'rspec-rails', '>= 2.0.0'
   gem 'mocha'
-  gem 'database_cleaner','>=0.5.0'
+  gem 'database_cleaner'
   gem 'webmock'
+  gem 'launchy', '>=0.3.7'
   gem 'spork', '>=0.8.4'
-  gem 'pickle', '>=0.4.2'
 end
