@@ -20,6 +20,7 @@ gem 'formtastic', '>=1.1.0'
 gem 'compass', '>= 0.10.5'
 gem 'html5-boilerplate'
 gem 'compass-960-plugin'
+gem 'maruku', '>= 0.5.9'
 
 # Deploy 
 gem 'inploy', '>=1.6.8'
