@@ -36,8 +36,8 @@ gem 'metric_fu', '>=1.5.1', :group => :development
 group :test, :development do
   gem 'factory_girl_rails'
   gem 'factory_girl_generator', '>= 0.0.1'
-  gem 'ruby-debug19' if RUBY_VERSION.include? "1.9"
-  gem 'ruby-debug' if RUBY_VERSION.include? "1.8"
+  #gem 'ruby-debug19' if RUBY_VERSION.include? "1.9"
+  #gem 'ruby-debug' if RUBY_VERSION.include? "1.8"
 end
 
 group :test do

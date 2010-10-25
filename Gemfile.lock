@@ -44,7 +44,6 @@ GEM
       activesupport (= 3.0.0)
     activesupport (3.0.0)
     addressable (2.2.2)
-    archive-tar-minitar (0.5.2)
     arel (1.0.1)
       activesupport (~> 3.0.0)
     arrayfields (4.7.4)
@@ -73,7 +72,6 @@ GEM
       ruby_parser (~> 2.0.4)
       sexp_processor (~> 3.0.3)
     colored (1.2)
-    columnize (0.3.1)
     compass (0.10.5)
       haml (>= 3.0.4)
     compass-960-plugin (0.10.0)
@@ -151,8 +149,6 @@ GEM
     launchy (0.3.7)
       configuration (>= 0.0.5)
       rake (>= 0.8.1)
-    linecache19 (0.5.11)
-      ruby_core_source (>= 0.1.4)
     mail (2.2.7)
       activesupport (>= 2.3.6)
       mime-types
@@ -224,19 +220,9 @@ GEM
       rspec-expectations (~> 2.0.1)
     rspec-rails (2.0.1)
       rspec (~> 2.0.0)
-    ruby-debug-base19 (0.11.24)
-      columnize (>= 0.3.1)
-      linecache19 (>= 0.5.11)
-      ruby_core_source (>= 0.1.4)
-    ruby-debug19 (0.11.6)
-      columnize (>= 0.3.1)
-      linecache19 (>= 0.5.11)
-      ruby-debug-base19 (>= 0.11.19)
     ruby2ruby (1.2.5)
       ruby_parser (~> 2.0)
       sexp_processor (~> 3.0)
-    ruby_core_source (0.1.4)
-      archive-tar-minitar (>= 0.5.2)
     ruby_parser (2.0.5)
       sexp_processor (~> 3.0)
     rubyforge (2.0.4)
@@ -296,7 +282,6 @@ DEPENDENCIES
   rails3-generators!
   rspec (>= 2.0.0)
   rspec-rails (>= 2.0.0)
-  ruby-debug19
   spork (>= 0.8.4)
   sqlite3-ruby
   webmock
