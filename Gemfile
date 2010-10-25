@@ -37,9 +37,6 @@ group :test, :development do
   gem 'rspec-rails', '>=2.0.0.rc'
   gem 'factory_girl_rails'
   #gem 'ruby-debug' if RUBY_VERSION.include? "1.8"
-end
-
-group :test do
   gem 'rspec', '>=2.0.0.rc'
   gem 'remarkable', '>=4.0.0.alpha4'
   gem 'remarkable_activemodel', '>=4.0.0.alpha4'

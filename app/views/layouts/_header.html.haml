@@ -1,1 +1,1 @@
-%h1 Header
+%h1= content_for?(:header) ? yield(:header) : controller.controller_name.titleize + "-"+ controller.action_name.titleize
