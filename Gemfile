@@ -25,7 +25,7 @@ gem 'maruku', '>= 0.5.9'
 # Deploy 
 gem 'inploy', '>=1.6.8'
 gem 'heroku'
-gem 'hassle', :git => 'git://github.com/koppen/hassle.git'
+#gem 'hassle', :git => 'git://github.com/koppen/hassle.git'
 
 #Uncatagorized
 gem 'friendly_id', '~>3.0'

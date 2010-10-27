@@ -5,14 +5,72 @@
 // Add your own custom styles below
 //-----------------------------------
 
-body {}
+body {
+  min-width: 960px;
+}
+.logo {
+  font-family: 'Lobster13Regular', Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 50px;
+	margin-bottom: 0;
+	margin-top: -10px;
+}
+.tagline {
+  font-size: 25px;
+	font-family: 'CaviarDreamsRegular', Helvetica, sans-serif;
+}
+header {
+  @include grid-container;
+  #branding {
+    @include grid(5);
+    @include alpha;
+    #logo {
+      @include grid(2);
+      @include alpha;
+    }
+    #tagline {
+      @include grid(3);
+      @include omega;//so that no right margin
+    }
+    text-align: center;
+  }
+  #nav {
+    @include grid(7);
+    @include omega;//so that no right margin
+  	font-family: 'CaviarDreamsRegular', Helvetica, sans-serif;
+  	text-align: right;
+  	font-size: 17px;
+  	color: #494949;
+  	
+  	ul {
+    	list-style: none;
+    	float: right;
+    }
 
-#container {
-  @include grid-system(12);
+    ul li {
+    	float: left;
+    	margin-right: 12px;
+    }
+  	a, ul {
+    	color: #000;
+    	text-decoration: none;
+    }
+
+    a:hover {
+    	text-decoration: underline;
+    }    
+  }  
+  margin-top: $section-margin-top;
+  @include pie-clearfix;
 }
 
-header {}
+#main {
+  @include grid-container;
+  margin-top: $section-margin-top/2;
+}
 
-#main {}
+footer {
+  @include grid-container;
+  margin-top: $section-margin-top;
+}
 
-footer {}
