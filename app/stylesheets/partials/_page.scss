@@ -11,7 +11,7 @@ body {
 .logo {
   font-family: 'Lobster13Regular', Helvetica, sans-serif;
 	font-weight: normal;
-	font-size: 50px;
+	font-size: 40px;
 	margin-bottom: 0;
 	margin-top: -10px;
 }
@@ -19,8 +19,15 @@ body {
   font-size: 25px;
 	font-family: 'CaviarDreamsRegular', Helvetica, sans-serif;
 }
-header {
+#container {
   @include grid-container;
+}
+header {
+  @include grid(12);
+  @include alpha;
+  @include omega;
+  margin-top: $section-margin-top;
+  @include pie-clearfix;
   #branding {
     @include grid(5);
     @include alpha;
@@ -60,17 +67,21 @@ header {
     	text-decoration: underline;
     }    
   }  
-  margin-top: $section-margin-top;
-  @include pie-clearfix;
+  
 }
 
 #main {
-  @include grid-container;
+  @include grid(12);
+  @include alpha;
+  @include omega;
+  @include pie-clearfix;
   margin-top: $section-margin-top/2;
 }
 
 footer {
-  @include grid-container;
+  @include grid(12);
+  @include alpha;
+  @include omega;
   margin-top: $section-margin-top;
 }
 
