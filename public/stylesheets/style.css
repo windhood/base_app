@@ -1,0 +1,898 @@
+/* line 27, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_reset.scss */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* line 38, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 42, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_reset.scss */
+nav ul {
+  list-style: none;
+}
+
+/* line 44, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 47, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 49, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_reset.scss */
+a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* line 51, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_reset.scss */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* line 53, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_reset.scss */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* line 55, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_reset.scss */
+del {
+  text-decoration: line-through;
+}
+
+/* line 57, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_reset.scss */
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+/* line 61, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 63, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_reset.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* line 65, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_reset.scss */
+input, select {
+  vertical-align: middle;
+}
+
+/* line 17, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_fonts.scss */
+body {
+  font-size: 13px;
+  font-family: sans-serif;
+  line-height: 1.231;
+  *font-size: small;
+}
+
+/* line 24, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_fonts.scss */
+select, input, textarea, button {
+  font: 99% sans-serif;
+}
+
+/* line 29, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_fonts.scss */
+pre, code, kbd, samp {
+  font-family: monospace, sans-serif;
+}
+
+/* line 15, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_styles.scss */
+body, select, input, textarea {
+  color: #444444;
+}
+
+/* line 17, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_styles.scss */
+html {
+  overflow-y: scroll;
+}
+
+/* line 19, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_styles.scss */
+a, a:active, a:visited {
+  color: #607890;
+}
+
+/* line 20, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_styles.scss */
+a:hover {
+  color: #003366;
+}
+
+/* line 22, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_styles.scss */
+ul, ol {
+  margin-left: 1.8em;
+}
+
+/* line 23, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_styles.scss */
+ol {
+  list-style-type: decimal;
+}
+
+/* line 25, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_styles.scss */
+td, td img {
+  vertical-align: top;
+}
+
+/* line 27, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_styles.scss */
+sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
+
+/* line 29, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_styles.scss */
+sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+
+/* line 31, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_styles.scss */
+textarea {
+  overflow: auto;
+}
+
+/* line 60, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_styles.scss */
+a:hover, a:active {
+  outline: none;
+}
+
+/* line 65, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_styles.scss */
+pre {
+  padding: 15px;
+  white-space: pre;
+  white-space: pre-wrap;
+  white-space: pre-line;
+  word-wrap: break-word;
+}
+
+/* line 77, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_styles.scss */
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+
+/* line 78, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_styles.scss */
+input[type="checkbox"] {
+  vertical-align: bottom;
+}
+
+/* line 79, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_styles.scss */
+.ie7 input[type="checkbox"] {
+  vertical-align: baseline;
+}
+
+/* line 80, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_styles.scss */
+.ie6 input {
+  vertical-align: text-bottom;
+}
+
+/* line 85, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_styles.scss */
+label, input[type=button], input[type=submit], button {
+  cursor: pointer;
+}
+
+/* line 90, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_styles.scss */
+button, input, select, textarea {
+  margin: 0;
+}
+
+/* line 97, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_styles.scss */
+::-moz-selection {
+  background: #ff5e99;
+  color: white;
+  text-shadow: none;
+}
+
+/* line 98, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_styles.scss */
+::selection {
+  background: #ff5e99;
+  color: white;
+  text-shadow: none;
+}
+
+/* line 103, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_styles.scss */
+a:link {
+  -webkit-tap-highlight-color: #ff5e99;
+}
+
+/* line 114, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_styles.scss */
+button {
+  width: auto;
+  overflow: visible;
+}
+
+/* line 118, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_styles.scss */
+.ie7 img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/* line 120, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_styles.scss */
+.ie6 legend, .ie7 legend {
+  margin-left: -7px;
+}
+
+/* line 10, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_helpers.scss */
+.ir {
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  direction: ltr;
+  background-repeat: no-repeat;
+}
+
+/* line 12, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_helpers.scss */
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+/* line 14, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_helpers.scss */
+.visuallyhidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* line 16, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_helpers.scss */
+.clearfix {
+  *zoom: 1;
+}
+/* line 22, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+@media print {
+  /* line 24, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_media.scss */
+  * {
+    background: transparent !important;
+    color: #444 !important;
+    text-shadow: none !important;
+  }
+
+  /* line 26, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_media.scss */
+  a, a:visited {
+    color: #444 !important;
+    text-decoration: underline;
+  }
+
+  /* line 28, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_media.scss */
+  a:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* line 30, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_media.scss */
+  abbr:after {
+    content: " (" attr(title) ")";
+  }
+
+  /* line 32, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_media.scss */
+  .ir a:after {
+    content: "";
+  }
+
+  /* line 34, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_media.scss */
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /* line 36, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_media.scss */
+  thead {
+    display: table-header-group;
+  }
+
+  /* line 38, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_media.scss */
+  tr, img {
+    page-break-inside: avoid;
+  }
+
+  @page {
+    margin: 0.5cm;
+}
+
+  /* line 42, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_media.scss */
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 44, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_media.scss */
+  h2, h3 {
+    page-break-after: avoid;
+  }
+}
+
+@media all and (orientation:portrait) {}
+@media all and (orientation:landscape) {}
+@media screen and (max-device-width: 480px) {}
+/* line 9, ../../app/stylesheets/partials/_typography.scss */
+small {
+  font-size: 85%;
+}
+
+/* line 18, ../../app/stylesheets/partials/_typography.scss */
+input:invalid, textarea:invalid {
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+  -o-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -khtml-border-radius: 1px;
+  border-radius: 1px;
+  -moz-box-shadow: red 0 0 5px 0;
+  -webkit-box-shadow: red 0 0 5px 0;
+  -o-box-shadow: red 0 0 5px 0;
+  box-shadow: red 0 0 5px 0;
+}
+
+/* line 23, ../../app/stylesheets/partials/_typography.scss */
+.no-boxshadow input:invalid,
+.no-boxshadow textarea:invalid {
+  background-color: #f0dddd;
+}
+
+/* line 27, ../../app/stylesheets/partials/_typography.scss */
+p {
+  padding: 0 0  1em 0;
+  color: #444444;
+}
+
+/* line 30, ../../app/stylesheets/partials/_typography.scss */
+p.first:first-letter {
+  float: left;
+  font-family: Palatino,'Palatino Linotype',Georgia, sans-serif;
+  font-size: 3em;
+  font-weight: 700;
+  line-height: 1em;
+  margin-bottom: -0.2em;
+  padding: 0.2em 0.1em 0 0;
+}
+
+/* line 31, ../../app/stylesheets/partials/_typography.scss */
+p img {
+  float: left;
+  margin: 0.3em 0.833em 0.833em 0;
+  padding: 0;
+}
+
+/* line 32, ../../app/stylesheets/partials/_typography.scss */
+p img.right {
+  float: right;
+  margin: 0.3em  0 0.833em 0.833em;
+}
+
+/* line 35, ../../app/stylesheets/partials/_typography.scss */
+h1, h2 {
+  font-weight: normal;
+  color: #333333;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+/* line 36, ../../app/stylesheets/partials/_typography.scss */
+h3, h4, h5, h6 {
+  font-weight: normal;
+  color: #333333;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+/* line 39, ../../app/stylesheets/partials/_typography.scss */
+h1 {
+  font-size: 2.2em;
+  margin-bottom: 0.682em;
+}
+
+/* line 40, ../../app/stylesheets/partials/_typography.scss */
+h2 {
+  font-size: 1.9em;
+  margin-bottom: 0.79em;
+}
+
+/* line 41, ../../app/stylesheets/partials/_typography.scss */
+h3 {
+  font-size: 1.7em;
+  margin-bottom: 0.882em;
+}
+
+/* line 42, ../../app/stylesheets/partials/_typography.scss */
+h4 {
+  font-size: 1.4em;
+  margin-bottom: 1.071em;
+}
+
+/* line 43, ../../app/stylesheets/partials/_typography.scss */
+h5, h6 {
+  font-size: 1.3em;
+  margin-bottom: 1.154em;
+}
+
+/* Color palete */
+/* line 46, ../../app/stylesheets/partials/_typography.scss */
+.water {
+  color: #5582d1;
+}
+
+/* line 47, ../../app/stylesheets/partials/_typography.scss */
+.earth {
+  color: #4e3e2c;
+}
+
+/* line 48, ../../app/stylesheets/partials/_typography.scss */
+.air {
+  color: #f1fff7;
+}
+
+/* line 49, ../../app/stylesheets/partials/_typography.scss */
+.fire {
+  color: #ff8a19;
+}
+
+/* line 50, ../../app/stylesheets/partials/_typography.scss */
+.wine {
+  color: #4a040a;
+}
+
+/* line 51, ../../app/stylesheets/partials/_typography.scss */
+.beer {
+  color: #F0C030;
+}
+
+/* line 52, ../../app/stylesheets/partials/_typography.scss */
+.caffe {
+  color: #473523;
+}
+
+/* line 53, ../../app/stylesheets/partials/_typography.scss */
+.caffe-cream {
+  color: #b68d3d;
+}
+
+/* line 54, ../../app/stylesheets/partials/_typography.scss */
+.espresso {
+  color: #2c1901;
+}
+
+/* line 55, ../../app/stylesheets/partials/_typography.scss */
+.caramel {
+  color: #ab671f;
+}
+
+/* line 56, ../../app/stylesheets/partials/_typography.scss */
+.chocolate {
+  color: #290200;
+}
+
+/* line 57, ../../app/stylesheets/partials/_typography.scss */
+.black-pepper {
+  color: #444334;
+}
+
+/* line 58, ../../app/stylesheets/partials/_typography.scss */
+.pepper-lite {
+  color: #8d8a72;
+}
+
+/* line 59, ../../app/stylesheets/partials/_typography.scss */
+.lipstick {
+  color: #c20c0c;
+}
+
+/* line 63, ../../app/stylesheets/partials/_typography.scss */
+li ul,
+li ol {
+  margin: 0 1.5em;
+}
+
+/* line 64, ../../app/stylesheets/partials/_typography.scss */
+ul, ol {
+  margin: 0 1.5em 1.5em 1.5em;
+}
+
+/* line 67, ../../app/stylesheets/partials/_typography.scss */
+dl {
+  margin: 0 0 1.5em 0;
+}
+
+/* line 68, ../../app/stylesheets/partials/_typography.scss */
+dl dt {
+  font-weight: bold;
+}
+
+/* line 69, ../../app/stylesheets/partials/_typography.scss */
+dl dd {
+  margin-left: 1.5em;
+}
+
+/* line 71, ../../app/stylesheets/partials/_typography.scss */
+a {
+  color: #607890;
+  text-decoration: none;
+}
+
+/* line 72, ../../app/stylesheets/partials/_typography.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 75, ../../app/stylesheets/partials/_typography.scss */
+table {
+  margin-bottom: 1.5em;
+  border-collapse: collapse;
+}
+
+/* line 76, ../../app/stylesheets/partials/_typography.scss */
+th {
+  font-weight: bold;
+}
+
+/* line 77, ../../app/stylesheets/partials/_typography.scss */
+tr, th, td {
+  margin: 0;
+  padding: 0 1.5em 0 1em;
+  height: 18px;
+}
+
+/* line 78, ../../app/stylesheets/partials/_typography.scss */
+tfoot {
+  font-style: italic;
+}
+
+/* line 79, ../../app/stylesheets/partials/_typography.scss */
+caption {
+  text-align: center;
+  font-family: Georgia, serif;
+}
+
+/* line 82, ../../app/stylesheets/partials/_typography.scss */
+abbr, acronym {
+  border-bottom: 1px dotted #000;
+}
+
+/* line 83, ../../app/stylesheets/partials/_typography.scss */
+address {
+  margin-top: 1.5em;
+  font-style: italic;
+}
+
+/* line 84, ../../app/stylesheets/partials/_typography.scss */
+del {
+  color: #000;
+}
+
+/* line 87, ../../app/stylesheets/partials/_typography.scss */
+blockquote {
+  padding: 1em 1em 1em 1.5em;
+  font-family: baskerville,"palatino linotype",serif;
+}
+
+/* line 88, ../../app/stylesheets/partials/_typography.scss */
+blockquote > *:first-child:before {
+  content: "\201C";
+  font-size: 2.5em;
+  margin-left: -0.62em;
+  font-family: georgia,serif;
+  padding-right: .2em;
+  color: #aaa;
+  line-height: 0;
+}
+
+/* From Tripoli  */
+/* line 90, ../../app/stylesheets/partials/_typography.scss */
+strong {
+  ont-weight: bold;
+}
+
+/* line 91, ../../app/stylesheets/partials/_typography.scss */
+em, dfn {
+  font-style: italic;
+}
+
+/* line 92, ../../app/stylesheets/partials/_typography.scss */
+dfn {
+  font-weight: bold;
+}
+
+/* line 93, ../../app/stylesheets/partials/_typography.scss */
+pre, code {
+  margin: 1.5em 0;
+  white-space: pre;
+}
+
+/* line 94, ../../app/stylesheets/partials/_typography.scss */
+pre, code, tt {
+  font: 1em monospace;
+  line-height: 1.5;
+}
+
+/* line 95, ../../app/stylesheets/partials/_typography.scss */
+tt {
+  display: block;
+  margin: 1.5em 0;
+}
+
+/* line 96, ../../app/stylesheets/partials/_typography.scss */
+hr {
+  margin-bottom: 1.5em;
+}
+
+/*other small things */
+/* line 100, ../../app/stylesheets/partials/_typography.scss */
+.tc {
+  text-align: center;
+}
+
+/* line 101, ../../app/stylesheets/partials/_typography.scss */
+.tr {
+  text-align: right;
+}
+
+/* line 102, ../../app/stylesheets/partials/_typography.scss */
+.tl {
+  text-align: left;
+}
+
+/* line 103, ../../app/stylesheets/partials/_typography.scss */
+.b {
+  font-weight: bold;
+}
+
+/* line 104, ../../app/stylesheets/partials/_typography.scss */
+.i {
+  font-style: italic;
+}
+
+/* line 106, ../../app/stylesheets/partials/_typography.scss */
+.indent {
+  text-indent: 1.5em;
+}
+
+/* line 107, ../../app/stylesheets/partials/_typography.scss */
+.open {
+  font-variant: small-caps;
+}
+
+/* line 108, ../../app/stylesheets/partials/_typography.scss */
+p.break {
+  text-align: center;
+  text-indent: 0;
+  line-height: 0;
+}
+
+/* line 109, ../../app/stylesheets/partials/_typography.scss */
+p.zero {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 110, ../../app/stylesheets/partials/_typography.scss */
+p.one {
+  padding: 0 1em  1em 1em;
+  color: #111;
+}
+
+/* line 111, ../../app/stylesheets/partials/_typography.scss */
+p img.right10 {
+  float: right;
+  margin: 0.833em;
+}
+
+/* line 113, ../../app/stylesheets/partials/_typography.scss */
+.oldbook {
+  font-family: "Book Antiqua","Warnock Pro","Goudy Old Style","Palatino",Georgia,serif;
+}
+
+/* line 114, ../../app/stylesheets/partials/_typography.scss */
+.note {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+  font-size: 0.9em;
+  margin: 0.1em;
+  color: #333;
+}
+
+/* line 115, ../../app/stylesheets/partials/_typography.scss */
+.mono {
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* embed special fonts */
+@font-face {
+  font-family: 'Lobster13Regular';
+  src: url("fonts/Lobster_1.3-webfont.eot");
+  src: local("‚ò∫"), url("fonts/Lobster_1.3-webfont.woff") format("woff"), url("fonts/Lobster_1.3-webfont.ttf") format("truetype"), url("fonts/Lobster_1.3-webfont.svg#webfontHqICmWr8") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CaviarDreamsRegular';
+  src: url("fonts/CaviarDreams-webfont.eot");
+  src: local("‚ò∫"), url("fonts/CaviarDreams-webfont.woff") format("woff"), url("fonts/CaviarDreams-webfont.ttf") format("truetype"), url("fonts/CaviarDreams-webfont.svg#webfontdHSnsI35") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 8, ../../app/stylesheets/partials/_page.scss */
+body {
+  min-width: 960px;
+}
+
+/* line 11, ../../app/stylesheets/partials/_page.scss */
+.logo {
+  font-family: 'Lobster13Regular', Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 40px;
+  margin-bottom: 0;
+  margin-top: -10px;
+}
+
+/* line 18, ../../app/stylesheets/partials/_page.scss */
+.tagline {
+  font-size: 25px;
+  font-family: 'CaviarDreamsRegular', Helvetica, sans-serif;
+}
+
+/* line 22, ../../app/stylesheets/partials/_page.scss */
+#container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+}
+
+/* line 25, ../../app/stylesheets/partials/_page.scss */
+header {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 940px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 40px;
+  *zoom: 1;
+}
+/* line 22, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+header:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+/* line 31, ../../app/stylesheets/partials/_page.scss */
+header #branding {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 380px;
+  margin-left: 0;
+  text-align: center;
+}
+/* line 34, ../../app/stylesheets/partials/_page.scss */
+header #branding #logo {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 140px;
+  margin-left: 0;
+}
+/* line 38, ../../app/stylesheets/partials/_page.scss */
+header #branding #tagline {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 220px;
+  margin-right: 0;
+}
+/* line 44, ../../app/stylesheets/partials/_page.scss */
+header #nav {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 540px;
+  margin-right: 0;
+  font-family: 'CaviarDreamsRegular', Helvetica, sans-serif;
+  text-align: right;
+  font-size: 17px;
+  color: #494949;
+}
+/* line 52, ../../app/stylesheets/partials/_page.scss */
+header #nav ul {
+  list-style: none;
+  float: right;
+}
+/* line 57, ../../app/stylesheets/partials/_page.scss */
+header #nav ul li {
+  float: left;
+  margin-right: 12px;
+}
+/* line 61, ../../app/stylesheets/partials/_page.scss */
+header #nav a, header #nav ul {
+  color: #000;
+  text-decoration: none;
+}
+/* line 66, ../../app/stylesheets/partials/_page.scss */
+header #nav a:hover {
+  text-decoration: underline;
+}
+
+/* line 73, ../../app/stylesheets/partials/_page.scss */
+#main {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 940px;
+  margin-left: 0;
+  margin-right: 0;
+  *zoom: 1;
+  margin-top: 20px;
+}
+/* line 22, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#main:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+/* line 81, ../../app/stylesheets/partials/_page.scss */
+footer {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 940px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 40px;
+}
