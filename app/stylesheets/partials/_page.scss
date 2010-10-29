@@ -1,54 +1,59 @@
 @import "compass/css3";
-@import "960/grid";
+//@import "960/grid";
+// Don't move this @import above the GRID and FONT-SIZE variables.
+@import "susy/susy";
 
 //-----------------------------------
 // Add your own custom styles below
 //-----------------------------------
+/* Layout -------------------------------------------------------------- */
 
-body {
-  min-width: 960px;
-}
-.logo {
-  font-family: 'Lobster13Regular', Helvetica, sans-serif;
-	font-weight: normal;
-	font-size: 40px;
-	margin-bottom: 0;
-	margin-top: -10px;
-}
-.tagline {
-  font-size: 25px;
-	font-family: 'CaviarDreamsRegular', Helvetica, sans-serif;
-}
+@include susy;
+
 #container {
-  @include grid-container;
-}
-header {
-  @include grid(12);
-  @include alpha;
-  @include omega;
-  margin-top: $section-margin-top;
-  @include pie-clearfix;
-  #branding {
-    @include grid(5);
-    @include alpha;
-    #logo {
-      @include grid(2);
+  @include container;
+  @include show-grid("grid.png");
+  header {
+    @include full;
+    margin-top: $section-margin-top;
+    
+    #branding {
+      @include columns(6);
       @include alpha;
+      #logo {
+        @include columns(3, 6);
+      }
+      #tagline {
+        @include columns(3, 6);
+        @include omega(9);//so that no right margin
+      }
+    }    
+    #nav {
+      @include columns(6);
+      @include omega; //add right gut
     }
-    #tagline {
-      @include grid(3);
-      @include omega;//so that no right margin
-    }
+  }
+  
+  #main {
+    @include full;
+    margin-top: $section-margin-top/2;
+  }
+
+  footer {
+    @include full;
+    margin-top: $section-margin-top;
+  }
+}
+
+header {
+  #branding {   
     text-align: center;
   }
   #nav {
-    @include grid(7);
-    @include omega;//so that no right margin
-  	font-family: 'CaviarDreamsRegular', Helvetica, sans-serif;
+    font-family: 'CaviarDreamsRegular', Helvetica, sans-serif;
   	text-align: right;
   	font-size: 17px;
-  	color: #494949;
-  	
+  	color: #494949;  	
   	ul {
     	list-style: none;
     	float: right;
@@ -70,18 +75,15 @@ header {
   
 }
 
-#main {
-  @include grid(12);
-  @include alpha;
-  @include omega;
-  @include pie-clearfix;
-  margin-top: $section-margin-top/2;
-}
 
-footer {
-  @include grid(12);
-  @include alpha;
-  @include omega;
-  margin-top: $section-margin-top;
+.logo {
+  font-family: 'Lobster13Regular', Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 40px;
+	margin-bottom: 0;
+	margin-top: -10px;
 }
-
+.tagline {
+  font-size: 25px;
+	font-family: 'CaviarDreamsRegular', Helvetica, sans-serif;
+}

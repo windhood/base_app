@@ -202,7 +202,7 @@ input, select {
 @media screen and (max-device-width: 480px) {}
 /* line 4, ../../app/stylesheets/partials/_base-styles.scss */
 body, select, input, textarea {
-  color: #444444;
+  color: #4c4c4c;
 }
 
 /* line 6, ../../app/stylesheets/partials/_base-styles.scss */
@@ -338,12 +338,129 @@ button {
   font-style: normal;
 }
 
-/* line 8, ../../app/stylesheets/partials/_page.scss */
+/* Layout -------------------------------------------------------------- */
+/* line 29, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/compass-susy-plugin-0.8.1/sass/susy/_vertical_rhythm.scss */
 body {
-  min-width: 960px;
+  font-size: 100%;
+  line-height: 1.5em;
 }
 
-/* line 11, ../../app/stylesheets/partials/_page.scss */
+/* line 33, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/compass-susy-plugin-0.8.1/sass/susy/_vertical_rhythm.scss */
+html > body {
+  font-size: 16px;
+}
+
+/* line 13, ../../app/stylesheets/partials/_page.scss */
+#container {
+  *zoom: 1;
+  margin-left: auto;
+  margin-right: auto;
+  width: 61em;
+  max-width: 100%;
+  background-image: url('/images/grid.png?1275641046');
+  background-repeat: repeat;
+  background-position: 1em 0;
+}
+/* line 22, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#container:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+/* line 16, ../../app/stylesheets/partials/_page.scss */
+#container header {
+  clear: both;
+  margin-right: 1.639%;
+  margin-left: 1.639%;
+  margin-top: 40px;
+}
+/* line 20, ../../app/stylesheets/partials/_page.scss */
+#container header #branding {
+  display: inline;
+  float: left;
+  width: 47.541%;
+  margin-right: 1.639%;
+  margin-left: 1.639%;
+}
+/* line 23, ../../app/stylesheets/partials/_page.scss */
+#container header #branding #logo {
+  display: inline;
+  float: left;
+  width: 48.276%;
+  margin-right: 3.448%;
+}
+/* line 26, ../../app/stylesheets/partials/_page.scss */
+#container header #branding #tagline {
+  display: inline;
+  float: left;
+  width: 48.276%;
+  margin-right: 3.448%;
+  display: inline;
+  float: right;
+  margin-right: 0;
+  #margin-left: -1em;
+}
+/* line 31, ../../app/stylesheets/partials/_page.scss */
+#container header #nav {
+  display: inline;
+  float: left;
+  width: 47.541%;
+  margin-right: 1.639%;
+  display: inline;
+  float: right;
+  margin-right: 1.639%;
+  #margin-left: -1em;
+}
+/* line 37, ../../app/stylesheets/partials/_page.scss */
+#container #main {
+  clear: both;
+  margin-right: 1.639%;
+  margin-left: 1.639%;
+  margin-top: 20px;
+}
+/* line 42, ../../app/stylesheets/partials/_page.scss */
+#container footer {
+  clear: both;
+  margin-right: 1.639%;
+  margin-left: 1.639%;
+  margin-top: 40px;
+}
+
+/* line 49, ../../app/stylesheets/partials/_page.scss */
+header #branding {
+  text-align: center;
+}
+/* line 52, ../../app/stylesheets/partials/_page.scss */
+header #nav {
+  font-family: 'CaviarDreamsRegular', Helvetica, sans-serif;
+  text-align: right;
+  font-size: 17px;
+  color: #494949;
+}
+/* line 57, ../../app/stylesheets/partials/_page.scss */
+header #nav ul {
+  list-style: none;
+  float: right;
+}
+/* line 62, ../../app/stylesheets/partials/_page.scss */
+header #nav ul li {
+  float: left;
+  margin-right: 12px;
+}
+/* line 66, ../../app/stylesheets/partials/_page.scss */
+header #nav a, header #nav ul {
+  color: #000;
+  text-decoration: none;
+}
+/* line 71, ../../app/stylesheets/partials/_page.scss */
+header #nav a:hover {
+  text-decoration: underline;
+}
+
+/* line 79, ../../app/stylesheets/partials/_page.scss */
 .logo {
   font-family: 'Lobster13Regular', Helvetica, sans-serif;
   font-weight: normal;
@@ -352,131 +469,8 @@ body {
   margin-top: -10px;
 }
 
-/* line 18, ../../app/stylesheets/partials/_page.scss */
+/* line 86, ../../app/stylesheets/partials/_page.scss */
 .tagline {
   font-size: 25px;
   font-family: 'CaviarDreamsRegular', Helvetica, sans-serif;
-}
-
-/* line 22, ../../app/stylesheets/partials/_page.scss */
-#container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 960px;
-}
-
-/* line 25, ../../app/stylesheets/partials/_page.scss */
-header {
-  display: inline;
-  float: left;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 940px;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 40px;
-  *zoom: 1;
-}
-/* line 22, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-header:after {
-  content: "\0020";
-  display: block;
-  height: 0;
-  clear: both;
-  overflow: hidden;
-  visibility: hidden;
-}
-/* line 31, ../../app/stylesheets/partials/_page.scss */
-header #branding {
-  display: inline;
-  float: left;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 380px;
-  margin-left: 0;
-  text-align: center;
-}
-/* line 34, ../../app/stylesheets/partials/_page.scss */
-header #branding #logo {
-  display: inline;
-  float: left;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 140px;
-  margin-left: 0;
-}
-/* line 38, ../../app/stylesheets/partials/_page.scss */
-header #branding #tagline {
-  display: inline;
-  float: left;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 220px;
-  margin-right: 0;
-}
-/* line 44, ../../app/stylesheets/partials/_page.scss */
-header #nav {
-  display: inline;
-  float: left;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 540px;
-  margin-right: 0;
-  font-family: 'CaviarDreamsRegular', Helvetica, sans-serif;
-  text-align: right;
-  font-size: 17px;
-  color: #494949;
-}
-/* line 52, ../../app/stylesheets/partials/_page.scss */
-header #nav ul {
-  list-style: none;
-  float: right;
-}
-/* line 57, ../../app/stylesheets/partials/_page.scss */
-header #nav ul li {
-  float: left;
-  margin-right: 12px;
-}
-/* line 61, ../../app/stylesheets/partials/_page.scss */
-header #nav a, header #nav ul {
-  color: #000;
-  text-decoration: none;
-}
-/* line 66, ../../app/stylesheets/partials/_page.scss */
-header #nav a:hover {
-  text-decoration: underline;
-}
-
-/* line 73, ../../app/stylesheets/partials/_page.scss */
-#main {
-  display: inline;
-  float: left;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 940px;
-  margin-left: 0;
-  margin-right: 0;
-  *zoom: 1;
-  margin-top: 20px;
-}
-/* line 22, ../../../../.rvm/gems/ruby-1.9.2-p0@railstemplate/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-#main:after {
-  content: "\0020";
-  display: block;
-  height: 0;
-  clear: both;
-  overflow: hidden;
-  visibility: hidden;
-}
-
-/* line 81, ../../app/stylesheets/partials/_page.scss */
-footer {
-  display: inline;
-  float: left;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 940px;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 40px;
 }
