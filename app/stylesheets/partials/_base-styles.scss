@@ -1,0 +1,49 @@
+//--------------------------------
+// Minimal Base Styles, Normally needs to be customized
+//--------------------------------
+body, select, input, textarea { color: $font-color; }
+
+html { @include force-scrollbar; }
+
+a, a:active, a:visited { color: $link-color; }
+a:hover { color: $link-hover-color; }
+
+ul, ol { margin-left: $list-left-margin; }
+ol { list-style-type: decimal; }
+
+td, td img { vertical-align: top; }
+
+sub { @include sub; }
+
+sup { @include sup; }
+
+@include accessible-focus;
+
+@include quoted-pre;
+
+@include align-input-labels;
+
+@include hand-cursor-inputs;
+
+@include selected-text;
+
+@include webkit-tap-highlight;
+
+@include ie-hacks;
+
+/* embed special fonts */
+@font-face {
+	font-family: 'Lobster13Regular';
+	src: url('fonts/Lobster_1.3-webfont.eot');
+	src: local('‚ò∫'), url('fonts/Lobster_1.3-webfont.woff') format('woff'), url('fonts/Lobster_1.3-webfont.ttf') format('truetype'), url('fonts/Lobster_1.3-webfont.svg#webfontHqICmWr8') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'CaviarDreamsRegular';
+	src: url('fonts/CaviarDreams-webfont.eot');
+	src: local('‚ò∫'), url('fonts/CaviarDreams-webfont.woff') format('woff'), url('fonts/CaviarDreams-webfont.ttf') format('truetype'), url('fonts/CaviarDreams-webfont.svg#webfontdHSnsI35') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
