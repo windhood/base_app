@@ -15,75 +15,19 @@
   @include show-grid("grid.png");
   header {
     @include full;
-    margin-top: $section-margin-top;
-    
-    #branding {
-      @include columns(6);
-      @include alpha;
-      #logo {
-        @include columns(3, 6);
-      }
-      #tagline {
-        @include columns(3, 6);
-        @include omega(9);//so that no right margin
-      }
-    }    
-    #nav {
-      @include columns(6);
-      @include omega; //add right gut
-    }
   }
-  
+  nav {
+    @include full;
+  }
   #main {
     @include full;
-    margin-top: $section-margin-top/2;
   }
 
   footer {
     @include full;
-    margin-top: $section-margin-top;
   }
 }
 
-header {
-  #branding {   
-    text-align: center;
-  }
-  #nav {
-    font-family: 'CaviarDreamsRegular', Helvetica, sans-serif;
-  	text-align: right;
-  	font-size: 17px;
-  	color: #494949;  	
-  	ul {
-    	list-style: none;
-    	float: right;
-    }
-
-    ul li {
-    	float: left;
-    	margin-right: 12px;
-    }
-  	a, ul {
-    	color: #000;
-    	text-decoration: none;
-    }
-
-    a:hover {
-    	text-decoration: underline;
-    }    
-  }  
-  
-}
-
-
-.logo {
-  font-family: 'Lobster13Regular', Helvetica, sans-serif;
-	font-weight: normal;
-	font-size: 40px;
-	margin-bottom: 0;
-	margin-top: -10px;
-}
-.tagline {
-  font-size: 25px;
-	font-family: 'CaviarDreamsRegular', Helvetica, sans-serif;
-}
+/* Style each sections -------------------------------------------------------------- */
+@import "header";
+@import "main-nav";

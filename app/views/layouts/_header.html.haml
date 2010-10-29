@@ -1,9 +1,4 @@
-%section#branding
-  .logo#logo <strong><a href="/" title="Home">BaseApp</a></strong>
-  .tagline#tagline= content_for?(:header) ? yield(:header) : controller.controller_name.titleize + "-"+ controller.action_name.titleize
-%nav#nav
-  %ul
-    %li= link_to 'Home', '/', :id => 'home'
-    %li= link_to 'Sign in', '/users/sign_in', :id => 'signin'    
-    %li= link_to "Contact", '/pages/contact', :id => 'contact'
-    %li= link_to "About", '/pages/about', :id => 'about'
+-# %section#branding
+-#  .logo#logo <strong><a href="/" title="Home">BaseApp</a></strong>
+-#  .tagline#tagline= content_for?(:header) ? yield(:header) : controller.controller_name.titleize + "-"+ controller.action_name.titleize
+%h1 <a href="/">BaseApp! <strong>Sample App</strong></a>
