@@ -200,48 +200,312 @@ input, select {
 @media all and (orientation:portrait) {}
 @media all and (orientation:landscape) {}
 @media screen and (max-device-width: 480px) {}
-/* line 4, ../../app/stylesheets/partials/_base-styles.scss */
+/* Body --------------------------------------------------------------*/
+/* line 7, ../../app/stylesheets/partials/_susy-default.scss */
+body {
+  font-family: Cambria, Georgia, serif;
+  color: #4c4c4c;
+}
+
+/* Links --------------------------------------------------------------*/
+/* line 15, ../../app/stylesheets/partials/_susy-default.scss */
+a:link, a:visited {
+  color: #005498;
+}
+/* line 18, ../../app/stylesheets/partials/_susy-default.scss */
+a:focus, a:hover, a:active {
+  color: #00467f;
+  text-decoration: none;
+}
+/* line 22, ../../app/stylesheets/partials/_susy-default.scss */
+a img {
+  border: none;
+}
+
+/* Headings --------------------------------------------------------------*/
+/* line 29, ../../app/stylesheets/partials/_susy-default.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+/* line 31, ../../app/stylesheets/partials/_susy-default.scss */
+h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {
+  margin: 0;
+}
+
+/* line 36, ../../app/stylesheets/partials/_susy-default.scss */
+h1 {
+  font-size: 3em;
+  line-height: 1em;
+  margin-bottom: 0.5em;
+}
+
+/* line 41, ../../app/stylesheets/partials/_susy-default.scss */
+h2 {
+  font-size: 2em;
+  line-height: 1.5em;
+  margin-bottom: 0.75em;
+}
+
+/* line 46, ../../app/stylesheets/partials/_susy-default.scss */
+h3 {
+  font-size: 1.5em;
+  line-height: 1em;
+  margin-bottom: 1em;
+}
+
+/* line 51, ../../app/stylesheets/partials/_susy-default.scss */
+h4 {
+  font-size: 1.125em;
+  line-height: 1.333em;
+  margin-bottom: 1.333em;
+}
+
+/* line 56, ../../app/stylesheets/partials/_susy-default.scss */
+h5, h6 {
+  margin-bottom: 1.5em;
+  font-weight: bold;
+}
+
+/* Text --------------------------------------------------------------*/
+/* line 63, ../../app/stylesheets/partials/_susy-default.scss */
+cite, em, dfn {
+  font-style: italic;
+}
+
+/* line 67, ../../app/stylesheets/partials/_susy-default.scss */
+strong, dfn {
+  font-weight: bold;
+}
+
+/* line 71, ../../app/stylesheets/partials/_susy-default.scss */
+sup, sub {
+  line-height: 0;
+}
+
+/* line 75, ../../app/stylesheets/partials/_susy-default.scss */
+abbr, acronym {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+/* line 80, ../../app/stylesheets/partials/_susy-default.scss */
+address {
+  margin-bottom: 1.5em;
+  font-style: italic;
+}
+
+/* line 85, ../../app/stylesheets/partials/_susy-default.scss */
+ins {
+  text-decoration: underline;
+}
+
+/* line 89, ../../app/stylesheets/partials/_susy-default.scss */
+del {
+  text-decoration: line-through;
+}
+
+/* line 93, ../../app/stylesheets/partials/_susy-default.scss */
+pre, code, tt {
+  margin: 1.5em;
+  margin-left: -1.5em;
+  padding-left: 1.5em;
+  border-left: 1px dotted;
+  font-family: "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, Courier, monospace, sans-serif;
+}
+
+/* line 102, ../../app/stylesheets/partials/_susy-default.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  white-space: pre-line;
+  word-wrap: break-word;
+}
+
+/* line 109, ../../app/stylesheets/partials/_susy-default.scss */
+code {
+  display: block;
+}
+
+/* line 113, ../../app/stylesheets/partials/_susy-default.scss */
+q {
+  font-style: italic;
+}
+/* line 115, ../../app/stylesheets/partials/_susy-default.scss */
+q em {
+  font-style: normal;
+}
+
+/* line 120, ../../app/stylesheets/partials/_susy-default.scss */
+p {
+  margin-bottom: 1.5em;
+}
+
+/* line 124, ../../app/stylesheets/partials/_susy-default.scss */
+blockquote, q {
+  quotes: "" "";
+}
+
+/* line 128, ../../app/stylesheets/partials/_susy-default.scss */
+blockquote {
+  margin: 1.5em;
+  margin-left: -1.5em;
+  padding-left: 1.5em;
+  border-left: 1px solid;
+  font-family: Cambria, Georgia, serif;
+  font-style: italic;
+}
+
+/* line 139, ../../app/stylesheets/partials/_susy-default.scss */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+}
+
+/* Replaced --------------------------------------------------------------*/
+/* line 146, ../../app/stylesheets/partials/_susy-default.scss */
+img {
+  vertical-align: bottom;
+}
+
+/* Lists --------------------------------------------------------------*/
+/* line 168, ../../app/stylesheets/partials/_susy-default.scss */
+ol {
+  margin: 0 1.5em 1.5em 0;
+  list-style: decimal;
+}
+
+/* line 172, ../../app/stylesheets/partials/_susy-default.scss */
+ul {
+  margin: 0 1.5em 1.5em 0;
+  list-style: disc;
+}
+
+/* line 177, ../../app/stylesheets/partials/_susy-default.scss */
+li ul, li ol {
+  list-style-type: circle;
+  margin: 0 1.5em 0.75em;
+}
+
+/* line 183, ../../app/stylesheets/partials/_susy-default.scss */
+dl {
+  margin-bottom: 1.5em;
+  border-top-style: solid;
+  border-top-width: 0.063em;
+  padding-top: 1.438em;
+}
+/* line 186, ../../app/stylesheets/partials/_susy-default.scss */
+dl dt {
+  font-size: 1.125em;
+  line-height: 1.333em;
+  margin-bottom: 0.667em;
+}
+
+/* line 192, ../../app/stylesheets/partials/_susy-default.scss */
+dd {
+  margin-bottom: 1.5em;
+  border-bottom-style: solid;
+  border-bottom-width: 0.063em;
+  padding-bottom: 1.438em;
+}
+
+/* Tables --------------------------------------------------------------*/
+/* tables still need 'cellspacing="0"' in the markup */
+/* line 200, ../../app/stylesheets/partials/_susy-default.scss */
+table {
+  margin-bottom: 1.5em;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+/* line 207, ../../app/stylesheets/partials/_susy-default.scss */
+table, td, th {
+  vertical-align: top;
+}
+
+/* line 211, ../../app/stylesheets/partials/_susy-default.scss */
+th, thead th {
+  font-weight: bold;
+}
+
+/* line 215, ../../app/stylesheets/partials/_susy-default.scss */
+th, td, caption {
+  padding: 0.75em;
+  text-align: left;
+  font-weight: normal;
+}
+
+/* line 221, ../../app/stylesheets/partials/_susy-default.scss */
+th, td {
+  border-bottom-style: solid;
+  border-bottom-width: 0.063em;
+  padding-bottom: 0.688em;
+}
+
+/* line 225, ../../app/stylesheets/partials/_susy-default.scss */
+tfoot {
+  font-size: 0.875em;
+  line-height: 1.714em;
+}
+
+/* line 229, ../../app/stylesheets/partials/_susy-default.scss */
+caption {
+  font-size: 1.5em;
+  line-height: 1em;
+  margin-bottom: 1em;
+}
+
+/* Forms --------------------------------------------------------------*/
+/* line 236, ../../app/stylesheets/partials/_susy-default.scss */
+fieldset {
+  margin-bottom: 1.5em;
+  border-style: solid;
+  border-width: 0.063em;
+  padding: 1.438em;
+}
+
+/* line 241, ../../app/stylesheets/partials/_susy-default.scss */
+legend {
+  font-size: 1.125em;
+  line-height: 1.333em;
+  font-weight: bold;
+}
+
+/* line 246, ../../app/stylesheets/partials/_susy-default.scss */
+label {
+  font-weight: bold;
+}
+
+/* line 250, ../../app/stylesheets/partials/_susy-default.scss */
+textarea, input:not([type="radio"]) {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* line 6, ../../app/stylesheets/partials/_base-styles.scss */
 body, select, input, textarea {
   color: #4c4c4c;
 }
 
-/* line 6, ../../app/stylesheets/partials/_base-styles.scss */
+/* line 8, ../../app/stylesheets/partials/_base-styles.scss */
 html {
   overflow-y: scroll;
 }
 
-/* line 8, ../../app/stylesheets/partials/_base-styles.scss */
-a, a:active, a:visited {
-  color: #607890;
-}
-
-/* line 9, ../../app/stylesheets/partials/_base-styles.scss */
-a:hover {
-  color: #003366;
-}
-
-/* line 11, ../../app/stylesheets/partials/_base-styles.scss */
-ul, ol {
-  margin-left: 1.8em;
-}
-
-/* line 12, ../../app/stylesheets/partials/_base-styles.scss */
-ol {
-  list-style-type: decimal;
-}
-
-/* line 14, ../../app/stylesheets/partials/_base-styles.scss */
-td, td img {
+/* line 10, ../../app/stylesheets/partials/_base-styles.scss */
+td img {
   vertical-align: top;
 }
 
-/* line 16, ../../app/stylesheets/partials/_base-styles.scss */
+/* line 12, ../../app/stylesheets/partials/_base-styles.scss */
 sub {
   vertical-align: sub;
   font-size: smaller;
 }
 
-/* line 18, ../../app/stylesheets/partials/_base-styles.scss */
+/* line 14, ../../app/stylesheets/partials/_base-styles.scss */
 sup {
   vertical-align: super;
   font-size: smaller;
@@ -250,15 +514,6 @@ sup {
 /* line 60, ../../../../../../Library/Ruby/Gems/1.8/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_styles.scss */
 a:hover, a:active {
   outline: none;
-}
-
-/* line 65, ../../../../../../Library/Ruby/Gems/1.8/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_styles.scss */
-pre {
-  padding: 15px;
-  white-space: pre;
-  white-space: pre-wrap;
-  white-space: pre-line;
-  word-wrap: break-word;
 }
 
 /* line 77, ../../../../../../Library/Ruby/Gems/1.8/gems/html5-boilerplate-0.2.4/stylesheets/html5-boilerplate/_styles.scss */
