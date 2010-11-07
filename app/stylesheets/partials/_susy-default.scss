@@ -250,5 +250,5 @@ textarea, input:not([type="radio"]) {
   // box-sizing will help us control the width of inputs
   // which are otherwise very hard to manage in the grid.
   @include box-sizing(border-box);
-  width: 100%;
+  //width: 100%;
 }
