@@ -1,17 +1,13 @@
 //--------------------------------
 // Minimal Base Styles, Normally needs to be customized
 //--------------------------------
+
+@import "susy-default";
 body, select, input, textarea { color: $font-color; }
 
 html { @include force-scrollbar; }
 
-a, a:active, a:visited { color: $link-color; }
-a:hover { color: $link-hover-color; }
-
-ul, ol { margin-left: $list-left-margin; }
-ol { list-style-type: decimal; }
-
-td, td img { vertical-align: top; }
+td img { vertical-align: top; }
 
 sub { @include sub; }
 
@@ -19,7 +15,7 @@ sup { @include sup; }
 
 @include accessible-focus;
 
-@include quoted-pre;
+//@include quoted-pre;
 
 @include align-input-labels;
 
@@ -30,6 +26,7 @@ sup { @include sup; }
 @include webkit-tap-highlight;
 
 @include ie-hacks;
+
 
 /* embed special fonts */
 @font-face {
