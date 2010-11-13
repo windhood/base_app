@@ -3,8 +3,13 @@ class ApplicationController < ActionController::Base
   
   rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
   rescue_from NoMethodError, :with => :show_error
+  before_filter :set_locale
   
 private
+  def set_locale
+    # if params[:locale] is nil then I18n.default_locale will be used
+    I18n.locale = params[:locale]
+  end
   def show_error(exception); render :text => exception.message; end
   
   def record_not_found

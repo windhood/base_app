@@ -1,0 +1,5 @@
+# Chinese (China) translations for Ruby on Rails 
+# by tsechingho (http://github.com/tsechingho)
+
+"zh-CN":
+  hello: "欢迎您"

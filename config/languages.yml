@@ -1,0 +1,4 @@
+default: 'zh-CN'
+available:
+  en: 'English'
+  zh-CN: 'Chinese'
