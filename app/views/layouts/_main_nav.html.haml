@@ -1,5 +1,5 @@
 %ul
   %li= link_to t('.home'), root_path, :id => 'home'
-  %li= link_to t('.signin'), '/users/sign_in', :id => 'signin'    
+  %li= link_to t('.signin'), new_session_path(:user), :id => 'signin'    
   %li= link_to t('.contact'), contact_path, :id => 'contact'
   %li= link_to t('.about'), about_path, :id => 'about'
