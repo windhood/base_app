@@ -3,3 +3,13 @@
 
 en:
   hello: "Hello world"
+  layouts:
+    main_nav:
+      view_profile: "view profile"
+      edit_profile: "edit profile"
+      account_settings: "account settings"
+      logout: "logout"
+      contact: "Contact"
+      about: "About"
+      home: "Home"
+      signin: "Sign In"
