@@ -23,6 +23,9 @@ gem 'html5-boilerplate'
 gem 'compass-susy-plugin'
 gem 'maruku', '>= 0.5.9'
 
+# active_admin
+gem 'activeadmin', :git => 'https://github.com/gregbell/active_admin.git'
+
 # Deploy 
 gem 'inploy', '>=1.6.8'
 gem 'heroku'

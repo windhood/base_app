@@ -1,4 +1,8 @@
 BaseApp::Application.routes.draw do
+  devise_for :admin_users, :path => 'admin'
+
+  ActiveAdmin.routes(self)
+
   #get "pages/home"
   #get "pages/contact"  
   #get "pages/about"
@@ -6,7 +10,7 @@ BaseApp::Application.routes.draw do
   match '/contact', :to => 'pages#contact'
   match '/about',   :to => 'pages#about'
 
-  devise_for :admins
+  #devise_for :admins
 
   devise_for :users
   
