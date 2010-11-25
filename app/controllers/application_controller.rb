@@ -1,11 +1,18 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  
+  layout :layout_by_resource    
   rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
   rescue_from NoMethodError, :with => :show_error
   before_filter :set_locale
   
 private
+  def layout_by_resource
+    if devise_controller? && resource_name == :admin_user
+      "active_admin"
+    else
+      "application"
+    end
+  end
   def set_locale
     # if params[:locale] is nil then I18n.default_locale will be used
     I18n.locale = params[:locale]
