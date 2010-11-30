@@ -37,7 +37,8 @@ BaseApp::Application.configure do
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
   
-  config.action_mailer.default_url_options = { :host => 'yourhost.com' }
+  # Heroku will take care, if deployed to other server, you need config it
+  #config.action_mailer.default_url_options = { :host => 'yourhost.com' }
   ### ActionMailer Config
   # Setup for production - deliveries, no errors raised
   config.action_mailer.delivery_method = :smtp
