@@ -47,6 +47,7 @@ GEM
       activesupport (= 3.0.1)
     activesupport (3.0.1)
     addressable (2.2.2)
+    annotate-models (1.0.4)
     arel (1.0.1)
       activesupport (~> 3.0.0)
     arrayfields (4.7.4)
@@ -91,9 +92,9 @@ GEM
       cucumber (>= 0.8.0)
     culerity (0.2.12)
     database_cleaner (0.5.2)
-    devise (1.1.3)
+    devise (1.1.5)
       bcrypt-ruby (~> 2.1.2)
-      warden (~> 0.10.7)
+      warden (~> 1.0.2)
     devise_invitable (0.3.4)
       devise (~> 1.1.0)
     diff-lcs (1.1.2)
@@ -187,6 +188,11 @@ GEM
       rake
     newrelic_rpm (2.13.2)
     nokogiri (1.4.3.1)
+    pickle (0.4.3)
+      cucumber (>= 0.8)
+      rake
+      rspec (>= 1.3)
+      yard
     polyglot (0.3.1)
     progressbar (0.9.0)
     rack (1.2.1)
@@ -230,6 +236,7 @@ GEM
     rspec-core (2.1.0)
     rspec-expectations (2.1.0)
       diff-lcs (~> 1.1.2)
+    rspec-instafail (0.1.5)
     rspec-mocks (2.1.0)
     rspec-rails (2.1.0)
       rspec (~> 2.1.0)
@@ -255,7 +262,7 @@ GEM
     treetop (1.4.8)
       polyglot (>= 0.3.1)
     tzinfo (0.3.23)
-    warden (0.10.7)
+    warden (1.0.2)
       rack (>= 1.0.0)
     webmock (1.4.0)
       addressable (>= 2.2.2)
@@ -263,19 +270,21 @@ GEM
     will_paginate (3.0.pre2)
     xpath (0.1.2)
       nokogiri (~> 1.3)
+    yard (0.6.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   activeadmin!
+  annotate-models (= 1.0.4)
   bundler (>= 1.0.0)
   capybara (>= 0.4.0)
   compass (>= 0.10.5)
   compass-susy-plugin
   cucumber-rails (= 0.3.2)
-  database_cleaner
-  devise (>= 1.1.3)
+  database_cleaner (= 0.5.2)
+  devise (>= 1.1.4)
   devise_invitable (~> 0.3.4)
   factory_girl_generator (>= 0.0.1)
   factory_girl_rails
@@ -288,16 +297,18 @@ DEPENDENCIES
   html5-boilerplate
   inherited_resources (>= 1.1.2)
   inploy (>= 1.6.8)
-  launchy (>= 0.3.7)
+  launchy
   maruku (>= 0.5.9)
   metric_fu (>= 1.5.1)
   mocha
   newrelic_rpm (>= 2.12.3)
+  pickle
   rails (= 3.0.1)
   rails3-generators!
   rspec (>= 2.1.0)
+  rspec-instafail
   rspec-rails (>= 2.1.0)
-  spork (>= 0.8.4)
+  spork
   sqlite3-ruby
   webmock
   will_paginate (>= 3.0.pre2)

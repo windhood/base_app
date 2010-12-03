@@ -9,13 +9,22 @@ class DeviseCreateUsers < ActiveRecord::Migration
       # t.confirmable
       # t.lockable :lock_strategy => :failed_attempts, :unlock_strategy => :both
       # t.token_authenticatable
-
+      
+      t.string :username, :null => false
+      t.text :bio
+      t.string :name
 
       t.timestamps
     end
-
+    
+    User.create!(:email => 'test@windhood.com', 
+                 :password => 'start123', 
+                 :password_confirmation => 'start123', 
+                 :username => 'test')
+                      
     add_index :users, :email,                :unique => true
     add_index :users, :reset_password_token, :unique => true
+    add_index :users, :username,             :unique => true
     # add_index :users, :confirmation_token,   :unique => true
     # add_index :users, :unlock_token,         :unique => true
   end

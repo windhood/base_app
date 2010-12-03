@@ -4,7 +4,7 @@ gem 'rails', '3.0.1'
 gem 'bundler', '>= 1.0.0'
 
 #Security
-gem 'devise', '>=1.1.3'
+gem 'devise', '>=1.1.4'
 #gem 'devise-mongo_mapper', :git => 'git://github.com/collectiveidea/devise-mongo_mapper'
 gem 'devise_invitable', '~> 0.3.4'
 
@@ -37,12 +37,14 @@ gem 'newrelic_rpm', '>=2.12.3', :group => :production
 gem 'hoptoad_notifier', '>=2.3.6'
 gem 'rails3-generators', :git => 'git://github.com/indirect/rails3-generators.git'
 gem 'metric_fu', '>=1.5.1', :group => :development
+gem 'annotate-models', '1.0.4', :group => :development
 
 group :test, :development do
   gem 'factory_girl_rails'
   gem 'factory_girl_generator', '>= 0.0.1'
   #gem 'ruby-debug19' if RUBY_VERSION.include? "1.9"
   #gem 'ruby-debug' if RUBY_VERSION.include? "1.8"
+  gem 'launchy'
 end
 
 group :test do
@@ -51,8 +53,15 @@ group :test do
   gem 'rspec', '>= 2.1.0'
   gem 'rspec-rails', '>= 2.1.0'
   gem 'mocha'
-  gem 'database_cleaner'
-  gem 'webmock'
-  gem 'launchy', '>=0.3.7'
-  gem 'spork', '>=0.8.4'
+  gem 'database_cleaner', '0.5.2'
+  gem 'webmock', :require => false
+  #gem 'jasmine', :path => 'vendor/gems/jasmine', :require => false
+  #gem 'mongrel', :require => false if RUBY_VERSION.include? "1.8"
+  gem 'rspec-instafail', :require => false
+  gem 'spork'
+  gem 'pickle'
+end
+
+group :deployment do
+  #gem 'sprinkle', :git => 'git://github.com/rsofaer/sprinkle.git'
 end
