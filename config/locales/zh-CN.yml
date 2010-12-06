@@ -3,6 +3,7 @@
 
 "zh-CN":
   hello: "欢迎您"
+  app_name: "BaseApp"
   layouts:
     application:
       main_nav:

@@ -45,6 +45,7 @@ group :test, :development do
   #gem 'ruby-debug19' if RUBY_VERSION.include? "1.9"
   #gem 'ruby-debug' if RUBY_VERSION.include? "1.8"
   gem 'launchy'
+  gem 'spork', '>=0.9.0.rc2'
 end
 
 group :test do
@@ -58,7 +59,6 @@ group :test do
   #gem 'jasmine', :path => 'vendor/gems/jasmine', :require => false
   #gem 'mongrel', :require => false if RUBY_VERSION.include? "1.8"
   gem 'rspec-instafail', :require => false
-  gem 'spork'
   gem 'pickle'
 end
 

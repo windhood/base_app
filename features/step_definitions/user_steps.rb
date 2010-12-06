@@ -4,5 +4,5 @@ Given /^a user with email "([^\"]*)" and password "([^\"]*)"$/ do |username, pas
 end
 
 When /^I click on my name$/ do
-  click_link("#{@me.first_name} #{@me.last_name}")
+  click_link("#{@me.name}")
 end

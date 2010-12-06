@@ -1,4 +1,27 @@
 -# %section#branding
 -#  .logo#logo <strong><a href="/" title="Home">BaseApp</a></strong>
 -#  .tagline#tagline= content_for?(:header) ? yield(:header) : controller.controller_name.titleize + "-"+ controller.action_name.titleize
-%h2 <a href="/">BaseApp! <strong>Sample App</strong></a>
+
+%h2= link_to t('app_name'), root_path
+
+- if !current_user 
+  .right
+    %ul#landing_nav
+      %li= link_to t('.login'), new_user_session_path, :class => 'login'
+      %li= link_to t('.signup'), new_user_registration_path, :class => 'signup'
+
+- elsif (current_user || !@landing_page)
+  #global_search
+    = form_tag(users_path, :method => 'get', :id => "global_search_form") do
+      = text_field_tag 'q', nil, :placeholder => t('search'), :type => 'search', :results => 5
+
+  %ul#user_menu
+    .right
+      ▼
+    .avatar
+      = owner_image_tag(:thumb_small)
+    = link_to current_user.name, '#'
+    %li= link_to t('.view_profile'), '#'
+    %li= link_to t('.edit_profile'), '#'
+    %li= link_to t('.account_settings'), '#'
+    %li= link_to t('.logout'), destroy_user_session_path
