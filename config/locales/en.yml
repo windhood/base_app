@@ -3,6 +3,7 @@
 
 en:
   app_name: "BaseApp"
+  search: "Search"
   layouts:
     main_nav:
       view_profile: "view profile"
@@ -14,3 +15,10 @@ en:
       home: "Home"
       signin: "Sign In"
       signout: "Sign Out"
+    header:
+      signin: "Sign In"
+      signup: "Sign Up"
+      logout: "Logout"
+      view_profile: "View Profile"
+      edit_profile: "Edit Profile"
+      account_settings: "Account Settings"

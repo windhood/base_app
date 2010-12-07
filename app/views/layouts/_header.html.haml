@@ -7,7 +7,7 @@
 - if !current_user 
   .right
     %ul#landing_nav
-      %li= link_to t('.login'), new_user_session_path, :class => 'login'
+      %li= link_to t('.signin'), new_user_session_path, :class => 'login'
       %li= link_to t('.signup'), new_user_registration_path, :class => 'signup'
 
 - elsif (current_user || !@landing_page)
@@ -19,7 +19,7 @@
     .right
       ▼
     .avatar
-      = owner_image_tag(:thumb_small)
+      = user_image_tag(:thumb_small)
     = link_to current_user.name, '#'
     %li= link_to t('.view_profile'), '#'
     %li= link_to t('.edit_profile'), '#'

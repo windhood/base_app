@@ -23,4 +23,15 @@ header {
   	  font-weight: normal;
   	}  
 	}
+	
+  ul#user_menu .avatar {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    display: block; 
+  }
 }
+
+

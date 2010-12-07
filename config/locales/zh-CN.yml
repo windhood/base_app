@@ -4,6 +4,7 @@
 "zh-CN":
   hello: "欢迎您"
   app_name: "BaseApp"
+  search: "Search"
   layouts:
     application:
       main_nav:
@@ -16,4 +17,12 @@
         home: "Home"
         signin: "Sign In"
         signout: "Sign Out"
+
+      header:
+        signin: "Sign In"
+        signup: "Sign Up"
+        logout: "Logout"
+        view_profile: "View Profile"
+        edit_profile: "Edit Profile"
+        account_settings: "Account Settings"
   

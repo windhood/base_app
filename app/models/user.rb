@@ -29,6 +29,65 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  after_validation :strip_names
+  validates_length_of :name, :maximum => 100
+
+  before_save :strip_names
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :name, :bio
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :name, :bio,
+    :image_url, :image_url_medium, :image_url_small
+  
+  def image_url(size = :thumb_large)
+    if size == :thumb_medium
+      self[:image_url_medium]
+    elsif size == :thumb_small
+      self[:image_url_small]
+    else
+      self[:image_url]
+    end
+  end
+
+
+  def image_url= url
+    return image_url if url == ''
+    if url.nil? || url.match(/^https?:\/\//)
+      super(url)
+    else
+      super(absolutify_local_url(url))
+    end
+  end
+
+  def image_url_small= url
+    return image_url if url == ''
+    if url.nil? || url.match(/^https?:\/\//)
+      super(url)
+    else
+      super(absolutify_local_url(url))
+    end
+  end
+
+  def image_url_medium= url
+    return image_url if url == ''
+    if url.nil? || url.match(/^https?:\/\//)
+      super(url)
+    else
+      super(absolutify_local_url(url))
+    end
+  end
+
+  def date= params
+    if ['year', 'month', 'day'].all? { |key| params[key].present? }
+      date = Date.new(params['year'].to_i, params['month'].to_i, params['day'].to_i)
+      self.birthday = date
+    elsif ['year', 'month', 'day'].all? { |key| params[key] == '' }
+      self.birthday = nil
+    end
+  end
+
+  protected
+
+  def strip_names
+    self.name.strip! if self.name
+  end
+  
 end
