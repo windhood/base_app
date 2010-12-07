@@ -44,3 +44,67 @@ sup { @include sup; }
 	font-weight: normal;
 	font-style: normal;
 }
+
+/* avatar */
+.avatar {
+  width: 50px;
+  height: 50px; 
+}
+
+/* errors, notices, warnings etc */
+#flash_notice,
+#flash_error,
+#flash_alert {
+  z-index: 100;
+  position: fixed;
+  color: white;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  padding: 1em;
+  -moz-box-shadow: 0 1px 2px #333333;
+  -webkit-box-shadow: 0 1px 2px #333333;
+  font-weight: bold; 
+}
+
+#flash_notice {
+  background-color: #7ef04d;
+  background-color: rgba(126, 240, 77, 0.98);
+  text-shadow: 0 1px #66cc66; 
+}
+
+#flash_error,
+#flash_alert {
+  background-color: #d0312b;
+  background-color: rgba(208, 49, 43, 0.98);
+  border-bottom: solid 1px #cc6666;
+  text-shadow: 0 1px #cc6666; 
+}
+
+.fieldWithErrors {
+  display: inline; 
+}
+
+.error_messages {
+  width: 400px;
+  border: 2px solid #cf0000;
+  padding: 0;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  font-size: 12px; 
+}
+  .error_messages h2 {
+    text-align: left;
+    padding: 5px 5px 5px 15px;
+    margin: 0;
+    font-weight: bold;
+    font-size: 12px;
+    background-color: #cc0000; 
+  }
+  .error_messages p {
+    margin: 8px 10px; 
+  }
+  .error_messages ul {
+    margin: 0; 
+  }
