@@ -84,6 +84,13 @@ class User < ActiveRecord::Base
     end
   end
 
+  def display_name
+    if name.blank?
+      username
+    else
+      name
+    end
+  end
   protected
 
   def strip_names
