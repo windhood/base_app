@@ -20,7 +20,7 @@
       ▼
     .avatar
       = user_image_tag(:thumb_small)
-    = link_to current_user.name, '#'
+    = link_to current_user.display_name, '#'
     %li= link_to t('.view_profile'), '#'
     %li= link_to t('.edit_profile'), '#'
     %li= link_to t('.account_settings'), '#'

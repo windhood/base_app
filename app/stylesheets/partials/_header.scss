@@ -23,14 +23,18 @@ header {
   	  font-weight: normal;
   	}  
 	}
-	
+	ul#user_menu .right {
+        right: 5px; 
+        float: right;  
+        display: inline;      
+  }
   ul#user_menu .avatar {
     height: 20px;
     width: 20px;
-    position: absolute;
+    float: right;
     left: 2px;
     top: 2px;
-    display: block; 
+    display: inline; 
   }
 }
 
