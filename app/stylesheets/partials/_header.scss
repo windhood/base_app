@@ -1,40 +1,109 @@
 header {
-  //@include adjust-font-size-to(32px);
-  //@include leader(1,32px);
-  //@include trailer(1,32px);
-  //h1 {
-  //  @include adjust-font-size-to(32px);
-  //}
-  h2 {
-    a:link, a:visited {
-  		color: $base;
-  		display: block;
-  		font-weight: bold;
-  		margin: 0 0 .6em 0;
-  		text-decoration: none;
-  	}
-  	a:hover, a:active {
-  		background: none;
-  		color: $alt;
-  		text-shadow: none;
-  	}
-    strong {
-  	  @include adjust-font-size-to(8px);
-  	  font-weight: normal;
-  	}  
+  z-index: 4;
+  position: relative;
+  min-height: 40px;
+  
+  color: #CCC;
+  
+  a:link, a:visited {
+		color: $header-link-color;
+		margin: 0 0 .6em 0;
+		text-decoration: none;
 	}
-	ul#user_menu .right {
-        right: 5px; 
-        float: right;  
-        display: inline;      
+	a:hover, a:active {
+		background: none;
+		color: $alt;
+		text-shadow: none;
+	}
+	
+  .landing {
+    height: 45px;    
+  }
+  
+  #landing_nav {
+    position: absolute;
+    right: 0;
+    top: 0px;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+ 
+    li {
+      display: inline;
+      margin-right: 0.5em;
+    }
+  }
+  
+	
+	ul#user_menu {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-shadow: 0 1px 0 #000;
+    font-size: 0.75em;
+    width: auto;
+
+    cursor: pointer;
+
+    z-index: 10;
+    padding: 5px 5px 5px 30px;
+    margin: -2px -5px 0 0;
+
+    background-color: #000;
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+
+    position: absolute;
+    display: inline;
+
+    top: 5px;
+    right: 0;
+    
+    a {
+      padding-right: 15px;
+      text-decoration: none;
+    }
+    
+    li {
+      display: none;
+      a {
+        display: block;
+        padding: 4px;
+        height: 100%;
+      }
+      a:hover {
+        background-color: #107FC9;
+        color: #fff;
+      }
+    }
+  }
+  ul#user_menu.active {
+    margin-top: -3px;
+    margin-right: -6px;
+    background-color: #000;
+    border: 1px solid #999;
+    box-shadow: 0 1px 2px #333;
+    -webkit-box-shadow: 0 1px 2px #333;
+    -moz-box-shadow: 0 1px 2px #333;
+    li {
+      display: block;
+    }
+  }
+  
+  #drop_down_symbol {
+    position: absolute;
+    right: 5px;
+    font-size: 0.75em;
   }
   ul#user_menu .avatar {
     height: 20px;
     width: 20px;
-    float: right;
+    position: absolute;
     left: 2px;
     top: 2px;
-    display: inline; 
+    display: block; 
   }
 }
 

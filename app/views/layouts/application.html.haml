@@ -4,6 +4,12 @@
   = render 'layouts/head'
   %body{:class => "#{controller.controller_name}" }
     #container
+      - unless @landing_page
+        #notification
+
+        - flash.each do |name, msg|
+          = content_tag :div, msg, :id => "flash_#{name}"
+      
       %header#header{:class=>('landing' unless current_user)}
         = render 'layouts/header'
       %nav#main_nav

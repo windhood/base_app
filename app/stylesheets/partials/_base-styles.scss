@@ -108,3 +108,8 @@ sup { @include sup; }
   .error_messages ul {
     margin: 0; 
   }
+.header_logo {
+    position: relative;
+    top: 4px;
+    margin-right: 1em;
+}
