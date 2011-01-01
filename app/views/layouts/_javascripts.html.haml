@@ -11,8 +11,9 @@
 :javascript
   !window.jQuery && document.write(unescape('%3Cscript src="/javascripts/jquery-1.4.2.min.js"%3E%3C/script%3E'))
   
-= javascript_include_tag 'rails', 'plugins', 'application'
-
+-# = javascript_include_tag 'rails', 'plugins', 'application'
+- if current_user
+  = include_javascripts :main
 /[if lt IE 7 ]
   = javascript_include_tag 'dd_belatedpng'
   :javascript

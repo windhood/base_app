@@ -22,6 +22,7 @@ gem 'html5-boilerplate'
 # gem 'compass-960-plugin'
 gem 'compass-susy-plugin'
 gem 'maruku', '>= 0.5.9'
+gem 'jammit'
 
 # active_admin
 gem 'activeadmin', :git => 'https://github.com/gregbell/active_admin.git'

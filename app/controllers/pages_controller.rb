@@ -1,5 +1,7 @@
 class PagesController < ApplicationController
-  def home
+  before_filter :set_landing_page
+  
+  def home    
   end
 
   def contact
@@ -7,5 +9,8 @@ class PagesController < ApplicationController
   
   def about
   end
-
+private 
+  def set_landing_page
+    @landing_page = true
+  end
 end
