@@ -5,24 +5,22 @@
   hello: "欢迎您"
   app_name: "BaseApp"
   search: "Search"
-  layouts:
-    application:
-      main_nav:
-        view_profile: "view profile"
-        edit_profile: "edit profile"
-        account_settings: "account settings"
-        logout: "logout"
-        contact: "Contact"
-        about: "About"
-        home: "Home"
-        signin: "Sign In"
-        signout: "Sign Out"
+  layouts:    
+    main_nav:
+      view_profile: "view profile"
+      edit_profile: "edit profile"
+      account_settings: "account settings"
+      logout: "logout"
+      contact: "Contact"
+      about: "About"
+      home: "Home"
+      signin: "Sign In"
+      signout: "Sign Out"
 
-      header:
-        signin: "Sign In"
-        signup: "Sign Up"
-        logout: "Logout"
-        view_profile: "View Profile"
-        edit_profile: "Edit Profile"
-        account_settings: "Account Settings"
-  
+    header:
+      signin: "Sign In"
+      signup: "Sign Up"
+      logout: "Logout"
+      view_profile: "View Profile"
+      edit_profile: "Edit Profile"
+      account_settings: "Account Settings"
