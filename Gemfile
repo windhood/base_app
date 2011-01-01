@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.1'
+gem 'rails', '3.0.3'
 gem 'bundler', '>= 1.0.0'
 
 #Security
@@ -25,7 +25,7 @@ gem 'maruku', '>= 0.5.9'
 gem 'jammit'
 
 # active_admin
-gem 'activeadmin', :git => 'https://github.com/gregbell/active_admin.git'
+gem 'activeadmin', :git => 'git@github.com:windhood/active_admin.git'
 
 # Deploy 
 gem 'inploy', '>=1.6.8'
