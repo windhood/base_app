@@ -40,6 +40,7 @@ gem 'rails3-generators', :git => 'git://github.com/indirect/rails3-generators.gi
 gem 'metric_fu', '>=1.5.1', :group => :development
 gem 'annotate-models', '1.0.4', :group => :development
 
+gem 'hpricot', :group => :development #used for generating devise views
 group :test, :development do
   gem 'factory_girl_rails'
   gem 'factory_girl_generator', '>= 0.0.1'
