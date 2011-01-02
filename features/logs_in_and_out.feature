@@ -6,7 +6,7 @@ Feature: user authentication
     And I fill in "Email" with "ohai@test.com"
     And I fill in "Password" with "secret"
     And I press "Sign in"
-    Then I should be on the homepage
+    Then I should be on the getting started page
 
   @javascript
   Scenario: user logs out

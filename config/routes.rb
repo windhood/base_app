@@ -13,7 +13,18 @@ BaseApp::Application.routes.draw do
   #devise_for :admins
 
   devise_for :users
-  resources  :users
+  
+  # added public route to user
+  match 'public/:username',          :to => 'users#public'
+  match 'getting_started',           :to => 'users#getting_started', :as => 'getting_started'
+  match 'getting_started_completed', :to => 'users#getting_started_completed'
+  match 'users/export',              :to => 'users#export'
+  match 'users/export_photos',       :to => 'users#export_photos'
+  match 'login',                     :to => 'users#sign_up'
+  resources :users,                  :except => [:create, :new, :show]
+  
+  match 'my_dashboard',              :to => 'users#my_dashboard', :as => 'user_root'
+  
   
   root :to => "pages#home"
 

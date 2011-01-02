@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20101204003047
+# Schema version: 20101207001405
 #
 # Table name: users
 #
@@ -20,7 +20,10 @@
 #  name                 :string(255)
 #  created_at           :datetime
 #  updated_at           :datetime
-#  getting_started      :
+#  getting_started      :boolean         default(TRUE)
+#  image_url            :string(255)
+#  image_url_medium     :string(255)
+#  image_url_small      :string(255)
 #
 
 class User < ActiveRecord::Base
@@ -28,11 +31,21 @@ class User < ActiveRecord::Base
   # :token_authenticatable, :confirmable, :lockable and :timeoutable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-
+  
+  before_validation :strip_and_downcase_username, :on => :create
   after_validation :strip_names
+  
+  validates_presence_of :username
+  validates_uniqueness_of :username, :case_sensitive => false
+  validates_format_of :username, :with => /\A[A-Za-z0-9_]+\z/
+  validates_length_of :username, :maximum => 50
   validates_length_of :name, :maximum => 100
-
+  validates :email, :presence => true,
+                    :format   => { :with => /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
+  
   before_save :strip_names
+  
+  
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :name, :bio,
     :image_url, :image_url_medium, :image_url_small
@@ -95,6 +108,13 @@ class User < ActiveRecord::Base
 
   def strip_names
     self.name.strip! if self.name
+  end
+  
+  def strip_and_downcase_username
+    if username.present?
+      username.strip!
+      username.downcase!
+    end
   end
   
 end
