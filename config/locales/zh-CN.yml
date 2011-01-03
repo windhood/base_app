@@ -24,3 +24,55 @@
       view_profile: "View Profile"
       edit_profile: "Edit Profile"
       account_settings: "Account Settings"
+      
+  users:
+    edit:
+      export_data: "Export Data"
+      close_account: "Close Account"
+      change_language: "Change Language"
+      change_password: "Change Password"
+      new_password: "New Password"
+      download_xml: "download my xml"
+      download_photos: "download my photos"
+      your_email: "Your email"
+      edit_account: "Edit account"
+      email_notifications: "Email notifications"
+      receive_email_notifications: "Receive email notificaions?"
+      change: "Change"
+      destroy: "Account successfully closed."
+    getting_started:
+      welcome: "Welcome to BaseApp!"
+      signup_steps: "Finish your sign up by completing these three steps:"
+      edit_profile: "Edit your profile"
+      define_aspects: "Define your aspects"
+      connect_services: "Connect your other services"
+      finished: "Finished!"
+      skip: "skip getting started"
+      save_and_continue: "Save and continue"
+      step_2:
+        your_aspects: "Your aspects"
+        description: "Tell Diaspora what different aspects of you are seen by different contacts. You can manage these later through your account menu at the top right. Your aspects are unique to you and not visible by others."
+        aspect_name: "Aspect name"
+        add: "Add"
+        your_inviter: "Here are the people who are waiting for you:"
+        drag_to_add:  "Drag them to the aspect of yourself they know"
+        no_requests: "You have no requests"
+      step_3:
+        your_services: "Your services"
+        description: 'You are able to connect your existing social networks to your Diaspora account. You will be able to post publically through your Home page when you select “make public"'
+      step_4:
+        set_up: "You're all set up, %{name}!"
+        ready_to_share: "You're now ready to start sharing with "
+        continue: "Continue on to your Home page, an overview of all of your aspects."
+        change_profile: "You can edit your profile and manage your connected services at any time through "
+        user_menu: "the user menu located at the top right."
+        manage_aspects: "You can also add contacts while on any aspect page."
+        finish: "Finish"
+    update:
+      password_changed: "Password Changed"
+      password_not_changed: "Password Change Failed"
+      language_changed: "Language Changed"
+      language_not_changed: "Language Change Failed"
+      email_notifications_changed: "Email notifications changed"
+    public:
+      does_not_exist: "User %{username} does not exist!"

@@ -13,10 +13,15 @@ body {
 
 a {
   &:link, &:visited {
-    color: $alt;
+    color: $link-color;
+    text-decoration: none;
   }
-  &:focus, &:hover, &:active {
-    color: darken($alt,5);
+  &:focus, &:hover {
+    color: $link-hover-color;
+    text-decoration: none;
+  }
+  &:active {
+    color: $link-active-color;
     text-decoration: none;
   }
   img {

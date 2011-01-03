@@ -214,101 +214,107 @@ body {
 /* Links --------------------------------------------------------------*/
 /* line 15, ../../app/stylesheets/partials/_susy-default.scss */
 a:link, a:visited {
-  color: #005498;
-}
-/* line 18, ../../app/stylesheets/partials/_susy-default.scss */
-a:focus, a:hover, a:active {
-  color: #00467f;
+  color: #107fc9;
   text-decoration: none;
 }
-/* line 22, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 19, ../../app/stylesheets/partials/_susy-default.scss */
+a:focus, a:hover {
+  color: #4ccae0;
+  text-decoration: none;
+}
+/* line 23, ../../app/stylesheets/partials/_susy-default.scss */
+a:active {
+  color: #005d9c;
+  text-decoration: none;
+}
+/* line 27, ../../app/stylesheets/partials/_susy-default.scss */
 a img {
   border: none;
 }
 
 /* Headings --------------------------------------------------------------*/
-/* line 29, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 34, ../../app/stylesheets/partials/_susy-default.scss */
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
-/* line 31, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 36, ../../app/stylesheets/partials/_susy-default.scss */
 h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {
   margin: 0;
 }
 
-/* line 36, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 41, ../../app/stylesheets/partials/_susy-default.scss */
 h1 {
   font-size: 3em;
   line-height: 1em;
   margin-bottom: 0.5em;
 }
 
-/* line 41, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 46, ../../app/stylesheets/partials/_susy-default.scss */
 h2 {
   font-size: 2em;
   line-height: 1.5em;
   margin-bottom: 0.75em;
 }
 
-/* line 46, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 51, ../../app/stylesheets/partials/_susy-default.scss */
 h3 {
   font-size: 1.5em;
   line-height: 1em;
   margin-bottom: 1em;
 }
 
-/* line 51, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 56, ../../app/stylesheets/partials/_susy-default.scss */
 h4 {
   font-size: 1.125em;
   line-height: 1.333em;
   margin-bottom: 1.333em;
 }
 
-/* line 56, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 61, ../../app/stylesheets/partials/_susy-default.scss */
 h5, h6 {
   margin-bottom: 1.5em;
   font-weight: bold;
 }
 
 /* Text --------------------------------------------------------------*/
-/* line 63, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 68, ../../app/stylesheets/partials/_susy-default.scss */
 cite, em, dfn {
   font-style: italic;
 }
 
-/* line 67, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 72, ../../app/stylesheets/partials/_susy-default.scss */
 strong, dfn {
   font-weight: bold;
 }
 
-/* line 71, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 76, ../../app/stylesheets/partials/_susy-default.scss */
 sup, sub {
   line-height: 0;
 }
 
-/* line 75, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 80, ../../app/stylesheets/partials/_susy-default.scss */
 abbr, acronym {
   border-bottom: 1px dotted;
   cursor: help;
 }
 
-/* line 80, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 85, ../../app/stylesheets/partials/_susy-default.scss */
 address {
   margin-bottom: 1.5em;
   font-style: italic;
 }
 
-/* line 85, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 90, ../../app/stylesheets/partials/_susy-default.scss */
 ins {
   text-decoration: underline;
 }
 
-/* line 89, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 94, ../../app/stylesheets/partials/_susy-default.scss */
 del {
   text-decoration: line-through;
 }
 
-/* line 93, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 98, ../../app/stylesheets/partials/_susy-default.scss */
 pre, code, tt {
   margin: 1.5em;
   margin-left: -1.5em;
@@ -317,7 +323,7 @@ pre, code, tt {
   font-family: "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, Courier, monospace, sans-serif;
 }
 
-/* line 102, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 107, ../../app/stylesheets/partials/_susy-default.scss */
 pre {
   white-space: pre;
   white-space: pre-wrap;
@@ -325,31 +331,31 @@ pre {
   word-wrap: break-word;
 }
 
-/* line 109, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 114, ../../app/stylesheets/partials/_susy-default.scss */
 code {
   display: block;
 }
 
-/* line 113, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 118, ../../app/stylesheets/partials/_susy-default.scss */
 q {
   font-style: italic;
 }
-/* line 115, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 120, ../../app/stylesheets/partials/_susy-default.scss */
 q em {
   font-style: normal;
 }
 
-/* line 120, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 125, ../../app/stylesheets/partials/_susy-default.scss */
 p {
   margin-bottom: 1.5em;
 }
 
-/* line 124, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 129, ../../app/stylesheets/partials/_susy-default.scss */
 blockquote, q {
   quotes: "" "";
 }
 
-/* line 128, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 133, ../../app/stylesheets/partials/_susy-default.scss */
 blockquote {
   margin: 1.5em;
   margin-left: -1.5em;
@@ -359,51 +365,51 @@ blockquote {
   font-style: italic;
 }
 
-/* line 139, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 144, ../../app/stylesheets/partials/_susy-default.scss */
 blockquote:before, blockquote:after, q:before, q:after {
   content: "";
 }
 
 /* Replaced --------------------------------------------------------------*/
-/* line 146, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 151, ../../app/stylesheets/partials/_susy-default.scss */
 img {
   vertical-align: bottom;
 }
 
 /* Lists --------------------------------------------------------------*/
-/* line 167, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 172, ../../app/stylesheets/partials/_susy-default.scss */
 ol {
   margin: 0 1.5em 1.5em 0;
   list-style: decimal;
 }
 
-/* line 171, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 176, ../../app/stylesheets/partials/_susy-default.scss */
 ul {
   margin: 0 1.5em 1.5em 0;
   list-style: disc;
 }
 
-/* line 176, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 181, ../../app/stylesheets/partials/_susy-default.scss */
 li ul, li ol {
   list-style-type: circle;
   margin: 0 1.5em 0.75em;
 }
 
-/* line 182, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 187, ../../app/stylesheets/partials/_susy-default.scss */
 dl {
   margin-bottom: 1.5em;
   border-top-style: solid;
   border-top-width: 0.063em;
   padding-top: 1.438em;
 }
-/* line 185, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 190, ../../app/stylesheets/partials/_susy-default.scss */
 dl dt {
   font-size: 1.125em;
   line-height: 1.333em;
   margin-bottom: 0.667em;
 }
 
-/* line 191, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 196, ../../app/stylesheets/partials/_susy-default.scss */
 dd {
   margin-bottom: 1.5em;
   border-bottom-style: solid;
@@ -413,7 +419,7 @@ dd {
 
 /* Tables --------------------------------------------------------------*/
 /* tables still need 'cellspacing="0"' in the markup */
-/* line 199, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 204, ../../app/stylesheets/partials/_susy-default.scss */
 table {
   margin-bottom: 1.5em;
   width: 100%;
@@ -421,37 +427,37 @@ table {
   border-spacing: 0;
 }
 
-/* line 206, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 211, ../../app/stylesheets/partials/_susy-default.scss */
 table, td, th {
   vertical-align: top;
 }
 
-/* line 210, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 215, ../../app/stylesheets/partials/_susy-default.scss */
 th, thead th {
   font-weight: bold;
 }
 
-/* line 214, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 219, ../../app/stylesheets/partials/_susy-default.scss */
 th, td, caption {
   padding: 0.75em;
   text-align: left;
   font-weight: normal;
 }
 
-/* line 220, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 225, ../../app/stylesheets/partials/_susy-default.scss */
 th, td {
   border-bottom-style: solid;
   border-bottom-width: 0.063em;
   padding-bottom: 0.688em;
 }
 
-/* line 224, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 229, ../../app/stylesheets/partials/_susy-default.scss */
 tfoot {
   font-size: 0.875em;
   line-height: 1.714em;
 }
 
-/* line 228, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 233, ../../app/stylesheets/partials/_susy-default.scss */
 caption {
   font-size: 1.5em;
   line-height: 1em;
@@ -459,7 +465,7 @@ caption {
 }
 
 /* Forms --------------------------------------------------------------*/
-/* line 235, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 240, ../../app/stylesheets/partials/_susy-default.scss */
 fieldset {
   margin-bottom: 1.5em;
   border-style: solid;
@@ -467,19 +473,19 @@ fieldset {
   padding: 1.438em;
 }
 
-/* line 240, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 245, ../../app/stylesheets/partials/_susy-default.scss */
 legend {
   font-size: 1.125em;
   line-height: 1.333em;
   font-weight: bold;
 }
 
-/* line 245, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 250, ../../app/stylesheets/partials/_susy-default.scss */
 label {
   font-weight: bold;
 }
 
-/* line 249, ../../app/stylesheets/partials/_susy-default.scss */
+/* line 254, ../../app/stylesheets/partials/_susy-default.scss */
 textarea, input:not([type="radio"]) {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -596,15 +602,27 @@ button {
   font-style: normal;
 }
 
-/* avatar */
+/* added site specific styles */
 /* line 49, ../../app/stylesheets/partials/_base-styles.scss */
+input:not([type="submit"]), textarea {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  height: auto;
+}
+
+/* avatar */
+/* line 55, ../../app/stylesheets/partials/_base-styles.scss */
 .avatar {
   width: 50px;
   height: 50px;
 }
 
 /* errors, notices, warnings etc */
-/* line 57, ../../app/stylesheets/partials/_base-styles.scss */
+/* line 63, ../../app/stylesheets/partials/_base-styles.scss */
 #flash_notice,
 #flash_error,
 #flash_alert {
@@ -620,14 +638,14 @@ button {
   font-weight: bold;
 }
 
-/* line 70, ../../app/stylesheets/partials/_base-styles.scss */
+/* line 76, ../../app/stylesheets/partials/_base-styles.scss */
 #flash_notice {
   background-color: #7ef04d;
   background-color: rgba(126, 240, 77, 0.98);
   text-shadow: 0 1px #66cc66;
 }
 
-/* line 77, ../../app/stylesheets/partials/_base-styles.scss */
+/* line 83, ../../app/stylesheets/partials/_base-styles.scss */
 #flash_error,
 #flash_alert {
   background-color: #d0312b;
@@ -636,12 +654,12 @@ button {
   text-shadow: 0 1px #cc6666;
 }
 
-/* line 84, ../../app/stylesheets/partials/_base-styles.scss */
+/* line 90, ../../app/stylesheets/partials/_base-styles.scss */
 .fieldWithErrors {
   display: inline;
 }
 
-/* line 88, ../../app/stylesheets/partials/_base-styles.scss */
+/* line 94, ../../app/stylesheets/partials/_base-styles.scss */
 .error_messages {
   width: 400px;
   border: 2px solid #cf0000;
@@ -652,7 +670,7 @@ button {
   font-size: 12px;
 }
 
-/* line 97, ../../app/stylesheets/partials/_base-styles.scss */
+/* line 103, ../../app/stylesheets/partials/_base-styles.scss */
 .error_messages h2 {
   text-align: left;
   padding: 5px 5px 5px 15px;
@@ -662,17 +680,17 @@ button {
   background-color: #cc0000;
 }
 
-/* line 105, ../../app/stylesheets/partials/_base-styles.scss */
+/* line 111, ../../app/stylesheets/partials/_base-styles.scss */
 .error_messages p {
   margin: 8px 10px;
 }
 
-/* line 108, ../../app/stylesheets/partials/_base-styles.scss */
+/* line 114, ../../app/stylesheets/partials/_base-styles.scss */
 .error_messages ul {
   margin: 0;
 }
 
-/* line 111, ../../app/stylesheets/partials/_base-styles.scss */
+/* line 117, ../../app/stylesheets/partials/_base-styles.scss */
 .header_logo {
   position: relative;
   top: 4px;
@@ -729,7 +747,26 @@ html > body {
   margin-right: 1.639%;
   margin-left: 1.639%;
 }
-/* line 26, ../../app/stylesheets/partials/_page.scss */
+/* line 24, ../../app/stylesheets/partials/_page.scss */
+#container #main #signup_steps_instruction {
+  display: inline;
+  float: left;
+  width: 39.344%;
+  margin-right: 1.639%;
+  margin-left: 1.639%;
+}
+/* line 28, ../../app/stylesheets/partials/_page.scss */
+#container #main #signup_steps_content {
+  display: inline;
+  float: left;
+  width: 55.738%;
+  margin-right: 1.639%;
+  display: inline;
+  float: right;
+  margin-right: 1.639%;
+  #margin-left: -1em;
+}
+/* line 34, ../../app/stylesheets/partials/_page.scss */
 #container footer {
   clear: both;
   margin-right: 1.639%;
@@ -787,35 +824,38 @@ header ul#user_menu {
   padding: 5px 5px 5px 30px;
   margin: -2px -5px 0 0;
   background-color: #000;
-  -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
   border-radius: 5px;
   position: absolute;
   display: inline;
   top: 5px;
   right: 0;
 }
-/* line 64, ../../app/stylesheets/partials/_header.scss */
+/* line 62, ../../app/stylesheets/partials/_header.scss */
 header ul#user_menu a {
   padding-right: 15px;
   text-decoration: none;
 }
-/* line 69, ../../app/stylesheets/partials/_header.scss */
+/* line 67, ../../app/stylesheets/partials/_header.scss */
 header ul#user_menu li {
   display: none;
 }
-/* line 71, ../../app/stylesheets/partials/_header.scss */
+/* line 69, ../../app/stylesheets/partials/_header.scss */
 header ul#user_menu li a {
   display: block;
   padding: 4px;
   height: 100%;
 }
-/* line 76, ../../app/stylesheets/partials/_header.scss */
+/* line 74, ../../app/stylesheets/partials/_header.scss */
 header ul#user_menu li a:hover {
   background-color: #107FC9;
   color: #fff;
 }
-/* line 82, ../../app/stylesheets/partials/_header.scss */
+/* line 80, ../../app/stylesheets/partials/_header.scss */
 header ul#user_menu.active {
   margin-top: -3px;
   margin-right: -6px;
@@ -825,17 +865,17 @@ header ul#user_menu.active {
   -webkit-box-shadow: 0 1px 2px #333;
   -moz-box-shadow: 0 1px 2px #333;
 }
-/* line 90, ../../app/stylesheets/partials/_header.scss */
+/* line 88, ../../app/stylesheets/partials/_header.scss */
 header ul#user_menu.active li {
   display: block;
 }
-/* line 95, ../../app/stylesheets/partials/_header.scss */
+/* line 93, ../../app/stylesheets/partials/_header.scss */
 header #drop_down_symbol {
   position: absolute;
   right: 5px;
   font-size: 0.75em;
 }
-/* line 100, ../../app/stylesheets/partials/_header.scss */
+/* line 98, ../../app/stylesheets/partials/_header.scss */
 header ul#user_menu .avatar {
   height: 20px;
   width: 20px;
@@ -843,6 +883,40 @@ header ul#user_menu .avatar {
   left: 2px;
   top: 2px;
   display: block;
+}
+
+/* line 108, ../../app/stylesheets/partials/_header.scss */
+#global_search {
+  display: inline;
+  position: relative;
+  top: 8px;
+}
+/* line 112, ../../app/stylesheets/partials/_header.scss */
+#global_search form {
+  display: inline;
+}
+/* line 114, ../../app/stylesheets/partials/_header.scss */
+#global_search form input {
+  display: inline;
+  background-color: #ccc;
+  border: 1px solid #000;
+  font-size: 12px;
+  -webkit-box-shadow: 0 1px #aaa;
+  -moz-box-shadow: 0 1px #aaa;
+  box-shadow: 0 1px #aaa;
+}
+/* line 123, ../../app/stylesheets/partials/_header.scss */
+#global_search form input:hover {
+  background-color: #ddd;
+}
+/* line 126, ../../app/stylesheets/partials/_header.scss */
+#global_search form input:active {
+  background-color: #eee;
+}
+/* line 129, ../../app/stylesheets/partials/_header.scss */
+#global_search form input[type='search'] {
+  width: 200px;
+  padding: 4px;
 }
 
 /* Nav --------------------------------------------------------------*/
@@ -890,4 +964,29 @@ header ul#user_menu .avatar {
   border-bottom-left-radius: 5px;
   -moz-border-radius-bottomleft: 5px;
   -webkit-border-bottom-left-radius: 5px;
+}
+
+/* line 2, ../../app/stylesheets/partials/_content-style.scss */
+#signup_steps_instruction h1 {
+  text-align: right;
+  font-size: 2em;
+  margin-bottom: 0.3em;
+}
+/* line 7, ../../app/stylesheets/partials/_content-style.scss */
+#signup_steps_instruction h3 {
+  text-align: right;
+  font-size: 1.1em;
+}
+
+/* line 13, ../../app/stylesheets/partials/_content-style.scss */
+h1 .description, h2 .description, h3 .description, h4 .description {
+  color: #CCCCCC;
+  font-size: 70%;
+  font-weight: 100;
+  margin-top: 0.3em;
+}
+
+/* line 19, ../../app/stylesheets/partials/_content-style.scss */
+h3 span.current_gs_step {
+  color: #22C910;
 }

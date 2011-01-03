@@ -45,6 +45,12 @@ sup { @include sup; }
 	font-style: normal;
 }
 
+/* added site specific styles */
+input:not([type="submit"]), textarea {
+  @include border-radius(5px);
+  height: auto;
+}
+
 /* avatar */
 .avatar {
   width: 50px;

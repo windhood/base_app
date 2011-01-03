@@ -51,9 +51,7 @@ header {
 
     background-color: #000;
 
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+    @include border-radius(5px);
 
     position: absolute;
     display: inline;
@@ -107,4 +105,31 @@ header {
   }
 }
 
-
+#global_search {
+  display: inline;
+  position: relative;
+  top: 8px;
+  form {
+    display: inline;
+    input {
+      display: inline;
+      background-color: #ccc;
+      border: 1px solid #000;
+      font-size: 12px;
+      -webkit-box-shadow: 0 1px #aaa;
+      -moz-box-shadow: 0 1px #aaa;
+      box-shadow: 0 1px #aaa;
+    }
+    input:hover {
+      background-color: #ddd;
+    }
+    input:active {
+      background-color: #eee;
+    }
+    input[type='search'] {
+      width: 200px;
+      padding: 4px;
+    }
+  }
+}
+  

@@ -21,6 +21,14 @@
   }
   #main {
     @include full;
+    #signup_steps_instruction {
+      @include columns(5);
+      @include alpha;
+    }
+    #signup_steps_content {
+      @include columns(7);
+      @include omega; //add right gut
+    }
   }
 
   footer {
@@ -31,3 +39,4 @@
 /* Style each sections -------------------------------------------------------------- */
 @import "header";
 @import "main-nav";
+@import "content-style"
