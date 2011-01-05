@@ -1,0 +1,25 @@
+#container {
+  @include container;
+  @include show-grid("grid.png");
+  header {
+    @include full;
+  }
+  nav {
+    @include full;
+  }
+  #main {
+    @include full;
+    #signup_steps_instruction {
+      @include columns(5);
+      @include alpha;
+    }
+    #signup_steps_content {
+      @include columns(7);
+      @include omega; //add right gut
+    }
+  }
+
+  footer {
+    @include full;
+  }
+}

@@ -58,6 +58,7 @@ input:not([type="submit"]), textarea {
 }
 input[type="radio"], input[type="checkbox"] {
   width: auto;
+  display: inline;
 }
 /* avatar */
 .avatar {
@@ -108,22 +109,57 @@ input[type="radio"], input[type="checkbox"] {
   background-color: #f0f0f0;
   font-size: 12px; 
 }
-  .error_messages h2 {
-    text-align: left;
-    padding: 5px 5px 5px 15px;
-    margin: 0;
-    font-weight: bold;
-    font-size: 12px;
-    background-color: #cc0000; 
-  }
-  .error_messages p {
-    margin: 8px 10px; 
-  }
-  .error_messages ul {
-    margin: 0; 
-  }
+.error_messages h2 {
+  text-align: left;
+  padding: 5px 5px 5px 15px;
+  margin: 0;
+  font-weight: bold;
+  font-size: 12px;
+  background-color: #cc0000; 
+}
+.error_messages p {
+  margin: 8px 10px; 
+}
+.error_messages ul {
+  margin: 0; 
+}
 .header_logo {
     position: relative;
     top: 4px;
     margin-right: 1em;
+}
+
+.floating {
+  @include border-radius(2px);
+  @include box-shadow(#333, 0, 1px, 5px, 0);
+  background-color:white;
+  border-bottom:1px solid #CCCCCC;
+  border-top:1px solid white;
+  padding:12px;
+  position:relative;
+}
+
+h1 .description, h2 .description, h3 .description, h4 .description {
+    color: #CCCCCC;
+    font-size: 70%;
+    font-weight: 100;
+    margin-top: 0.3em;
+}
+h3 span.current_gs_step {
+  color: #22C910;
+}
+
+
+
+.bottom_notification {
+  background-color:rgba(16, 127, 201, 0.8);
+  bottom:0;
+  color:white;
+  font-size:14px;
+  font-weight:bold;
+  left:0;
+  padding:12px 12px 10px;
+  position:fixed;
+  text-align:center;
+  width:100%;
 }

@@ -37,8 +37,8 @@
   %h4
     = t('search')
     %p{:class=>"checkbox_select"}
-      = label_tag 'user[searchable]', t('people.edit.allow_search')
       = check_box_tag 'user[searchable]', true, @user.searchable
+      = label_tag 'user[searchable]', t('people.edit.allow_search')
 
   = hidden_field_tag :getting_started, @step if @step
 
