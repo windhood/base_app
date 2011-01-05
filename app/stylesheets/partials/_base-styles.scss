@@ -49,8 +49,16 @@ sup { @include sup; }
 input:not([type="submit"]), textarea {
   @include border-radius(5px);
   height: auto;
+  border: 1px solid #CCC;
+  @include sans-family; 
+  font-size: 14px;
+  padding: 0.3em;
+  width: 66%;
+  display: block;
 }
-
+input[type="radio"], input[type="checkbox"] {
+  width: auto;
+}
 /* avatar */
 .avatar {
   width: 50px;

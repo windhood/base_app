@@ -1,4 +1,7 @@
 module ApplicationHelper
+  def mark_required(object, attribute)
+    "*" if object.class.validators_on(attribute).map(&:class).include? ActiveModel::Validations::PresenceValidator
+  end
   # used by devise when integrate with active_admin, active_admin seems needing this param
   def skip_sidebar?
       @skip_admin_sidebar == true
