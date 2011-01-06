@@ -65,6 +65,29 @@ input[type="radio"], input[type="checkbox"] {
   width: 50px;
   height: 50px; 
 }
+.button, .button_set {
+    @include border-radius(4px);
+    background: -moz-linear-gradient(center top , #F6F6F6, #D0D0D0) repeat scroll 0 0 transparent;
+    border-color: #BBBBBB #AAAAAA #888888;
+    border-left: 1px solid #AAAAAA;
+    border-right: 1px solid #AAAAAA;
+    border-style: solid;
+    border-width: 1px;
+    color: #444444;
+    cursor: default;
+    display: inline;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 100%;
+    min-height: 10px;
+    min-width: 26px;
+    padding: 4px 7px;
+    text-shadow: 0 1px 0 white;
+}
+.submit_block {
+    text-align: right;
+}
 
 /* errors, notices, warnings etc */
 #flash_notice,

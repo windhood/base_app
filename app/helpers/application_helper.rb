@@ -30,5 +30,22 @@ module ApplicationHelper
   def hard_link(string, path)
     link_to string, path, :rel => 'external' 
   end
+  
+  def ts(st)
+    st.to_s.gsub(/(\d)(?=(\d\d\d)+(?!\d))/, "\\1,")
+  end
+  def i18n_number_to_currency(money)    
+    #sprintf("#{DEFAULT_DOLLAR_SIGN} %0.02f" , money)
+    ts(money)+DEFAULT_DOLLAR_SIGN.t
+  end
+  def teaser txt
+    if txt.blank?
+      ""
+    elsif txt.length<=50
+      txt
+    else
+      txt[1..50]+"..."
+    end
+  end
     
 end

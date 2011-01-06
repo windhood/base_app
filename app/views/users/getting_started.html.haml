@@ -30,7 +30,7 @@
         = t('.finished')
     %br
 #signup_steps_content
-  .floating{:style=>"min-height:500px;"}
+  .floating
     = render "users/getting_started/step_#{@step}", :current_user => current_user
 
     - if @step > 1

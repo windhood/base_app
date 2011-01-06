@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20101207001405
+# Schema version: 20110105083930
 #
 # Table name: users
 #
@@ -24,6 +24,9 @@
 #  image_url            :string(255)
 #  image_url_medium     :string(255)
 #  image_url_small      :string(255)
+#  birthday             :date
+#  gender               :string(255)
+#  searchable           :boolean         default(TRUE)
 #
 
 class User < ActiveRecord::Base
@@ -44,11 +47,11 @@ class User < ActiveRecord::Base
                     :format   => { :with => /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
   
   before_save :strip_names
-  
+  has_many :services
   
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :name, :bio,
-    :image_url, :image_url_medium, :image_url_small
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :name, :bio,:date,
+    :image_url, :image_url_medium, :image_url_small, :getting_started, :birthday, :gender, :searchable
   
   def image_url(size = :thumb_large)
     if size == :thumb_medium

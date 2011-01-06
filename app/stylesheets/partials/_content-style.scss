@@ -1,5 +1,3 @@
-
-
 #signup_steps_instruction {
  h1 {
   text-align: right;
@@ -18,4 +16,12 @@
   #user_searchable {
     display: inline;
   }
+  .floating {
+    min-height: 560px;
+  }  
+}
+#previous_step {
+    bottom: 12px;
+    left: 12px;
+    position: absolute;
 }
