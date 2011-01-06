@@ -24,7 +24,7 @@ class UsersController  < ApplicationController
     params[:user] ||= {}
     params[:user][:searchable] ||= false
     
-    if current_user.update params[:user]
+    if current_user.update_attributes params
       flash[:notice] = I18n.t 'people.update.updated'
     else
       flash[:error] = I18n.t 'people.update.failed'
