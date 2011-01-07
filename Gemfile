@@ -6,10 +6,14 @@ gem 'bundler', '>= 1.0.0'
 #Security
 gem 'devise', '>=1.1.4'
 #gem 'devise-mongo_mapper', :git => 'git://github.com/collectiveidea/devise-mongo_mapper'
-gem 'devise_invitable', '~> 0.3.4'
+gem 'devise_invitable', '0.3.5'
 
 #DB
 gem 'sqlite3-ruby', :require => 'sqlite3'
+
+#Authentication
+gem 'omniauth', '0.1.6'
+gem 'twitter', :git => 'git://github.com/jnunemaker/twitter.git', :ref => 'ef122bbb280e229ed343'
 
 #Views
 gem 'haml'

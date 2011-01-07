@@ -1,0 +1,2 @@
+WillPaginate::ViewHelpers.pagination_options[:previous_label] = "&laquo; #{I18n.t('pagination.previous')}"
+WillPaginate::ViewHelpers.pagination_options[:next_label] = "#{I18n.t('pagination.next')} &raquo;"
