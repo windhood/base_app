@@ -10,24 +10,14 @@ When /^(.*) in the modal window$/ do |action|
   end
 end
 
-When /^(.*) in the aspect list$/ do |action|
-  within('#aspect_list') do
-    When action
-  end
-end
-
 Then /^I should see "([^\"]*)" in the main content area$/ do |stuff|
   within("#main_stream") do
     Then "I should see #{stuff}"
   end
 end
 
-When /^I wait for the aspects page to load$/ do
-  wait_until { current_path == aspects_path }
-end
-
-When /^I wait for the request's profile page to load$/ do
-  wait_until { current_path == person_path(@me.reload.pending_requests.first.from) }
+When /^I wait for the dashboard page to load$/ do
+  wait_until { current_path == user_root_path }
 end
 
 When /^I wait for the ajax to finish$/ do

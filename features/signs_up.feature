@@ -27,7 +27,7 @@ Feature: new user registration
     Then I should see "Your services"
 
     When I follow "Save and continue"
-    Then I should see "You're all set up, O!"
+    Then I should see "You're all set up"
     And I should not see "skip getting started"
 
 #    When I follow "Continue on to your Home page, an overview of all of your aspects."
@@ -41,6 +41,6 @@ Feature: new user registration
   
   Scenario: new user skips the setup wizard
     When I follow "skip getting started"
-    And I wait for the aspects page to load
-    Then I should be on the aspects page
-    And I should see "Bring the people that matter in your life to Diaspora!"
+    And I wait for the dashboard page to load
+    Then I should be on user root page
+    #And I should see "Bring the people that matter in your life to Diaspora!"

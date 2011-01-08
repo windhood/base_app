@@ -9,6 +9,10 @@ BaseApp::Application.routes.draw do
   
   match '/contact', :to => 'pages#contact'
   match '/about',   :to => 'pages#about'
+  
+  resources :services
+  match '/auth/:provider/callback' => 'services#create'
+  match '/auth/failure' => 'services#failure'
 
   #devise_for :admins
 

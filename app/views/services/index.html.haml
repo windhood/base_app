@@ -1,0 +1,15 @@
+- title t('.edit_services')
+
+#section_header
+  %h2
+    = t('settings')
+  %ul#settings_nav
+    %li=link_to t('profile'), edit_user_path(current_user)
+    %li=link_to t('account'), edit_user_path(current_user)
+    %li=link_to t('_services'), services_path
+
+.span-19.prepend-5.last
+  %h2
+    = t('_services')
+
+  = render 'shared/add_remove_services'

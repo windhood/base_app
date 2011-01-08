@@ -18,7 +18,7 @@ class UsersController  < ApplicationController
   def getting_started_completed
     user = current_user
     user.update_attributes( :getting_started => false )
-    redirect_to root_path
+    redirect_to user_root_path
   end
   
   def my_dashboard

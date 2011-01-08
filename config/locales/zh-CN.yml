@@ -8,7 +8,7 @@
   settings: "Settings"
   profile: "Profile"
   account: "Account"
-  services: "Services"
+  _services: "Services"
   photos: "photos"
   ok: "OK"
   cancel: "Cancel"
@@ -160,3 +160,18 @@
          accepts: "Once %{name} accepts, you'll start seeing each other's posts on Diaspora"
     aspect_list:
          edit_membership: "edit aspect membership"
+
+  services:
+   index:
+     logged_in_as: "logged in as"
+     disconnect: "disconnect"
+     really_disconnect: "disconnect %{service}?"
+     connect_to_twitter: "Connect to twitter"
+     connect_to_facebook: "Connect to facebook"
+     edit_services: "Edit services"
+   create:
+     success: "Authentication successful."
+   destroy:
+     success: "Successfully deleted authentication."
+   failure:
+     error: "there was an error connecting that service"
