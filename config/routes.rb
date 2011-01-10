@@ -14,6 +14,7 @@ BaseApp::Application.routes.draw do
   match '/auth/:provider/callback' => 'services#create'
   match '/auth/failure' => 'services#failure'
 
+  resources :people
   #devise_for :admins
 
   devise_for :users

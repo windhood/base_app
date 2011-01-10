@@ -10,7 +10,17 @@ module NavigationHelpers
 
     when /the home\s?page/
       '/'
-
+    when /^the home page$/
+      root_path
+    when /^its ([\w ]+) page$/
+      send("#{$1.gsub(/\W+/, '_')}_path", @it)
+    when /^the ([\w ]+) page$/
+      send("#{$1.gsub(/\W+/, '_')}_path")
+    when /^my edit profile page$/
+      edit_person_path(@me.person)    
+    when /^my account settings page$/
+      edit_user_path(@me)
+      
     # the following are examples using path_to_pickle
 
     when /^#{capture_model}(?:'s)? page$/                           # eg. the forum's page
