@@ -28,20 +28,32 @@ class UsersController  < ApplicationController
   end
   
   def update
-    params[:user] ||= {}
-    params[:user][:searchable] ||= false
-    
-    if current_user.update_attributes params[:user]
-      flash[:notice] = I18n.t 'people.update.updated'
-    else
-      flash[:error] = I18n.t 'people.update.failed'
+    @user = current_user
+
+    params[:user].delete(:password) if params[:user][:password].blank?
+    params[:user].delete(:password_confirmation) if params[:user][:password].blank? and params[:user][:password_confirmation].blank?
+    params[:user].delete(:language) if params[:user][:language].blank?
+
+    # change email notifications
+    if params[:user][:disable_mail]
+      @user.update_attributes(:disable_mail => params[:user][:disable_mail])
+      flash[:notice] = I18n.t 'users.update.email_notifications_changed'
+    # change passowrd
+    elsif params[:user][:password] && params[:user][:password_confirmation]
+      if @user.update_attributes(:password => params[:user][:password], :password_confirmation => params[:user][:password_confirmation])
+        flash[:notice] = I18n.t 'users.update.password_changed'
+      else
+        flash[:error] = I18n.t 'users.update.password_not_changed'
+      end
+    #elsif params[:user][:language]
+    #  if @user.update_attributes(:language => params[:user][:language])
+    #    flash[:notice] = I18n.t 'users.update.language_changed'
+    #  else
+    #    flash[:error] = I18n.t 'users.update.language_not_changed'
+    #  end
     end
-    
-    if params[:getting_started]
-      redirect_to getting_started_path(:step => params[:getting_started].to_i+1)
-    else
-      redirect_to edit_user_path
-    end
+
+    redirect_to edit_user_path(@user)
   end
   
   def edit

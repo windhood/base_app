@@ -12,7 +12,7 @@ Feature: Change password
     And I press "Change Password"
     Then I should see "Password Changed"  
     And I click on my name in the header
-    And I follow "logout"
+    And I follow "signout"
     Then I should be on the home page    
     And I sign in with password "newsecret"
-    Then I should be on the aspects page
+    Then I should be on user root page

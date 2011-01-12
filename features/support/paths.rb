@@ -17,7 +17,7 @@ module NavigationHelpers
     when /^the ([\w ]+) page$/
       send("#{$1.gsub(/\W+/, '_')}_path")
     when /^my edit profile page$/
-      edit_person_path(@me.person)    
+      edit_person_path(@me)    
     when /^my account settings page$/
       edit_user_path(@me)
       
