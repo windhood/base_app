@@ -3,7 +3,7 @@
 - title t('.edit_profile')
 - header 'getting_started'
 
-= form_tag user_path(@user), :method => :put, :multipart => true, :id => 'update_profile_form' do
+= form_tag person_path(@user), :method => :put, :multipart => true, :id => 'update_profile_form' do
   %h3
     = t('people.edit.your_profile')
     .description

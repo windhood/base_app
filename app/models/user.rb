@@ -51,7 +51,8 @@ class User < ActiveRecord::Base
   
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :name, :bio,:date,
-    :image_url, :image_url_medium, :image_url_small, :getting_started, :birthday, :gender, :searchable
+    :image_url, :image_url_medium, :image_url_small, :getting_started, :birthday, :gender, :searchable,
+    :disable_mail
   
   def image_url(size = :thumb_large)
     if size == :thumb_medium
