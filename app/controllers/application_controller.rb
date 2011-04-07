@@ -1,10 +1,19 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   layout :layout_by_resource    
-  class AccessDenied < StandardError; end
-  rescue_from AccessDenied, :with => :access_denied
-  rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
-  rescue_from NoMethodError, :with => :show_error
+  
+  class AccessDenied < StandardError; end 
+  
+  unless ActionController::Base.consider_all_requests_local
+    rescue_from AccessDenied, :with => :access_denied
+    rescue_from NoMethodError, :with => :render_error
+    rescue_from ActiveRecord::RecordNotFound,        :with => :render_not_found
+    rescue_from ActionController::RoutingError,      :with => :render_not_found
+    rescue_from ActionController::UnknownController, :with => :render_not_found
+    rescue_from ActionController::UnknownAction,     :with => :render_not_found
+    rescue_from Exception,                           :with => :render_error
+  end
+  
   before_filter :set_locale
   #around_filter :catch_errors
   
@@ -20,47 +29,49 @@ private
     # if params[:locale] is nil then I18n.default_locale will be used
     I18n.locale = params[:locale]
   end
+ 
+  def access_denied
+    respond_to do |format|
+      format.html { 
+        flash.now[:error] = exception.message
+        #render :text => '', :layout => !request.xhr?, :status => 500
+        render :template => "/error_pages/422.html.haml",
+                :status => 422,
+                :layout => 'error.html.haml'
+      }
+      format.atom { head 422 }
+      format.xml { head 422 }
+      format.json { head 422 }
+    end
+  end
   
-  def record_not_found
+  def render_not_found(exception)    
     Rails.logger.error "Exception #{exception.class}: #{exception.message}"
     Rails.logger.error(exception.backtrace.join("\n"))
-    render_404    
-  end
-  
-  def access_denied
-    render :file => File.join(RAILS_ROOT, 'public', '422.html'), :status => 422
-  end
-  
-  def show_error(exception); render :text => exception.message; end
-  
-  
-  def render_403      
-     respond_to do |format|
-      format.html { render :template => "common/403", :layout => (request.xhr? ? false : 'base'), :status => 403 }
-      format.atom { head 403 }
-      format.xml { head 403 }
-      format.json { head 403 }
-    end
-    return false
-  end
-  
-  # please refer to redmine code
-  def render_404      
     respond_to do |format|
-      format.html {render :file => File.join(RAILS_ROOT, 'public', '404.html'), :status => 404}
-      #format.html { render :template => "common/404", :layout => !request.xhr?, :status => 404 }
+      format.html { 
+        flash.now[:error] = exception.message
+        #render :text => '', :layout => !request.xhr?, :status => 500
+        render :template => "/error_pages/404.html.haml",
+                :status => 404,
+                :layout => 'error.html.haml'
+      }
       format.atom { head 404 }
       format.xml { head 404 }
       format.json { head 404 }
     end
-    return false
   end
-
-  def render_error(msg)
+  
+  def render_error(exception)
+    Rails.logger.error "Exception #{exception.class}: #{exception.message}"
+    Rails.logger.error(exception.backtrace.join("\n"))
     respond_to do |format|
       format.html { 
-        flash.now[:error] = msg
-        render :text => '', :layout => !request.xhr?, :status => 500
+        flash.now[:error] = exception.message
+        #render :text => '', :layout => !request.xhr?, :status => 500
+        render :template => "/error_pages/500.html.haml",
+               :status => 500,
+               :layout => 'error.html.haml'
       }
       format.atom { head 500 }
       format.xml { head 500 }

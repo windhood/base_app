@@ -1,4 +1,8 @@
 module ApplicationHelper
+  def body_classes
+      "#{params[:controller]} #{params[:controller]}_#{params[:action]}"
+  end
+  
   def mark_required(object, attribute)
     "*" if object.class.validators_on(attribute).map(&:class).include? ActiveModel::Validations::PresenceValidator
   end
