@@ -1,7 +1,7 @@
 BaseApp::Application.routes.draw do
-  devise_for :admin_users, :path => 'admin'
+  #devise_for :admin_users, :path => 'admin'
 
-  ActiveAdmin.routes(self)
+  #ActiveAdmin.routes(self)
 
   #get "pages/home"
   #get "pages/contact"  
@@ -15,8 +15,7 @@ BaseApp::Application.routes.draw do
   match '/auth/failure' => 'services#failure'
 
   resources :people
-  #devise_for :admins
-
+  
   devise_for :users
   
   # added public route to user
