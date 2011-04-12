@@ -1,58 +1,27 @@
 // This file must be imported before loading html5-boilerplate
 
-// Susy reset
-// Font Sizes --------------------------------------------------------------
-
-$base-font-size: 16px;
-$base-line-height: 24px;
-
-// Grid --------------------------------------------------------------
-
-$total-cols: 12;
-$col-width: 4em;
-$gutter-width: 1em;
-$side-gutter-width: $gutter-width;
-
-// Colors --------------------------------------------------------------
-
-$base: #4c4c4c;
-$alt: #005498;
-
-// Fonts --------------------------------------------------------------
-
-@mixin sans-family {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-@mixin serif-family {
-  font-family: Cambria, Georgia, serif;
-}
-
-@mixin monospace-family {
-  font-family: "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, Courier, monospace, sans-serif;
-}
-
 $base-font-family: unquote('sans-serif');  // default font-family
 
-//$base-font-size: 13px;  // default font-size for YUI fonts
+$base-font-size: 13px;  // default font-size for YUI fonts
 
-//$base-line-height: 1.231;  // default line-height for YUI fonts
+$base-line-height: 1.231;  // default line-height for YUI fonts
 
-$font-color: $base;//#444;
+$font-color: #444;
 
-$link-color: #107FC9;//#607890;
+$link-color: #607890;
 
-$link-hover-color:  #4CCAE0;//#22AAE0;
+$link-hover-color: #036;
 
-$link-active-color: #005D9C;
+$link-active-color: #607890;
+
+$link-visited-color: #607890;
 
 $selected-font-color: #fff;  // color for selected text
 
 $selected-background-color: #ff5E99;  // bg-color for selected text
 
-$list-left-margin: 1.8em;  // left margin for ul an ol
+$list-left-margin: 2em;  // left margin for ul an ol
 
-//customized
+//add other parameters and mixings
 $heading-font-color: #333;
-$section-margin-top: 40px;
-$header-link-color: #107fc9;
+$main-nav-background-color: #4c4c4c;

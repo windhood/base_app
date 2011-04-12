@@ -1,18 +1,10 @@
 @import "compass/css3";
-//@import "960/grid";
-// Don't move this @import above the GRID and FONT-SIZE variables.
-@import "susy/susy";
+@import "mixins";
 
-//-----------------------------------
-// Add your own custom styles below
-//-----------------------------------
-/* Layout -------------------------------------------------------------- */
-
-@include susy;
-
+@import "typography";
 @import "layout";
 
-/* Style each sections -------------------------------------------------------------- */
-@import "header";
+@include basic-typography;
+@include page-layout;
+
 @import "main-nav";
-@import "content-style"

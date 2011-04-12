@@ -1,0 +1,7 @@
+$default-full-width: 80em; //80*13 = 1040px
+@mixin container($full_width: $default-full-width) {  
+  @include pie-clearfix;
+  margin: auto;
+  width: $default-full-width;
+  max-width: 100%;
+}
