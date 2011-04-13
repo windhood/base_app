@@ -1,7 +1,12 @@
 $default-full-width: 80em; //80*13 = 1040px
+$default-bg-color: #ffffff; //white
 @mixin container($full_width: $default-full-width) {  
   @include pie-clearfix;
   margin: auto;
   width: $default-full-width;
   max-width: 100%;
+}
+
+@mixin container-background($bg-color:$default-bg-color) {
+   background: none repeat scroll 0 0 $bg-color;
 }
