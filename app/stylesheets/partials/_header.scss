@@ -3,22 +3,14 @@ header {
   position: relative;
   min-height: 40px;
   
-  color: #CCC;
-  
   a:link, a:visited {
-		color: $header-link-color;
 		margin: 0 0 .6em 0;
 		text-decoration: none;
 	}
 	a:hover, a:active {
 		background: none;
-		color: $alt;
 		text-shadow: none;
-	}
-	
-  .landing {
-    height: 45px;    
-  }
+	}	
   
   #landing_nav {
     position: absolute;
@@ -26,7 +18,6 @@ header {
     top: 0px;
     margin: 0;
     padding: 0;
-    font-size: 14px;
  
     li {
       display: inline;
@@ -40,16 +31,16 @@ header {
     white-space: nowrap;
     text-overflow: ellipsis;
     text-shadow: 0 1px 0 #000;
-    font-size: 0.75em;
+    font-size: 0.8em;
     width: auto;
 
     cursor: pointer;
 
     z-index: 10;
     padding: 5px 5px 5px 30px;
-    margin: -2px -5px 0 0;
+    margin: -2px 0px 0 0;
 
-    background-color: #000;
+    background-color: #fff;
 
     @include border-radius(5px);
 
@@ -72,19 +63,19 @@ header {
         height: 100%;
       }
       a:hover {
-        background-color: #107FC9;
-        color: #fff;
+        background-color: #ccc;
+        color: #000;
       }
     }
   }
   ul#user_menu.active {
     margin-top: -3px;
     margin-right: -6px;
-    background-color: #000;
-    border: 1px solid #999;
-    box-shadow: 0 1px 2px #333;
-    -webkit-box-shadow: 0 1px 2px #333;
-    -moz-box-shadow: 0 1px 2px #333;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 2px #ccc;
+    -webkit-box-shadow: 0 1px 2px #ccc;
+    -moz-box-shadow: 0 1px 2px #ccc;
     li {
       display: block;
     }
@@ -104,32 +95,3 @@ header {
     display: block; 
   }
 }
-
-#global_search {
-  display: inline;
-  position: relative;
-  top: 8px;
-  form {
-    display: inline;
-    input {
-      display: inline;
-      background-color: #ccc;
-      border: 1px solid #000;
-      font-size: 12px;
-      -webkit-box-shadow: 0 1px #aaa;
-      -moz-box-shadow: 0 1px #aaa;
-      box-shadow: 0 1px #aaa;
-    }
-    input:hover {
-      background-color: #ddd;
-    }
-    input:active {
-      background-color: #eee;
-    }
-    input[type='search'] {
-      width: 200px;
-      padding: 4px;
-    }
-  }
-}
-  
