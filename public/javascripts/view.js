@@ -14,42 +14,14 @@ var View = {
 
     /* In field labels */
     $("label").inFieldLabels();
-
-    /* Focus aspect name on fancybox */
-    $(this.addAspectButton.selector)
-      .click(this.addAspectButton.click);
-
-    /* Showing debug messages  */
-    $(this.debug.selector)
-      .click(this.debug.click);
-
-    /* "Toggling" the search input */
-    $(this.search.selector)
-      .blur(this.search.blur)
-      .focus(this.search.focus);
-
-    /* Getting started animation */
+		
+		/* Getting started animation */
     $(this.gettingStarted.selector)
       .live("click", this.gettingStarted.click);
-
-    /* Submitting the status message form when the user hits enter */
-    $(this.publisher.selector)
-      .keydown(this.publisher.keydown);
 
     /* User menu */
     $(this.userMenu.selector)
       .click(this.userMenu.click);
-
-    /* Sending a request message */
-    $(this.newRequest.selector)
-      .live("submit", this.newRequest.submit);
-
-    /* Button fancyboxes */
-    $(this.fancyBoxButtons.selectors.join(", "))
-      .fancybox({
-         'titleShow': false,
-         'hideOnOverlayClick': false
-      });
 
     /* Autoexpand textareas */
     $('textarea')
@@ -57,10 +29,6 @@ var View = {
         'animate': false,
         'extraSpace': 0
       });
-
-    /* Webfinger form ajaxy loading */
-    $(this.webFingerForm.selector)
-      .submit(this.webFingerForm.submit);
 
     $(document.body)
       .click(this.userMenu.removeFocus)

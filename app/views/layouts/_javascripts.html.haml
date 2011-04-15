@@ -11,8 +11,9 @@
 -# fall back to local jQuery if necessary
 :javascript
   !window.jQuery && document.write(unescape('%3Cscript src="/javascripts/jquery.min.js"%3E%3C/script%3E'))
-  
-= javascript_include_tag 'rails', 'plugins', 'application'
+
+= include_javascripts :main  
+-# = javascript_include_tag 'rails', 'plugins', 'application'
 
 -# Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb
 /[if lt IE 7 ]
