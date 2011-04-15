@@ -20,7 +20,8 @@ module NavigationHelpers
       edit_person_path(@me)    
     when /^my account settings page$/
       edit_user_path(@me)
-      
+    when /^my wowos page$/
+      wowos_path  
     # the following are examples using path_to_pickle
 
     when /^#{capture_model}(?:'s)? page$/                           # eg. the forum's page

@@ -1,4 +1,5 @@
 BaseApp::Application.routes.draw do
+  resources :wowos
   #devise_for :admin_users, :path => 'admin'
 
   #ActiveAdmin.routes(self)

@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   
   class AccessDenied < StandardError; end 
   
-  unless ActionController::Base.consider_all_requests_local
+  unless Rails.application.config.consider_all_requests_local
     rescue_from AccessDenied, :with => :access_denied
     rescue_from NoMethodError, :with => :render_error
     rescue_from ActiveRecord::RecordNotFound,        :with => :render_not_found
@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
     rescue_from ActionController::UnknownController, :with => :render_not_found
     rescue_from ActionController::UnknownAction,     :with => :render_not_found
     rescue_from Exception,                           :with => :render_error
-  end
+  end  
   
   before_filter :set_locale
   #around_filter :catch_errors
