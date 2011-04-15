@@ -1,17 +1,19 @@
 header {
-  z-index: 4;
+  z-index: 50;
   position: relative;
   min-height: 40px;
   
   a:link, a:visited {
-		margin: 0 0 .6em 0;
+		//margin: 0 0 .6em 0;
 		text-decoration: none;
 	}
 	a:hover, a:active {
 		background: none;
 		text-shadow: none;
 	}	
-  
+  #current_user_link {
+    pading-bottom: 2em;
+  }
   #landing_nav {
     position: absolute;
     right: 0;
@@ -31,7 +33,7 @@ header {
     white-space: nowrap;
     text-overflow: ellipsis;
     text-shadow: 0 1px 0 #000;
-    font-size: 0.8em;
+    font-size: 1em;
     width: auto;
 
     cursor: pointer;

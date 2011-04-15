@@ -1,4 +1,5 @@
 @mixin page-layout {
+  
   header {
     @include container;
     @include container-background($main-content-bg-color);
@@ -7,6 +8,7 @@
   #main {
     @include container;
     @include container-background($main-content-bg-color);
+    min-height: 400px;
   }
 
   footer {

@@ -14,7 +14,7 @@
         ▼
       .avatar
         = user_image_tag(:thumb_small)
-      = link_to current_user.display_name + "@windhood", '#'
+      = link_to current_user.display_name + "@windhood", '#',:id=>'current_user_link'
       %li= link_to t('.view_profile'), '#'
       %li= link_to t('.edit_profile'), edit_person_path(current_user)
       %li= link_to t('.account_settings'), edit_user_path(current_user)

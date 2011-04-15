@@ -35,25 +35,7 @@ var View = {
       .click(this.reshareButton.removeFocus);
   },
 
-  addAspectButton: {
-    click: function() {
-      $("#aspect_name").focus();
-    },
-    selector: ".add_aspect_button"
-  },
-
-  fancyBoxButtons: {
-    selectors: [
-      ".add_aspect_button",
-      ".manage_aspect_contacts_button",
-      ".invite_user_button",
-      ".add_photo_button",
-      ".remove_person_button",
-      ".question_mark",
-      ".share_with_button"
-    ]
-  },
-
+  
   debug: {
     click: function() {
       $("#debug_more").toggle("fast");
@@ -85,44 +67,8 @@ var View = {
     },
     selector: ".getting_started_box"
   },
-
-  newRequest: {
-    submit: function() {
-      $(this).hide().parent().find(".message").removeClass("hidden");
-    },
-    selector: ".new_request"
-  },
-
-  publisher: {
-    keydown: function(e) {
-      if(e.keyCode === 13) {
-        if(!e.shiftKey) {
-          $(this).closest("form").submit();
-        }
-      }
-    },
-    selector: "#publisher textarea"
-  },
-
-  search: {
-    blur: function() {
-      $(this).removeClass("active");
-    },
-    focus: function() {
-      $(this).addClass("active");
-    },
-    selector: "#q"
-  },
-
+  
   tooltips: {
-    addAspect: {
-      bind: function() {
-        $(".add_aspect_button", "#aspect_nav").tipsy({
-          gravity:"w"
-        });
-      }
-    },
-
     avatars: {
       bind: function() {
         $(".contact_pictures img.avatar, #manage_aspect_zones img.avatar").tipsy({
@@ -177,14 +123,6 @@ var View = {
       }
     },
     selector: "#user_menu"
-  },
-
-  webFingerForm: {
-    submit: function(evt) {
-      $(evt.currentTarget).siblings("#loader").show();
-      $("#request_result li:first").hide();
-    },
-    selector: ".webfinger_form"
   }
 };
 
