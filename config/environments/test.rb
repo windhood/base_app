@@ -32,4 +32,9 @@ BaseApp::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
+  
+  # Add for testing - make sure testing environment always use English
+  # test.rb should load before the initializer, such as initializers/locale.rb
+  # there is another solution described here http://amielmartin.tumblr.com/post/235855133/using-i18n-in-cucumber
+  DEFAULT_LANGUAGE = 'en'
 end

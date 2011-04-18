@@ -30,8 +30,8 @@ en:
   previous: 'previous'
   error: 'error'
   prohibit_from_saving: 'prohibited this record from being saved'
-  my_wowo: My WoWo
-  new_wowo: New WoWo
+  my_wowo: "My WoWo"
+  new_wowo: "New WoWo"
     
   layouts:
     main_nav:
@@ -174,3 +174,7 @@ en:
       success: "Successfully deleted authentication."
     failure:
       error: "there was an error connecting that service"
+  
+  wowos:
+    new:
+      choose_theme_label: "Please choose a theme:"

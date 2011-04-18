@@ -8,4 +8,5 @@ Feature: Setup a wowo
   	Given I am ready for creating my wowo
   	When I follow "New WoWo"
     Then I should be on the new wowo page
-    And I should see "Please select a theme"
+    #And show me the page
+    And I should see "Please choose a theme"

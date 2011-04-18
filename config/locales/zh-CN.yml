@@ -31,8 +31,8 @@
   previous: 'previous'
   error: 'error'
   prohibit_from_saving: 'prohibited this record from being saved'
-  my_wowo: 我的窝窝
-  new_wowo: New WoWo
+  my_wowo: "我的窝窝"
+  new_wowo: "新窝窝"
   
   layouts:    
     main_nav:
@@ -164,16 +164,20 @@
          edit_membership: "edit aspect membership"
 
   services:
-   index:
-     logged_in_as: "logged in as"
-     disconnect: "disconnect"
-     really_disconnect: "disconnect %{service}?"
-     connect_to_twitter: "Connect to twitter"
-     connect_to_facebook: "Connect to facebook"
-     edit_services: "Edit services"
-   create:
-     success: "Authentication successful."
-   destroy:
-     success: "Successfully deleted authentication."
-   failure:
-     error: "there was an error connecting that service"
+    index:
+      logged_in_as: "logged in as"
+      disconnect: "disconnect"
+      really_disconnect: "disconnect %{service}?"
+      connect_to_twitter: "Connect to twitter"
+      connect_to_facebook: "Connect to facebook"
+      edit_services: "Edit services"
+    create:
+      success: "Authentication successful."
+    destroy:
+      success: "Successfully deleted authentication."
+    failure:
+      error: "there was an error connecting that service"
+  
+  wowos:
+    new:
+      choose_theme_label: "请选择一个样式:"
