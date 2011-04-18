@@ -57,11 +57,11 @@ end
 
 group :test do
   gem 'capybara', '>= 0.4.0'
-  gem 'cucumber-rails', '0.3.2'
+  gem 'cucumber-rails', '>=0.4.0'
   gem 'rspec', '>= 2.1.0'
   gem 'rspec-rails', '>= 2.1.0'
   gem 'mocha'
-  gem 'database_cleaner', '0.5.2'
+  gem 'database_cleaner', '>=0.5.2'
   gem 'webmock', :require => false
   #gem 'jasmine', :path => 'vendor/gems/jasmine', :require => false
   #gem 'mongrel', :require => false if RUBY_VERSION.include? "1.8"

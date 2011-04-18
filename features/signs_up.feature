@@ -42,5 +42,5 @@ Feature: new user registration
   Scenario: new user skips the setup wizard
     When I follow "skip getting started"
     And I wait for the dashboard page to load
-    Then I should be on user root page
+    Then I should be on the user root page
     #And I should see "Bring the people that matter in your life to Diaspora!"

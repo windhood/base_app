@@ -15,4 +15,4 @@ Feature: Change password
     And I follow "signout"
     Then I should be on the home page    
     And I sign in with password "newsecret"
-    Then I should be on user root page
+    Then I should be on the user root page

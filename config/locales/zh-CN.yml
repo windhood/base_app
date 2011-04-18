@@ -31,6 +31,8 @@
   previous: 'previous'
   error: 'error'
   prohibit_from_saving: 'prohibited this record from being saved'
+  my_wowo: 我的窝窝
+  new_wowo: New WoWo
   
   layouts:    
     main_nav:

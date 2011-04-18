@@ -1,4 +1,1 @@
---color
-#--format nested
---require rspec/instafail
---format RSpec::Instafail
+--colour

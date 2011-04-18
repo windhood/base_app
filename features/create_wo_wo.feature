@@ -6,7 +6,6 @@ Feature: Setup a wowo
   @wip  
   Scenario: Create a wowo and go through the setup wizard
   	Given I am ready for creating my wowo
-  	#Given I am on my wowos page
-    When I Press "New WoWo"
+  	When I follow "New WoWo"
     Then I should be on the new wowo page
     And I should see "Please select a theme"

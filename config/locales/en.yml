@@ -30,7 +30,9 @@ en:
   previous: 'previous'
   error: 'error'
   prohibit_from_saving: 'prohibited this record from being saved'
-  
+  my_wowo: My WoWo
+  new_wowo: New WoWo
+    
   layouts:
     main_nav:
       view_profile: "view profile"
