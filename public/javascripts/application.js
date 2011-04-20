@@ -1,14 +1,64 @@
-$(document).ready(function() { 
-  $('#main_stream').infinitescroll({
-    navSelector  : "div.pagination",            
-                   // selector for the paged navigation (it will be hidden)
-    nextSelector : ".pagination a.next_page",    
-                   // selector for the NEXT link (to page 2)
-    itemSelector : "#main_stream li.message",
-                   // selector for all items you'll retrieve
-    bufferPx: 300,
-    donetext: "no more.",
-    loadingText: "", 
-    loadingImg: '/images/ajax-loader.gif'
-  });
+$(function() {
+  /* Make sure this refers to View, not the document */
+  View.initialize.apply(View);
 });
+
+var View = {
+  initialize: function() {
+    /* Buttons */
+    $("input[type='submit']").addClass("button");
+
+    /* Tooltips */
+    //this.tooltips.bindAll();
+
+    /* Animate flashes */
+    this.flashes.animate();
+
+    /* In field labels */
+    //$("label").inFieldLabels();
+		
+		/* Getting started animation */
+    //$(this.gettingStarted.selector)
+    //  .live("click", this.gettingStarted.click);
+
+    /* User menu */
+    $(this.userMenu.selector)
+      .click(this.userMenu.click);
+
+    /* Autoexpand textareas */
+    $('textarea')
+      .autoResize({
+        'animate': false,
+        'extraSpace': 0
+      });
+
+    $(document.body)
+      .click(this.userMenu.removeFocus);
+  }, 
+
+  flashes: {
+    animate: function() {
+      var $this = $(View.flashes.selector);
+      $this.animate({
+        top: 0
+      }).delay(2000).animate({
+        top: -100
+      }, $this.remove)
+    },
+    selector: "#flash_notice, #flash_error, #flash_alert"
+
+  }, 
+
+  userMenu: {
+    click: function() {
+      $(this).toggleClass("active");
+    },
+    removeFocus: function(evt) {
+      var $target = $(evt.target);
+      if(!$target.closest("#user_menu").length) {
+        $(View.userMenu.selector).removeClass("active");
+      }
+    },
+    selector: "#user_menu"
+  }
+};

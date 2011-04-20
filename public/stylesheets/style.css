@@ -598,6 +598,55 @@ header ul#user_menu .avatar {
   display: block;
 }
 
+/* theme browser */
+/* line 2, ../../app/stylesheets/partials/_content-style.scss */
+#theme_browser {
+  width: 95%;
+  height: 454px;
+  margin: 20px auto;
+}
+
+/* line 7, ../../app/stylesheets/partials/_content-style.scss */
+#theme_browser .arrow {
+  width: 72px;
+  height: 454px;
+  cursor: pointer;
+}
+
+/* line 12, ../../app/stylesheets/partials/_content-style.scss */
+#theme_browser #left_arrow {
+  float: left;
+  background: url(/images/corporate/theme_browser_left_arrow.png) top no-repeat;
+}
+
+/* line 16, ../../app/stylesheets/partials/_content-style.scss */
+#theme_browser #right_arrow {
+  float: right;
+  background: url(/images/corporate/theme_browser_right_arrow.png) top no-repeat;
+}
+
+/* line 20, ../../app/stylesheets/partials/_content-style.scss */
+#theme_browser #themes_frame {
+  padding: 20px 10px;
+  overflow: hidden;
+  height: 414px;
+  background: #292929 url(/images/corporate/theme_browser_bottom.png) bottom left repeat-x;
+  border: none;
+}
+
+/* line 27, ../../app/stylesheets/partials/_content-style.scss */
+#theme_browser #themes {
+  width: 9999px;
+}
+
+/* line 30, ../../app/stylesheets/partials/_content-style.scss */
+#theme_browser .theme {
+  float: left;
+  display: block;
+  padding: 0px 13px;
+  width: 246px;
+}
+
 @media print {
   /* line 24, ../../../../.rvm/gems/ruby-1.9.2-p0@wenhu.com/bundler/gems/compass-html5-boilerplate-6fb3a78ab2aa/stylesheets/html5-boilerplate/_media.scss */
   * {
