@@ -8,10 +8,11 @@ Feature: Setup a wowo
     Given I am ready for creating my wowo
     And the following themes exist
     | name       | url                          | image          |
-    | pure white | /themes/pure_white/style.css | pure_white.jpg |
-    | classic    | /themes/classic/style.css    | classic.jpg    |
+    | random 1   | /themes/random1/style.css    | random1.jpg |
+    | random 2   | /themes/random2/style.css    | random2.jpg    |
   	When I follow "New WoWo"
     Then I should be on the new wowo page
-    #And show me the page
+    And show me the page
     And I should see "Please choose a theme"
-    And I should see a list of themes
+    And I should see "random 1"
+    And I should see "random 2"
