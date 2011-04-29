@@ -527,3 +527,83 @@ Placeholders = {
       }
     }
 }
+
+editor = new Editor({
+      mode : {
+        current : 'CREATE',
+        publishPaths : {
+          CREATE : '/user/zaps',
+          UPDATE : '/user/zaps/4dba5969a006f961bc000177'
+        }
+      }
+    });
+ 
+    
+    // facebook, twitter, etc
+    Networks = {
+      publish       :
+        function (message, zap) {
+          var networks = [];
+          if (this.facebook.loggedIn) {
+            networks.push('facebook');
+          }
+          if (this.twitter.loggedIn) {
+            networks.push('twitter');
+          }
+          if (networks.length > 0) {
+            $.ajax({
+              url     : '/user/networks/posts',
+              data    :
+                {
+                  post : {
+                    networks  : networks,
+                    name      : zap.name,
+                    message   : message,
+                    link      : 'http://' + zap.domain_name
+                  }
+                },
+              type      : 'post'
+            });
+          }
+        },
+      facebook : {
+        loggedIn      : false,
+        toggle        :
+          function () {
+            if (this.loggedIn) {
+              this.loggedIn = false;
+              $('#share_facebook')
+                .removeClass('selected');
+            } else {
+              window.open('/user/networks/facebook/sessions/new', 'fb_login', 'menubar=no,toolbar=no,location=no,status=no,width=280,height=453');
+            }
+          },
+        logInComplete :
+          function () {
+            this.loggedIn = true;
+            $('#share_facebook')
+              .addClass('selected');
+          }
+      },
+      twitter : {
+        loggedIn      : false,
+        toggle        :
+          function () {
+            if (this.loggedIn) {
+              this.loggedIn = false;
+              $('#share_twitter')
+                .removeClass('selected');
+            } else {
+              window.open('/user/networks/twitter/sessions/new', 'twitter_login', 'menubar=no,toolbar=no,location=no,status=no,width=800,height=494');
+            }
+          },
+        logInComplete :
+          function () {
+            this.loggedIn = true;
+            $('#share_twitter')
+              .addClass('selected');
+          }
+      }
+    };
+ 
+    $(window).bind('ready load', Placeholders.reset);

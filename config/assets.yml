@@ -12,6 +12,7 @@ javascripts:
     - public/javascripts/vendor/jqModals.js
     - public/javascripts/application.js    
     - public/javascripts/theme_browser.js
+    - public/javascripts/wowo.js
   mobile:
     - public/javascripts/vendor/jquery144.min.js
     - public/javascripts/custom-mobile-scripting.js
