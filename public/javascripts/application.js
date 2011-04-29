@@ -65,7 +65,7 @@ var View = {
 var Wait = function(config) {
   var self = $.extend({
     id : '',
-    image : '/images/user/editor/wait.gif',
+    image : '/images/ajax-loader.gif',
     message : '',
     overlay : null
   }, config);
