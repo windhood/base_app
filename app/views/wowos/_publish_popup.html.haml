@@ -1,0 +1,8 @@
+#publish.popup
+  = link_to t('close'), '#', :onclick => "$('#publish').jqmHide(); return false;"
+  %h2= t('.publish_share')
+  %p= t('.publish_instruction')
+  <input class="share" id="share_facebook" onclick="Networks.facebook.toggle();" type="button" value="Facebook" /> 
+  <input class="share" id="share_twitter" onclick="Networks.twitter.toggle();" type="button" value="Twitter" /> 
+  <textarea cols="40" id="share_message" name="share[message]" placeholder="Add a message about your zap!" rows="20"></textarea> 
+  <input class="special wide" onclick="editor.publishing();" type="button" value="Publish" />

@@ -1,0 +1,27 @@
+#component_templates
+  .component.text_component
+    = hidden_field_tag 'wowo[components_attributes][][class_name]', 'TextComponent', :id => 'wowo_components_attributes__class_name'
+    -# %input#wowo_components_attributes__class_name{:type => 'hidden', :name => 'wowo[components_attributes][][class_name]', :value => 'TextComponent'} 
+    .delete_button
+    = text_field_tag 'wowo[components_attributes][][heading]', nil, :id => 'wowo_components_attributes__heading', :class => 'inputtext heading', 
+      :placeholder => t('.text_component_heading_placeholder')
+    = text_field_tag 'wowo[components_attributes][][text]', nil, :id => 'wowo_components_attributes__text', 
+      :placeholder => t('.text_component_content_placeholder')
+      
+  .component.link_component
+    = hidden_field_tag 'wowo[components_attributes][][class_name]', 'LinkComponent', :id => 'wowo_components_attributes__class_name'
+    .delete_button
+    %div
+      = url_field_tag 'wowo[components_attributes][][uri]', nil, :id => 'wowo_components_attributes__uri', :class => 'inputurl', 
+        :placeholder => "http://"
+    %div
+      = text_field_tag 'wowo[components_attributes][][title]', nil, :id => 'wowo_components_attributes__title', :class => 'inputtext heading', 
+        :placeholder => t('.link_component_title_placeholder')
+
+  .component.picture_component
+    = hidden_field_tag 'wowo[components_attributes][][class_name]', 'PictureComponent', :id => 'wowo_components_attributes__class_name'
+    = hidden_field_tag 'wowo[components_attributes][][picture_id]', nil, :id => 'wowo_components_attributes__picture_id'
+    .delete_button
+    .picture
+    = text_field_tag 'wowo[components_attributes][][caption]', nil, :id => 'wowo_components_attributes__caption', :class => 'inputtext', 
+      :placeholder => t('.picture_component_caption_placeholder')

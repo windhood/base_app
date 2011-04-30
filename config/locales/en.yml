@@ -32,6 +32,8 @@ en:
   prohibit_from_saving: 'prohibited this record from being saved'
   my_wowo: "My WoWo"
   new_wowo: "New WoWo"
+  close: "close"
+  succuess_title: "Success!"
     
   layouts:
     main_nav:
@@ -178,3 +180,15 @@ en:
   wowos:
     new:
       choose_theme_label: "Please choose a theme:"
+      create_a_new_wowo: "Create a New WoWo"
+    component_templates:
+      text_component_heading_placeholder: "Title your note! (Optional)"
+      text_component_content_placeholder: "Share your thoughts!"
+      link_component_title_placeholder: "Add a caption to your link! (Optional)"
+      picture_component_caption_placeholder: "Optional caption"
+    publish_popup:
+      publish_share: Publish and Share
+      publish_instruction: In addition to publishing your zap, you can choose to share this via Facebook or Twitter! 
+                           Just click on the buttons and show off your zap!
+    published_popup:
+      your_wowo_url_is: 'Your WoWo URL is: <span id="published_url"></span>'
