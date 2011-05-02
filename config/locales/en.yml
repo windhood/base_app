@@ -192,3 +192,7 @@ en:
                            Just click on the buttons and show off your zap!
     published_popup:
       your_wowo_url_is: 'Your WoWo URL is: <span id="published_url"></span>'
+    form:
+      wowo_title_label: 'Give your Zap a title:'
+      wowo_zap_url_instruction: 'Your WoWo URL: <a href="http://" target="_blank">http://</a>'
+      component_insert_prompt: 'Start your WoWo by clicking on one of the buttons to the left!'

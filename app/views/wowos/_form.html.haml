@@ -1,2 +1,13 @@
 = form_tag preview_wowo_path(@wowo.guid), :id => 'wowo_form', :method => :get do
+  = render "shared/error_messages", :target => @wowo 
   #wowo_title
+    = label_tag 'wowo[name]', t('.wowo_title_label')
+    = text_field_tag 'wowo[name]', @wowo.name, :id => 'wowo_name'
+  
+  #wowo_url
+    = t('.wowo_zap_url_instruction').html_safe
+  #component_panel_top
+  #component_panel
+    .component_insert_point
+    #component_insert_prompt= t('.component_insert_prompt')
+  #component_panel_bottom
