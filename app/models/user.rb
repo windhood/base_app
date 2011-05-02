@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20110105083930
+# Schema version: 20110502210436
 #
 # Table name: users
 #
@@ -27,6 +27,7 @@
 #  birthday             :date
 #  gender               :string(255)
 #  searchable           :boolean         default(TRUE)
+#  disable_mail         :boolean
 #
 
 class User < ActiveRecord::Base
@@ -48,6 +49,7 @@ class User < ActiveRecord::Base
   
   before_save :strip_names
   has_many :services
+  has_many :wowos
   
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :name, :bio,:date,

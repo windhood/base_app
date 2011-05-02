@@ -1,4 +1,5 @@
 BaseApp::Application.routes.draw do
+  get 'wowos/:guid/preview', :to => 'wowos#preview', :as => 'preview_wowo'
   resources :wowos
   #devise_for :admin_users, :path => 'admin'
 
