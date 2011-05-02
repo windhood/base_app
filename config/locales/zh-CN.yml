@@ -182,7 +182,6 @@
   
   wowos:
     new:
-      choose_theme_label: "请选择一个模版主题:"
       create_a_new_wowo: "创建一个新窝窝"
     component_templates:
       text_component_heading_placeholder: "标题（可选）"
@@ -199,3 +198,4 @@
       wowo_title_label: '给你的窝窝一个名字：'
       wowo_zap_url_instruction: '你的窝窝 URL: <a href="http://" target="_blank">http://</a>'
       component_insert_prompt: 'Start your Zap by clicking on one of the buttons to the left!'
+      choose_theme_label: "请选择一个模版主题:"

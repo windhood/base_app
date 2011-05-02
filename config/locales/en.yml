@@ -179,7 +179,6 @@ en:
   
   wowos:
     new:
-      choose_theme_label: "Please choose a theme:"
       create_a_new_wowo: "Create a New WoWo"
     component_templates:
       text_component_heading_placeholder: "Title your note! (Optional)"
@@ -196,3 +195,4 @@ en:
       wowo_title_label: 'Give your Zap a title:'
       wowo_zap_url_instruction: 'Your WoWo URL: <a href="http://" target="_blank">http://</a>'
       component_insert_prompt: 'Start your WoWo by clicking on one of the buttons to the left!'
+      choose_theme_label: "Choose your theme:"

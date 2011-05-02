@@ -3,9 +3,20 @@
   #wowo_title
     = label_tag 'wowo[name]', t('.wowo_title_label')
     = text_field_tag 'wowo[name]', @wowo.name, :id => 'wowo_name'
-  
+    
+  #wowo_theme
+    %label  #{t('.choose_theme_label')} 
+    #theme_browser
+      #left_arrow.arrow
+      #right_arrow.arrow
+      #themes_frame
+        #themes
+          = render @themes
+    = hidden_field_tag 'wowo[theme_id]', @wowo.theme.id, :id => 'wowo_theme_id'
+    
   #wowo_url
     = t('.wowo_zap_url_instruction').html_safe
+    
   #component_panel_top
   #component_panel
     .component_insert_point

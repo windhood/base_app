@@ -1,16 +1,7 @@
+%hr/
 %h1 #{t('.create_a_new_wowo')}
 = render 'form'
-%hr/
-%p #{t('.choose_theme_label')}
 
-#theme_browser
-  #left_arrow.arrow
-  #right_arrow.arrow
-  #themes_frame
-    #themes
-      = render @themes 
-
-%hr/
 = render 'component_templates'
 = render 'publish_popup'
 = render 'published_popup'
