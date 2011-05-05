@@ -191,9 +191,10 @@
     publish_popup:
       publish_share: Publish and Share
       publish_instruction: In addition to publishing your zap, you can choose to share this via Facebook or Twitter! 
-                           Just click on the buttons and show off your zap!
+                           Just click on the buttons and show off your wowo!
     published_popup:
       your_wowo_url_is: 'Your WoWo URL is: <span id="published_url"></span>'
+      success_title: '成功!'
     form:
       wowo_title_label: '给你的窝窝一个名字：'
       wowo_zap_url_instruction: '你的窝窝 URL: <a href="http://" target="_blank">http://</a>'

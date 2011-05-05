@@ -1,5 +1,5 @@
 #publish.popup
-  = link_to t('close'), '#', :onclick => "$('#publish').jqmHide(); return false;"
+  = link_to t('close'), '#', :onclick => "$('#publish').jqmHide(); return false;", :class => 'close'
   %h2= t('.publish_share')
   %p= t('.publish_instruction')
   <input class="share" id="share_facebook" onclick="Networks.facebook.toggle();" type="button" value="Facebook" /> 

@@ -1,5 +1,5 @@
 #published.popup
-  = link_to t('close'), '#', :onclick => "$('#published').jqmHide(); return false;"
+  = link_to t('close'), '#', :onclick => "$('#published').jqmHide(); return false;", :class => 'close'
   %h2= t('.success_title')
   %p 
     = t('.your_wowo_url_is').html_safe 
