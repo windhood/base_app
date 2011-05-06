@@ -1,0 +1,35 @@
+/* theme browser */
+#theme_browser {
+  width: 95%;//966px;
+  height: 454px;
+  margin: 20px auto;
+}
+#theme_browser .arrow {
+  width: 72px;
+  height: 454px;
+  cursor: pointer;
+}
+#theme_browser #left_arrow {
+  float: left;
+  background: url(/images/corporate/theme_browser_left_arrow.png) top no-repeat;
+}
+#theme_browser #right_arrow {
+  float: right;
+  background: url(/images/corporate/theme_browser_right_arrow.png) top no-repeat;
+}
+#theme_browser #themes_frame {
+  padding: 20px 10px;
+  overflow: hidden;
+  height: 414px;
+  background: #292929 url(/images/corporate/theme_browser_bottom.png) bottom left repeat-x;
+  border: none;
+}
+#theme_browser #themes {
+  width: 9999px;
+}
+#theme_browser .theme {
+  float: left;
+  display: block;
+  padding: 0px 13px;//0px 7px;
+  width: 246px;
+}

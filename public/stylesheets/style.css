@@ -390,6 +390,118 @@ h5, h6 {
   margin-bottom: 1.154em;
 }
 
+/* line 56, ../../app/stylesheets/partials/_typography.scss */
+textarea,
+input[type="text"],
+input[type="url"],
+input[type="email"],
+input[type="password"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 7px;
+  background: #fff;
+  font-size: .9em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  border: 1px solid #b9b9b9;
+}
+
+/* line 74, ../../app/stylesheets/partials/_typography.scss */
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder,
+input::-moz-placeholder,
+textarea::-moz-placeholder,
+.placeholder {
+  color: #959595;
+}
+
+/* line 81, ../../app/stylesheets/partials/_typography.scss */
+input[type="submit"],
+input[type="button"],
+button,
+.button {
+  display: inline-block;
+  background: transparent url(/images/buttons/Orange-Normal.png) center no-repeat;
+  border: none;
+  color: #fff;
+  height: 39px;
+  width: 146px;
+  text-align: center;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  font-size: .9em;
+  font-weight: bold;
+  margin-bottom: 9px;
+  line-height: 39px;
+  text-shadow: 0px -1px 0px #333333;
+  cursor: pointer;
+}
+
+/* line 101, ../../app/stylesheets/partials/_typography.scss */
+input[type="submit"].wide,
+input[type="button"].wide,
+button.wide,
+.button.wide {
+  width: 282px;
+  background-image: url(/images/buttons/Orange-Wide.png);
+}
+
+/* line 108, ../../app/stylesheets/partials/_typography.scss */
+input[type="submit"].special,
+input[type="button"].special,
+button.special,
+.button.special {
+  background-image: url(/images/buttons/Orange-Special-Normal.png);
+}
+
+/* line 114, ../../app/stylesheets/partials/_typography.scss */
+input[type="submit"].special.wide,
+input[type="button"].special.wide,
+button.special.wide,
+.button.special.wide {
+  background-image: url(/images/buttons/Orange-Special-Wide.png);
+}
+
+/* line 120, ../../app/stylesheets/partials/_typography.scss */
+input[type="submit"].gray,
+input[type="button"].gray,
+button.gray,
+.button.gray {
+  background-image: url(/images/buttons/Gray-Normal.png);
+}
+
+/* line 126, ../../app/stylesheets/partials/_typography.scss */
+input[type="submit"].gray.wide,
+input[type="button"].gray.wide,
+button.gray.wide,
+.button.gray.wide {
+  background-image: url(/images/buttons/Gray-Wide.png);
+}
+
+/* line 132, ../../app/stylesheets/partials/_typography.scss */
+input[type="submit"].black,
+input[type="button"].black,
+button.black,
+.button.black {
+  background-image: url(/images/buttons/Black-Normal.png);
+}
+
+/* line 138, ../../app/stylesheets/partials/_typography.scss */
+input[type="submit"].black.wide,
+input[type="button"].black.wide,
+button.black.wide,
+.button.black.wide {
+  background-image: url(/images/buttons/Black-Wide.png);
+}
+
+/* line 142, ../../app/stylesheets/partials/_typography.scss */
+a.button:hover {
+  text-decoration: none;
+}
+
 /* line 3, ../../app/stylesheets/partials/_layout.scss */
 header {
   *zoom: 1;
@@ -598,53 +710,533 @@ header ul#user_menu .avatar {
   display: block;
 }
 
-/* theme browser */
-/* line 2, ../../app/stylesheets/partials/_content-style.scss */
-#theme_browser {
-  width: 95%;
-  height: 454px;
-  margin: 20px auto;
+/* line 1, ../../app/stylesheets/partials/_content-style.scss */
+.jqmOverlay {
+  min-width: 2048px;
+  min-height: 2048px;
 }
 
-/* line 7, ../../app/stylesheets/partials/_content-style.scss */
-#theme_browser .arrow {
-  width: 72px;
-  height: 454px;
+/* line 6, ../../app/stylesheets/partials/_content-style.scss */
+.popup {
+  position: fixed;
+  background: #fff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-box-sizing: border-box;
+  border-radius: 10px;
+  display: none;
+}
+
+/* line 15, ../../app/stylesheets/partials/_content-style.scss */
+.popup a.close {
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 2px;
+  font-size: .7em;
+  color: #b5b5ab;
+}
+
+/* line 23, ../../app/stylesheets/partials/_content-style.scss */
+.popup.loading {
+  background: white url(/images/ajax-loader.gif) center no-repeat;
+}
+
+/* line 26, ../../app/stylesheets/partials/_content-style.scss */
+.popup iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* line 1, ../../app/stylesheets/partials/_layout-footer.scss */
+footer {
+  text-align: center;
+  height: 38px;
+}
+/* line 4, ../../app/stylesheets/partials/_layout-footer.scss */
+footer img {
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+/* ------------------------------------------------------------------------- */
+/* variables                                                                 */
+/* line 3, ../../app/stylesheets/partials/_wowo-form.scss */
+#wowo_form {
+  border-top-left-radius: 10px;
+  -moz-border-radius-top-left: 10px;
+  -webkit-border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  -moz-border-radius-top-right: 10px;
+  -webkit-border-top-right-radius: 10px;
+  position: relative;
+  width: 760px;
+  color: white;
+  background-color: #292929;
+  margin: 0px 10px;
+  padding: 1px 0px 0px;
+  /* theme browser */
+}
+
+/* line 18, ../../app/stylesheets/partials/_wowo-form.scss */
+#wowo_form label {
+  display: block;
+  margin: 25px 10px 0px 25px;
+}
+
+/* line 22, ../../app/stylesheets/partials/_wowo-form.scss */
+#wowo_form #wowo_settings {
+  position: absolute;
+  right: 20px;
+  top: 48px;
+}
+
+/* line 28, ../../app/stylesheets/partials/_wowo-form.scss */
+#wowo_form #wowo_title,
+#wowo_form #wowo_theme {
+  margin-bottom: 12px;
+}
+
+/* line 32, ../../app/stylesheets/partials/_wowo-form.scss */
+#wowo_form #zap_title input {
+  margin: 0px 10px 0px 25px;
+  width: 530px;
+}
+
+/* line 36, ../../app/stylesheets/partials/_wowo-form.scss */
+#wowo_form #theme_browser {
+  width: 720px;
+  height: 342px;
+  margin: 0px auto;
+}
+
+/* line 41, ../../app/stylesheets/partials/_wowo-form.scss */
+#wowo_form #theme_browser .arrow {
+  width: 54px;
+  height: 342px;
   cursor: pointer;
 }
 
-/* line 12, ../../app/stylesheets/partials/_content-style.scss */
-#theme_browser #left_arrow {
+/* line 46, ../../app/stylesheets/partials/_wowo-form.scss */
+#wowo_form #theme_browser #left_arrow {
   float: left;
-  background: url(/images/corporate/theme_browser_left_arrow.png) top no-repeat;
+  background: url(/images/editor/LeftThemeScroller.png) top no-repeat;
 }
 
-/* line 16, ../../app/stylesheets/partials/_content-style.scss */
-#theme_browser #right_arrow {
+/* line 50, ../../app/stylesheets/partials/_wowo-form.scss */
+#wowo_form #theme_browser #right_arrow {
   float: right;
-  background: url(/images/corporate/theme_browser_right_arrow.png) top no-repeat;
+  background: url(/images/editor/RightThemeScroller.png) top no-repeat;
 }
 
-/* line 20, ../../app/stylesheets/partials/_content-style.scss */
-#theme_browser #themes_frame {
-  padding: 20px 10px;
+/* line 54, ../../app/stylesheets/partials/_wowo-form.scss */
+#wowo_form #theme_browser #themes_frame {
+  padding: 12px 6px;
   overflow: hidden;
-  height: 414px;
-  background: #292929 url(/images/corporate/theme_browser_bottom.png) bottom left repeat-x;
+  height: 318px;
+  background: url(/images/editor/theme_scroller_bg.png) repeat-x;
   border: none;
+  position: relative;
 }
 
-/* line 27, ../../app/stylesheets/partials/_content-style.scss */
-#theme_browser #themes {
+/* line 62, ../../app/stylesheets/partials/_wowo-form.scss */
+#wowo_form #theme_browser #themes {
   width: 9999px;
 }
 
-/* line 30, ../../app/stylesheets/partials/_content-style.scss */
-#theme_browser .theme {
+/* line 65, ../../app/stylesheets/partials/_wowo-form.scss */
+#wowo_form #theme_browser .theme {
   float: left;
   display: block;
-  padding: 0px 13px;
-  width: 246px;
+  padding: 0px 7px;
+  width: 190px;
+  height: 310px;
+  position: relative;
+  cursor: pointer;
+}
+
+/* line 74, ../../app/stylesheets/partials/_wowo-form.scss */
+#wowo_form #theme_browser .theme img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 190px;
+  height: 310px;
+  z-index: 0;
+}
+
+/* line 82, ../../app/stylesheets/partials/_wowo-form.scss */
+#wowo_form #theme_browser .theme .overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 190px;
+  height: 310px;
+  z-index: 1;
+  opacity: .5;
+  background-color: #000;
+  /* ie */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+
+/* line 95, ../../app/stylesheets/partials/_wowo-form.scss */
+#wowo_form #theme_browser .theme.selected .overlay {
+  display: none;
+}
+
+/* line 100, ../../app/stylesheets/partials/_wowo-form.scss */
+#wowo_form #wowo_url {
+  margin: 0px 10px 0px 37px;
+  padding-bottom: 12px;
+  width: 530px;
+  display: none;
+}
+
+/* line 106, ../../app/stylesheets/partials/_wowo-form.scss */
+#wowo_form #wowo_url a {
+  color: #ff6600;
+  text-decoration: none;
+}
+
+/* line 110, ../../app/stylesheets/partials/_wowo-form.scss */
+#wowo_form #component_panel_top {
+  height: 4px;
+  background: url(/images/editor/component_panel_top.png);
+}
+
+/* line 114, ../../app/stylesheets/partials/_wowo-form.scss */
+#wowo_form #component_panel_bottom {
+  height: 43px;
+  background: url(/images/editor/component_panel_bottom.png);
+}
+
+/* line 118, ../../app/stylesheets/partials/_wowo-form.scss */
+#wowo_form #component_panel {
+  padding: 0px 0px 25px 0px;
+  background: url(/images/editor/component_panel_bg.png) repeat-y;
+}
+
+/* line 122, ../../app/stylesheets/partials/_wowo-form.scss */
+#wowo_form #component_panel .component_insert_point {
+  padding: 25px 0px;
+  margin: 0px 30px 0px 53px;
+  width: 678px;
+  height: 15px;
+  background: url(/images/editor/component_insert_point.png) center no-repeat;
+}
+
+/* line 129, ../../app/stylesheets/partials/_wowo-form.scss */
+#wowo_form #component_panel #component_insert_prompt {
+  margin-top: -25px;
+  margin-left: 190px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+  padding-bottom: 20px;
+}
+
+/* line 136, ../../app/stylesheets/partials/_wowo-form.scss */
+#wowo_form #component_panel .component_top {
+  width: 585px;
+  height: 21px;
+  background: url(/images/editor/component_top.png);
+  margin: 0px 0 0px 120px;
+}
+
+/* line 142, ../../app/stylesheets/partials/_wowo-form.scss */
+#wowo_form #component_panel .component_bottom {
+  width: 589px;
+  height: 24px;
+  background: url(/images/editor/component_bottom.png);
+  margin: 0px 0 0px 120px;
+}
+
+/* line 148, ../../app/stylesheets/partials/_wowo-form.scss */
+#wowo_form #component_panel .component {
+  position: relative;
+  margin: 0px 0 0px 120px;
+  padding: 0px 24px 0px 25px;
+  background: url(/images/editor/component_bg.png) repeat-y;
+  width: 540px;
+  cursor: move;
+}
+
+/* line 156, ../../app/stylesheets/partials/_wowo-form.scss */
+#wowo_form #component_panel .component textarea {
+  overflow: auto;
+}
+
+/* line 163, ../../app/stylesheets/partials/_wowo-form.scss */
+#wowo_form #component_panel .component textarea,
+#wowo_form #component_panel .component input[type="text"],
+#wowo_form #component_panel .component input[type="url"],
+#wowo_form #component_panel .component .inputtext,
+#wowo_form #component_panel .component .inputurl {
+  width: 540px;
+}
+
+/* line 166, ../../app/stylesheets/partials/_wowo-form.scss */
+#wowo_form #component_panel .component.text_component input[type="text"], #wowo_form #component_panel .component.link_component input[type="url"], #wowo_form #component_panel .component.picture_component .picture {
+  margin-bottom: 22px;
+}
+
+/* line 169, ../../app/stylesheets/partials/_wowo-form.scss */
+#wowo_form #component_panel .component textarea {
+  min-height: 60px;
+}
+
+/* line 172, ../../app/stylesheets/partials/_wowo-form.scss */
+#wowo_form #component_panel .component .picture {
+  height: 540px;
+  width: 540px;
+}
+
+/* line 176, ../../app/stylesheets/partials/_wowo-form.scss */
+#wowo_form #component_panel .component .delete_button {
+  position: absolute;
+  width: 44px;
+  height: 54px;
+  background: url(/images/editor/delete_button.png) no-repeat;
+  border: none;
+  top: -21px;
+  right: -40px;
+  cursor: pointer;
+}
+
+/* line 186, ../../app/stylesheets/partials/_wowo-form.scss */
+#wowo_form #component_panel .component label {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* line 191, ../../app/stylesheets/partials/_wowo-form.scss */
+.swfupload {
+  background-color: #000;
+}
+
+/* line 195, ../../app/stylesheets/partials/_wowo-form.scss */
+#component_templates {
+  display: none;
+}
+
+/* line 199, ../../app/stylesheets/partials/_wowo-form.scss */
+.show_component_action_panel {
+  border: 1px solid #cfcfcf;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0px auto 10px;
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+/* line 211, ../../app/stylesheets/partials/_wowo-form.scss */
+#component_action_panel {
+  background: url(/images/editor/component_action_panel.png);
+  position: absolute;
+  width: 87px;
+  height: 30px;
+  padding: 12px 9px 10px;
+}
+
+/* line 218, ../../app/stylesheets/partials/_wowo-form.scss */
+#component_action_panel .button {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  background: url(/images/editor/EditorButtons.png) no-repeat;
+  width: 29px;
+  height: 30px;
+  display: inline-block;
+  /* ie7 */
+  zoom: 1;
+  *display: inline;
+  _height: 30px;
+}
+
+/* line 231, ../../app/stylesheets/partials/_wowo-form.scss */
+#component_action_panel #add_link {
+  background-position: top right;
+}
+
+/* line 234, ../../app/stylesheets/partials/_wowo-form.scss */
+#component_action_panel #add_link:hover {
+  background-position: bottom right;
+}
+
+/* line 237, ../../app/stylesheets/partials/_wowo-form.scss */
+#component_action_panel #add_text {
+  background-position: top left;
+}
+
+/* line 240, ../../app/stylesheets/partials/_wowo-form.scss */
+#component_action_panel #add_text:hover {
+  background-position: bottom left;
+}
+
+/* line 244, ../../app/stylesheets/partials/_wowo-form.scss */
+#wowo_action_panel {
+  position: fixed;
+  left: 50%;
+  bottom: 35px;
+  margin-left: -492px;
+  width: 184px;
+  height: 154px;
+  background: url(/images/editor/wowo_action_panel_bg.png) no-repeat;
+}
+
+/* line 253, ../../app/stylesheets/partials/_wowo-form.scss */
+#wowo_action_panel button {
+  padding: 0px;
+  background: transparent;
+  cursor: pointer;
+  height: 31px;
+  line-height: 31px;
+}
+
+/* line 260, ../../app/stylesheets/partials/_wowo-form.scss */
+#wowo_action_panel #publish_button {
+  margin: 21px 0px 0px 23px;
+}
+
+/* line 263, ../../app/stylesheets/partials/_wowo-form.scss */
+#wowo_action_panel #preview_button {
+  margin: 9px 0px 0px 23px;
+}
+
+/* line 266, ../../app/stylesheets/partials/_wowo-form.scss */
+#wowo_action_panel #delete_button {
+  margin: 9px 0px 0px 23px;
+}
+
+/* line 270, ../../app/stylesheets/partials/_wowo-form.scss */
+.popup {
+  background-color: #efefec;
+  padding: 16px;
+}
+
+/* line 274, ../../app/stylesheets/partials/_wowo-form.scss */
+.popup p {
+  font-size: .8em;
+}
+
+/* line 281, ../../app/stylesheets/partials/_wowo-form.scss */
+.popup input[type="submit"],
+.popup input[type="button"],
+.popup button,
+.popup .button,
+.popup textarea {
+  display: block;
+  margin: 0px auto 9px;
+}
+
+/* line 285, ../../app/stylesheets/partials/_wowo-form.scss */
+.popup .share {
+  width: 288px;
+  height: 47px;
+  margin: 0px auto;
+  background-image: url(/images/buttons/Share-Unselected.png);
+}
+
+/* line 291, ../../app/stylesheets/partials/_wowo-form.scss */
+.popup .share.selected {
+  background-image: url(/images/buttons/Share-Selected.png);
+}
+
+/* line 295, ../../app/stylesheets/partials/_wowo-form.scss */
+#settings.popup {
+  top: 50%;
+  left: 50%;
+  width: 320px;
+  margin-left: -160px;
+}
+
+/* line 302, ../../app/stylesheets/partials/_wowo-form.scss */
+#publish.popup {
+  top: 50%;
+  left: 50%;
+  width: 320px;
+  margin-top: -230px;
+  margin-left: -160px;
+}
+
+/* line 309, ../../app/stylesheets/partials/_wowo-form.scss */
+#publish.popup textarea {
+  width: 288px;
+  height: 160px;
+}
+
+/* line 314, ../../app/stylesheets/partials/_wowo-form.scss */
+#published {
+  top: 50%;
+  left: 50%;
+  width: 320px;
+  height: 150px;
+  margin-top: -75px;
+  margin-left: -160px;
+}
+
+/* line 323, ../../app/stylesheets/partials/_wowo-form.scss */
+#publishing, #uploading_image {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 280px;
+  height: 190px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  margin-top: -140px;
+  margin-left: -95px;
+  display: none;
+}
+
+/* jqModal base Styling courtesy of;
+	Brice Burgess <bhb@iceburg.net> */
+/* The Window's CSS z-index value is respected (takes priority). If none is supplied,
+	the Window's z-index value will be set to 3000 by default (via jqModal.js). */
+/* line 344, ../../app/stylesheets/partials/_wowo-form.scss */
+.jqmWindow {
+  display: none;
+  position: fixed;
+  top: 17%;
+  left: 50%;
+  margin-left: -300px;
+  width: 600px;
+  background-color: #EEE;
+  color: #333;
+  border: 1px solid black;
+  padding: 12px;
+}
+
+/* line 360, ../../app/stylesheets/partials/_wowo-form.scss */
+.jqmOverlay {
+  background-color: #000;
+}
+
+/* Background iframe styling for IE6. Prevents ActiveX bleed-through (<select> form elements, etc.) */
+/* line 363, ../../app/stylesheets/partials/_wowo-form.scss */
+* iframe.jqm {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: expression(this.parentNode.offsetWidth+'px');
+  height: expression(this.parentNode.offsetHeight+'px');
+}
+
+/* Fixed posistioning emulation for IE6
+     Star selector used to hide definition from browsers other than IE6
+     For valid CSS, use a conditional include instead */
+/* line 371, ../../app/stylesheets/partials/_wowo-form.scss */
+* html .jqmWindow {
+  position: absolute;
+  top: expression((document.documentElement.scrollTop || document.body.scrollTop) + Math.round(17 * (document.documentElement.offsetHeight || document.body.clientHeight) / 100) + 'px');
 }
 
 @media print {

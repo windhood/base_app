@@ -1,36 +1,37 @@
-/* theme browser */
-#theme_browser {
-  width: 95%;//966px;
-  height: 454px;
-  margin: 20px auto;
+.jqmOverlay {
+  min-width: 2048px;
+  min-height: 2048px;
 }
-#theme_browser .arrow {
-  width: 72px;
-  height: 454px;
-  cursor: pointer;
+
+.popup {
+  position: fixed;
+  background: #fff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-box-sizing: border-box;
+  border-radius: 10px;
+  display: none;
 }
-#theme_browser #left_arrow {
-  float: left;
-  background: url(/images/corporate/theme_browser_left_arrow.png) top no-repeat;
-}
-#theme_browser #right_arrow {
-  float: right;
-  background: url(/images/corporate/theme_browser_right_arrow.png) top no-repeat;
-}
-#theme_browser #themes_frame {
-  padding: 20px 10px;
-  overflow: hidden;
-  height: 414px;
-  background: #292929 url(/images/corporate/theme_browser_bottom.png) bottom left repeat-x;
-  border: none;
-}
-#theme_browser #themes {
-  width: 9999px;
-}
-#theme_browser .theme {
-  float: left;
+.popup a.close {
   display: block;
-  padding: 0px 13px;//0px 7px;
-  width: 246px;
+  position: absolute;
+  right: 10px;
+  top: 2px;
+  font-size: .7em;
+  color: #b5b5ab;
 }
+.popup.loading {
+  background: white url(/images/ajax-loader.gif) center no-repeat;
+}
+.popup iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+@import "layout-footer";
+//@import "theme-browser";
+@import "wowo-form";
 

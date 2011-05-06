@@ -5,6 +5,7 @@
 @import "layout";
 
 @include basic-typography;
+@include general-form-style;
 @include page-layout;
 
 @import "main-nav";

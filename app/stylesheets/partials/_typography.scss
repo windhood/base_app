@@ -47,3 +47,99 @@
   h4 { font-size: 1.4em;  margin-bottom: 1.071em; }
   h5,h6 { font-size: 1.3em;  margin-bottom: 1.154em; }
 }
+
+@mixin general-form-style {
+  textarea,
+  input[type="text"],
+  input[type="url"],
+  input[type="email"],
+  input[type="password"] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 7px;
+    background: #fff;
+    font-size: .9em;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    border: 1px solid #b9b9b9;
+  }
+
+  input::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder,
+  input::-moz-placeholder,
+  textarea::-moz-placeholder,
+  .placeholder {
+    color: #959595;
+  }
+
+  input[type="submit"],
+  input[type="button"],
+  button,
+  .button {
+    display: inline-block;
+    background: transparent url(/images/buttons/Orange-Normal.png) center no-repeat;
+    border: none;
+    color: #fff;
+    height: 39px;
+    width: 146px;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    font-size: .9em;
+    font-weight: bold;
+    margin-bottom: 9px;
+    line-height: 39px;
+    text-shadow: 0px -1px 0px #333333;
+    cursor: pointer;
+  }
+  input[type="submit"].wide,
+  input[type="button"].wide,
+  button.wide,
+  .button.wide {
+    width: 282px;
+    background-image: url(/images/buttons/Orange-Wide.png);
+  }
+  input[type="submit"].special,
+  input[type="button"].special,
+  button.special,
+  .button.special {
+    background-image: url(/images/buttons/Orange-Special-Normal.png);
+  }
+  input[type="submit"].special.wide,
+  input[type="button"].special.wide,
+  button.special.wide,
+  .button.special.wide {
+    background-image: url(/images/buttons/Orange-Special-Wide.png);
+  }
+  input[type="submit"].gray,
+  input[type="button"].gray,
+  button.gray,
+  .button.gray {
+    background-image: url(/images/buttons/Gray-Normal.png);
+  }
+  input[type="submit"].gray.wide,
+  input[type="button"].gray.wide,
+  button.gray.wide,
+  .button.gray.wide {
+    background-image: url(/images/buttons/Gray-Wide.png);
+  }
+  input[type="submit"].black,
+  input[type="button"].black,
+  button.black,
+  .button.black {
+    background-image: url(/images/buttons/Black-Normal.png);
+  }
+  input[type="submit"].black.wide,
+  input[type="button"].black.wide,
+  button.black.wide,
+  .button.black.wide {
+    background-image: url(/images/buttons/Black-Wide.png);
+  }
+
+  a.button:hover {
+    text-decoration: none;
+  }
+}
