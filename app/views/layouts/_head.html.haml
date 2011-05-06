@@ -19,6 +19,8 @@
   -# %link{ :href => "/favicon.ico", :rel => "shortcut icon" }/
   -# %link{ :href => "/apple-touch-icon.png", :rel => "apple-touch-icon" }/
   
+  -# Append your own using content_for :head
+  = yield :head
   = render :partial => 'layouts/stylesheets'
   
   -# All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects
