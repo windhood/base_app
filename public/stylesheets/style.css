@@ -784,7 +784,7 @@ footer img {
 /* line 18, ../../app/stylesheets/partials/_wowo-form.scss */
 #wowo_form label {
   display: block;
-  margin: 25px 10px 0px 25px;
+  margin: 25px 10px 10px 25px;
 }
 
 /* line 22, ../../app/stylesheets/partials/_wowo-form.scss */
@@ -801,7 +801,7 @@ footer img {
 }
 
 /* line 32, ../../app/stylesheets/partials/_wowo-form.scss */
-#wowo_form #zap_title input {
+#wowo_form #wowo_title input {
   margin: 0px 10px 0px 25px;
   width: 530px;
 }

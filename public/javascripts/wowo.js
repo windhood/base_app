@@ -63,7 +63,7 @@ var Editor = function(config) {
       
         var link;
 
-        // publish zap to networks
+        // publish wowo to networks
         Networks.publish($('#share_message').val(), wowo);
 
         // link to show in "Your WoWo URL" and published popup
@@ -130,12 +130,12 @@ var WoWoActionPanel = function(editor) {
     // create DOM components
     var publishButton =
           $('<button id="publish_button">Publish & Share</button>')
-            .click(function() {
+					  .click(function() {
               editor.publish();
             }),
         previewButton =
           $('<button id="preview_button">Preview</button>')
-            .click(function() {
+					  .click(function() {
               editor.preview();
             }),
         deleteButton =
@@ -143,7 +143,7 @@ var WoWoActionPanel = function(editor) {
 
     // "memoize" footer height  
     // TODO change the #layout_footer to #footer
-    footerHeight = $('#layout_footer').outerHeight();
+    footerHeight = $('#footer').outerHeight();
 
     panel = $('<div id="wowo_action_panel"></div>')
       .append(publishButton)
@@ -249,7 +249,7 @@ var ComponentActionPanel = function () {
         file_post_name            : 'file',
         
         button_placeholder_id     : 'add_picture',
-        button_image_url          : '/images/user/editor/PictureButton.png',
+        button_image_url          : '/images/editor/PictureButton.png',
         button_width              : 29,
         button_height             : 30,
         button_action             : SWFUpload.BUTTON_ACTION.SELECT_FILE,
@@ -273,7 +273,7 @@ var ComponentActionPanel = function () {
                                           // clone the component template 
                                           component = $('#component_templates .picture_component').clone();
                                           
-                                      component.find('#zap_components_attributes__picture_id').val(picture_id);
+                                      component.find('#wowo_components_attributes__picture_id').val(picture_id);
                                       component.find('.picture').empty().append('<img src="/pictures/' + picture_id + '?width=540">');
                                       self.addComponent(component, swfu.insertionPoint);
                                       
@@ -480,7 +480,7 @@ ComponentActionPanel.prototype.removeComponent = function (component) {
 };
 
 //
-// (re)sets sorting behavior on zapComponents component list
+// (re)sets sorting behavior on wowoComponents component list
 //
 ComponentActionPanel.prototype.initSortable = function () {
   
@@ -528,12 +528,14 @@ Placeholders = {
     }
 }
 
+
+
 editor = new Editor({
       mode : {
         current : 'CREATE',
         publishPaths : {
-          CREATE : '/user/zaps',
-          UPDATE : '/user/zaps/4dba5969a006f961bc000177'
+          CREATE : '/user/wowos',
+          UPDATE : '/user/wowos/4dba5969a006f961bc000177'
         }
       }
     });
@@ -542,7 +544,7 @@ editor = new Editor({
     // facebook, twitter, etc
     Networks = {
       publish       :
-        function (message, zap) {
+        function (message, wowo) {
           var networks = [];
           if (this.facebook.loggedIn) {
             networks.push('facebook');
@@ -557,9 +559,9 @@ editor = new Editor({
                 {
                   post : {
                     networks  : networks,
-                    name      : zap.name,
+                    name      : wowo.name,
                     message   : message,
-                    link      : 'http://' + zap.domain_name
+                    link      : 'http://' + wowo.domain_name
                   }
                 },
               type      : 'post'
@@ -607,3 +609,5 @@ editor = new Editor({
     };
  
     $(window).bind('ready load', Placeholders.reset);
+		  
+

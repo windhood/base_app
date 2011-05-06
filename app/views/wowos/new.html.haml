@@ -3,5 +3,7 @@
 = render 'form'
 
 = render 'component_templates'
-= render 'publish_popup'
-= render 'published_popup'
+
+- content_for :javascripts do
+  = render 'publish_popup'
+  = render 'published_popup'

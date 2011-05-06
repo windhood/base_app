@@ -24,14 +24,7 @@ var View = {
     /* User menu */
     $(this.userMenu.selector)
       .click(this.userMenu.click);
-
-    /* Autoexpand textareas */
-    $('textarea')
-      .autoResize({
-        'animate': false,
-        'extraSpace': 0
-      });
-
+    
     $(document.body)
       .click(this.userMenu.removeFocus);
   }, 

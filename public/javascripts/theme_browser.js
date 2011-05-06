@@ -1,12 +1,3 @@
-/*   Copyright (c) 2010, Windhood Inc.  See
-*   the COPYRIGHT file.
-*/
-$(document).ready(function() {
-    // set up theme browser
-    new ThemeScroller();
-
-});
-
 var ThemeScroller = function () {
   
   var theme_browser = $('#theme_browser'),

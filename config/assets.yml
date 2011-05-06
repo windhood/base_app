@@ -6,10 +6,11 @@ javascripts:
     - public/javascripts/vendor/web_socket.js
   main:
     - public/javascripts/rails.js
-    - public/javascripts/vendor/jquery.infieldlabel.js
     - public/javascripts/vendor/jquery.tipsy.js
     - public/javascripts/vendor/jquery.html5-placeholder-shim.js
-    - public/javascripts/vendor/jqModals.js
+    - public/javascripts/vendor/jqModal.js
+    - public/javascripts/vendor/swfupload/swfupload.js
+    - public/javascripts/vendor/jquery-ui-1.8.6.custom.min.js
     - public/javascripts/application.js    
     - public/javascripts/theme_browser.js
     - public/javascripts/wowo.js
