@@ -1,11 +1,17 @@
-%hr/
-%h1 #{t('.create_a_new_wowo')}
-= render 'form'
+#sidebar
+  .h1
+    <a href="/users">Dashboard</a>
+  .h2 My Profile
+  .h3
+    <a href="/user/profile">Edit Information</a>
+#content
+  %h1 #{t('.create_a_new_wowo')}
+  = render 'form'
 
-= render 'component_templates'
-= render 'settings_popup'
-= render 'publish_popup'
-= render 'published_popup'
-- content_for :javascripts do
-  = render 'page_javascript'
+  = render 'component_templates'
+  = render 'settings_popup'
+  = render 'publish_popup'
+  = render 'published_popup'
+  - content_for :javascripts do
+    = render 'page_javascript'
   

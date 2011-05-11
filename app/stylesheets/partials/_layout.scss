@@ -8,7 +8,21 @@
   #main {
     @include container;
     @include container-background($main-content-bg-color);
-    min-height: 400px;
+    position: relative;
+    
+    #sidebar {
+      position: absolute;
+      left: 30px;
+      top: 10px;
+      line-height: 1.2em;
+      width: 150px;
+    } 
+    
+    #content {
+      min-height:  300px;
+      padding-left: 220px;
+      padding-top: 10px;
+    }
   }
 
   footer {
