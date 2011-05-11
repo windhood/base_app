@@ -1,3 +1,138 @@
+var Networks = function( config ) {
+      
+      var c = $.extend({
+            network_post_url: '',
+            new_facebook_session_url: '',
+            new_twitter_session_url: '',
+            facebook_button:$('#share_facebook'),
+            twitter_button:$('#share_twitter')
+          }, config),
+
+          /* external interface */
+          e = {
+            publish       :
+              function (message, zap) {
+                var networks = [];
+                if (this.facebook.loggedIn) {
+                  networks.push('facebook');
+                }
+                if (this.twitter.loggedIn) {
+                  networks.push('twitter');
+                }
+                if (networks.length > 0) {
+                  $.ajax({
+                    url     : c.network_post_url,
+                    data    :
+                      {
+                        post : {
+                          networks  : networks,
+                          name      : zap.name,
+                          message   : message,
+                          link      : 'http://' + zap.domain_name
+                        }
+                      },
+                    type      : 'post'
+                  });
+                }
+              },
+            facebook : {
+              loggedIn      : false,
+              toggle        :
+                function () {
+                  if (this.loggedIn) {
+                    this.loggedIn = false;
+                    c.facebook_button
+                      .removeClass('selected');
+                  } else {
+                    window.open(c.new_facebook_session_url, 'fb_login', 'menubar=no,toolbar=no,location=no,status=no,width=280,height=453');
+                  }
+                },
+              logInComplete :
+                function () {
+                  this.loggedIn = true;
+                  c.facebook_button
+                    .addClass('selected');
+                }
+            },
+            twitter : {
+              loggedIn      : false,
+              toggle        :
+                function () {
+                  if (this.loggedIn) {
+                    this.loggedIn = false;
+                    c.twitter_button
+                      .removeClass('selected');
+                  } else {
+                    window.open(c.new_twitter_session_url, 'twitter_login', 'menubar=no,toolbar=no,location=no,status=no,width=800,height=494');
+                  }
+                },
+              logInComplete :
+                function () {
+                  this.loggedIn = true;
+                  c.twitter_button
+                    .addClass('selected');
+                }
+            }
+          };
+      
+        
+      c.twitter_button.click(function(){
+        e.twitter.toggle();
+      });
+      c.facebook_button.click(function(){
+        e.facebook.toggle();
+      });
+      
+      return e;
+      
+    };
+
+
+var Settings = function( config ) {
+      
+      var c = $.extend({
+            popup           : $('#settings'),
+            profile_field   : $('#wowo_profile_enabled'),
+            comments_field  : $('#wowo_comments_enabled'),
+            profile_button  : $('#show_profile_button'),
+            comments_button : $('#show_comments_button')
+          }, config),
+          
+          /* external interface */
+          e = {
+            show : function () {
+              c.popup.jqmShow();
+              c.profile_button.toggleClass('selected', e.profile.enabled);
+              c.comments_button.toggleClass('selected', e.comments.enabled);
+            },
+            hide : function () {
+              c.popup.jqmHide(); 
+            },
+            profile : {
+              enabled: c.profile_field.val() === "true",
+              toggle : function () {
+                e.profile.enabled = !e.profile.enabled;
+                c.profile_field.val(e.profile.enabled);
+                c.profile_button.toggleClass('selected', e.profile.enabled);
+              }
+            },
+            comments : {
+              enabled : c.comments_field.val() === "true",
+              toggle  : function () {
+                e.comments.enabled = !e.comments.enabled;
+                c.comments_field.val(e.comments.enabled);                
+                c.comments_button.toggleClass('selected', e.comments.enabled);
+              }
+            }
+          };
+                
+      c.popup.detach().appendTo('body').jqm();        
+      c.profile_button.click(e.profile.toggle);
+      c.comments_button.click(e.comments.toggle);
+      
+      return e;
+    };
+
 var Editor = function(config) {
   var self;
   self = $.extend(true, {
@@ -527,87 +662,3 @@ Placeholders = {
       }
     }
 }
-
-
-
-editor = new Editor({
-      mode : {
-        current : 'CREATE',
-        publishPaths : {
-          CREATE : '/user/wowos',
-          UPDATE : '/user/wowos/4dba5969a006f961bc000177'
-        }
-      }
-    });
- 
-    
-    // facebook, twitter, etc
-    Networks = {
-      publish       :
-        function (message, wowo) {
-          var networks = [];
-          if (this.facebook.loggedIn) {
-            networks.push('facebook');
-          }
-          if (this.twitter.loggedIn) {
-            networks.push('twitter');
-          }
-          if (networks.length > 0) {
-            $.ajax({
-              url     : '/user/networks/posts',
-              data    :
-                {
-                  post : {
-                    networks  : networks,
-                    name      : wowo.name,
-                    message   : message,
-                    link      : 'http://' + wowo.domain_name
-                  }
-                },
-              type      : 'post'
-            });
-          }
-        },
-      facebook : {
-        loggedIn      : false,
-        toggle        :
-          function () {
-            if (this.loggedIn) {
-              this.loggedIn = false;
-              $('#share_facebook')
-                .removeClass('selected');
-            } else {
-              window.open('/user/networks/facebook/sessions/new', 'fb_login', 'menubar=no,toolbar=no,location=no,status=no,width=280,height=453');
-            }
-          },
-        logInComplete :
-          function () {
-            this.loggedIn = true;
-            $('#share_facebook')
-              .addClass('selected');
-          }
-      },
-      twitter : {
-        loggedIn      : false,
-        toggle        :
-          function () {
-            if (this.loggedIn) {
-              this.loggedIn = false;
-              $('#share_twitter')
-                .removeClass('selected');
-            } else {
-              window.open('/user/networks/twitter/sessions/new', 'twitter_login', 'menubar=no,toolbar=no,location=no,status=no,width=800,height=494');
-            }
-          },
-        logInComplete :
-          function () {
-            this.loggedIn = true;
-            $('#share_twitter')
-              .addClass('selected');
-          }
-      }
-    };
- 
-    $(window).bind('ready load', Placeholders.reset);
-		  
-

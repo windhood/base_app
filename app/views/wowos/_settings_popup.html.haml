@@ -1,0 +1,7 @@
+#settings.popup
+  = link_to t('close'), '#', :onclick => "settings.hide(); return false;", :class => 'close'
+  %h2= t('settings')
+  %p= t('.publish_instruction')
+  <input class="share" id="show_profile_button" onclick=";" type="button" value="Show Profile" />
+  <input class="share" id="show_comments_button" onclick=";" type="button" value="Show Comments" />
+  <input class="special wide" onclick="settings.hide();" type="button" value="Close" />

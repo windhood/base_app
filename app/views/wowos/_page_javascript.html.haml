@@ -1,0 +1,29 @@
+:javascript  
+  var editor, networks, settings;
+
+  $(function() {
+    editor =
+      new Editor({
+        mode : {
+          current : 'CREATE',
+          publishPaths : {
+            CREATE : '/user/wowos',
+            UPDATE : '/user/wowos/4dc46873a006f94aa6000138'
+          }
+        }
+      });
+
+    // facebook, twitter, etc
+    networks =
+      new Networks({
+        network_post_url:'https://www.zapd.com/user/networks/posts',
+        new_facebook_session_url:'/user/networks/facebook/sessions/new',
+        new_twitter_session_url:'/user/networks/twitter/sessions/new'
+      });
+
+    settings = new Settings();
+
+    $('#show_settings_button').click(settings.show);
+
+    $(window).bind('ready load', Placeholders.reset);
+  })
