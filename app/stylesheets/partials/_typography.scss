@@ -138,8 +138,64 @@
   .button.black.wide {
     background-image: url(/images/buttons/Black-Wide.png);
   }
+  input[type="submit"].dark,
+  input[type="button"].dark,
+  button.dark,
+  .button.dark {
+    background-image: url(/images/buttons/Dark.png);
+    width: 141px;
+    height: 32px;
+    line-height: 32px;
+  }
+  
 
   a.button:hover {
     text-decoration: none;
+  }
+  
+  .confirm {
+    position: absolute;
+    color: black;
+    text-align: center;
+    font-size: 1em;
+    line-height: 1.2em;
+  }
+  .confirm p {
+    padding-bottom: 0px;
+    margin-bottom: 8px;
+  }
+  .confirm a {
+    display: inline-block;
+    text-transform: uppercase;
+    height: 12px;
+    color: black;
+  }
+  .confirm a.confirm_yes {
+    color: #a0a094;
+  }
+  .confirm a:hover {
+    color: black;
+  }
+  .confirm.pop_up {
+    margin-top: -92px;
+    margin-left: -32px;
+    height: 72px;
+    width: 155px;
+    background: transparent url(/images/editor/confirm_wowo_delete.png) top left no-repeat;
+    padding: 13px 25px 7px;
+  }
+  .confirm.pop_up a {
+    width: 77px;
+  }
+  .confirm.pop_left {
+    height: 64px;
+    width: 130px;
+    padding: 13px 30px 7px 20px;
+    margin-left: -180px;
+    margin-top: -9px;
+    background: transparent url(/images/editor/confirm_component_delete.png) top left no-repeat;
+  }
+  .confirm.pop_left a {
+    width: 65px;
   }
 }
