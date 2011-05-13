@@ -497,9 +497,83 @@ button.black.wide,
   background-image: url(/images/buttons/Black-Wide.png);
 }
 
-/* line 142, ../../app/stylesheets/partials/_typography.scss */
+/* line 144, ../../app/stylesheets/partials/_typography.scss */
+input[type="submit"].dark,
+input[type="button"].dark,
+button.dark,
+.button.dark {
+  background-image: url(/images/buttons/Dark.png);
+  width: 141px;
+  height: 32px;
+  line-height: 32px;
+}
+
+/* line 152, ../../app/stylesheets/partials/_typography.scss */
 a.button:hover {
   text-decoration: none;
+}
+
+/* line 156, ../../app/stylesheets/partials/_typography.scss */
+.confirm {
+  position: absolute;
+  color: black;
+  text-align: center;
+  font-size: 1em;
+  line-height: 1.2em;
+}
+
+/* line 163, ../../app/stylesheets/partials/_typography.scss */
+.confirm p {
+  padding-bottom: 0px;
+  margin-bottom: 8px;
+}
+
+/* line 167, ../../app/stylesheets/partials/_typography.scss */
+.confirm a {
+  display: inline-block;
+  text-transform: uppercase;
+  height: 12px;
+  color: black;
+}
+
+/* line 173, ../../app/stylesheets/partials/_typography.scss */
+.confirm a.confirm_yes {
+  color: #a0a094;
+}
+
+/* line 176, ../../app/stylesheets/partials/_typography.scss */
+.confirm a:hover {
+  color: black;
+}
+
+/* line 179, ../../app/stylesheets/partials/_typography.scss */
+.confirm.pop_up {
+  margin-top: -92px;
+  margin-left: -32px;
+  height: 72px;
+  width: 155px;
+  background: transparent url(/images/editor/confirm_wowo_delete.png) top left no-repeat;
+  padding: 13px 25px 7px;
+}
+
+/* line 187, ../../app/stylesheets/partials/_typography.scss */
+.confirm.pop_up a {
+  width: 77px;
+}
+
+/* line 190, ../../app/stylesheets/partials/_typography.scss */
+.confirm.pop_left {
+  height: 64px;
+  width: 130px;
+  padding: 13px 30px 7px 20px;
+  margin-left: -180px;
+  margin-top: -9px;
+  background: transparent url(/images/editor/confirm_component_delete.png) top left no-repeat;
+}
+
+/* line 198, ../../app/stylesheets/partials/_typography.scss */
+.confirm.pop_left a {
+  width: 65px;
 }
 
 /* line 3, ../../app/stylesheets/partials/_layout.scss */
