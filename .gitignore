@@ -10,7 +10,6 @@ public/javascripts/*_packaged.js
 doc/specs.html
 doc/features.html
 tags
-*.sw?
 *~
 rerun.txt
 .bundle
