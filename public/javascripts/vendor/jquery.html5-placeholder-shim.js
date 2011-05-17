@@ -9,7 +9,7 @@
 			shim: function(opts) {
 				var config = {
 					color: '#888',
-					cls: '',
+					cls: 'placeholder_shim',
 					lr_padding:4,
 					selector: 'input[placeholder], textarea[placeholder]'
 				};
@@ -22,31 +22,28 @@
 		_placeholder_shim: function(config) {
 			function calcPositionCss(target)
 			{
-				var op = $(target).offsetParent().offset();
-				var ot = $(target).offset();
+				var t = $(target),
+						op = t.offsetParent().offset(),
+						ot = t.offset();
 
 				return {
-					top: ot.top - op.top + ($(target).outerHeight() - $(target).height()) /2,
-					left: ot.left - op.left + config.lr_padding,
-					width: $(target).width() - config.lr_padding
+					top: ot.top - op.top + (t.outerHeight() - t.height()) /2,
+					left: ot.left - op.left + parseInt(t.css('paddingLeft')) + config.lr_padding,
+					width: t.width() - (config.lr_padding * 2)
 				};
 			}
 			return this.each(function() {
+				
 				if( $(this).data('placeholder') ) {
 					var $ol = $(this).data('placeholder');
 					$ol.css(calcPositionCss($(this)));
 					return true;
 				}
-
-				var possible_line_height = {};
-				if( $(this).css('height') != 'auto') {
-				  possible_line_height = { lineHeight: $(this).css('height') };
-				}
-
+				
 				var ol = $('<label />')
 					.text($(this).attr('placeholder'))
 					.addClass(config.cls)
-					.css($.extend({
+					.css({
 						position:'absolute',
 						display: 'inline',
 						float:'none',
@@ -56,9 +53,9 @@
 						color: config.color,
 						cursor: 'text',
 						fontSize: $(this).css('font-size')
-					}, possible_line_height))
+					})
 					.css(calcPositionCss(this))
-					.attr('for', this.id)
+//					.attr('for', this.id)
 					.data('target',$(this))
 					.click(function(){
 						$(this).data('target').focus()
@@ -67,6 +64,7 @@
 				$(this)
 					.data('placeholder',ol)
 					.focus(function(){
+						$(config.selector).not(this).trigger('blur');
 						ol.hide();
 					}).blur(function() {
 						ol[$(this).val().length ? 'hide' : 'show']();
@@ -81,9 +79,3 @@
 	});
 
 })(jQuery);
-
-jQuery(document).add(window).bind('ready load', function() {
-  if (jQuery.placeholder) {
-    jQuery.placeholder.shim();
-  }
-});
