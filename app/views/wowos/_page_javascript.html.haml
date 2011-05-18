@@ -7,8 +7,8 @@
         mode : {
           current : 'CREATE',
           publishPaths : {
-            CREATE : '/user/wowos',
-            UPDATE : '/user/wowos/4dc46873a006f94aa6000138'
+            CREATE : "/wowos/#{@wowo.guid}",
+            UPDATE : "/wowos/#{@wowo.guid}"
           }
         }
       });
@@ -16,7 +16,7 @@
     // facebook, twitter, etc
     networks =
       new Networks({
-        network_post_url:'https://www.zapd.com/user/networks/posts',
+        network_post_url:'https://www.wowo.com/user/networks/posts',
         new_facebook_session_url:'/user/networks/facebook/sessions/new',
         new_twitter_session_url:'/user/networks/twitter/sessions/new'
       });

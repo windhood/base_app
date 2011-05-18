@@ -13,6 +13,9 @@ class WowosController  < ApplicationController
   def preview
   end
   
+  def create
+  end
+  
   ################### Private functions ############################
   private
   def new_wowo_with_guid
