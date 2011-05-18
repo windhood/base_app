@@ -1,9 +1,9 @@
 BaseApp::Application.routes.draw do
   get 'wowos/:guid/preview', :to => 'wowos#preview', :as => 'preview_wowo'
-  post 'wowos/:guid', :to => 'wowos#create', :as => 'create_wowo'
-  put 'wowos/:guid', :to => 'wowos#update', :as => 'update_wowo'
-  get 'wowos/new', :to => 'wowos#new', :as => 'new_wowo'
-  #resources :wowos
+  #post 'wowos/:guid', :to => 'wowos#create', :as => 'create_wowo'
+  #put 'wowos/:guid', :to => 'wowos#update', :as => 'update_wowo'
+  #get 'wowos/new', :to => 'wowos#new', :as => 'new_wowo'
+  resources :wowos
   #devise_for :admin_users, :path => 'admin'
 
   #ActiveAdmin.routes(self)

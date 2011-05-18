@@ -1,7 +1,8 @@
 = form_tag preview_wowo_path(@wowo.guid), :id => 'wowo_form', :method => :get do
   = render "shared/error_messages", :target => @wowo 
   <input id="wowo_profile_enabled" name="wowo[profile_enabled]" type="hidden" value="true" />
-  <input id="wowo_comments_enabled" name="wowo[comments_enabled]" type="hidden" value="true" />  
+  <input id="wowo_comments_enabled" name="wowo[comments_enabled]" type="hidden" value="true" /> 
+  -# = hidden_field_tag 'wowo[guid]', @wowo.guid, :id => 'wowo_guid' 
   #wowo_settings
     =link_to t('settings'), '#', :id => 'show_settings_button', :class => 'button dark', :onclick => "; return false;"
   #wowo_title
