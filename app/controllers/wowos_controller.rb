@@ -14,6 +14,14 @@ class WowosController  < ApplicationController
   end
   
   def create
+    #@comment = Comment.create!(params[:comment])
+    @wowo = Wowo.create(params[:wowo])
+    flash[:notice] = "Publish successful!"
+    respond_to do |format|
+      format.html { redirect_to wowos_path }
+      format.js
+    end
+    
   end
   
   ################### Private functions ############################

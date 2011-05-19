@@ -1,0 +1,10 @@
+$('#content h1').html("WoWo Created")
+// change editor mode to update
+editor.mode.current = 'UPDATE'
+editor.mode.publishPaths.UPDATE = '<%= "/wowos/#{@wowo.guid}" %>';
+  
+// update sidebar
+//$('#sidebar_zaps_list').replaceWith('\n<div id=\"sidebar_zaps_list\">\n\n    <div class=\"h3\">\n      <div class=\"\">Edit Existing Zap<\/div>\n    <\/div>\n  \n    \n      <div class=\"zap\">\n        <a href=\"/user/zaps/4dd30b4ea006f9332f0003c4/edit\">33nb.zapd.co<\/a>\n      <\/div>\n    \n    \n      <div class=\"zap\">\n        <a href=\"/user/zaps/4dafb048a006f91c820003b3/edit\">What can I do<\/a>\n      <\/div>\n    \n    \n      <div class=\"zap\">\n        <a href=\"/user/zaps/4d9263f1008bdf4500000000/edit\">Saw a great car<\/a>\n      <\/div>\n    \n\n    <div class=\"h3\">\n      <a href=\"/user/zaps\" class=\"\">All Zaps<\/a>\n    <\/div>\n\n<\/div>\n');
+  
+// tell editor we've published
+editor.published(<%=@wowo.to_json %>);
