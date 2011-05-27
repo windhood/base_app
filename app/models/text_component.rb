@@ -1,0 +1,2 @@
+class TextComponent < Component
+end
