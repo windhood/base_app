@@ -180,6 +180,9 @@ en:
   wowos:
     new:
       create_a_new_wowo: "Create a New WoWo"
+    create:
+      wowo_created: "You have successfully created a WoWo"
+      save_error: "There was an error when you save a WoWo"
     component_templates:
       text_component_heading_placeholder: "Title your note! (Optional)"
       text_component_content_placeholder: "Share your thoughts!"

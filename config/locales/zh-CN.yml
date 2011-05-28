@@ -183,6 +183,9 @@
   wowos:
     new:
       create_a_new_wowo: "创建一个新窝窝"
+    create:
+      wowo_created: "You have successfully created a WoWo"
+      save_error: "There was an error when you save a WoWo"
     component_templates:
       text_component_heading_placeholder: "标题（可选）"
       text_component_content_placeholder: "Share your thoughts!"
