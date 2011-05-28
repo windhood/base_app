@@ -576,6 +576,89 @@ a.button:hover {
   width: 65px;
 }
 
+/* errors, notices, warnings etc */
+/* line 205, ../../app/stylesheets/partials/_typography.scss */
+#flash_notice,
+#flash_error,
+#flash_alert {
+  z-index: 100;
+  position: fixed;
+  color: white;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  padding: 1em;
+  -moz-box-shadow: 0 1px 2px #333333;
+  -webkit-box-shadow: 0 1px 2px #333333;
+  font-weight: bold;
+}
+
+/* line 218, ../../app/stylesheets/partials/_typography.scss */
+#flash_notice {
+  background-color: #7ef04d;
+  background-color: rgba(126, 240, 77, 0.98);
+  text-shadow: 0 1px #66cc66;
+}
+
+/* line 225, ../../app/stylesheets/partials/_typography.scss */
+#flash_error,
+#flash_alert {
+  background-color: #d0312b;
+  background-color: rgba(208, 49, 43, 0.98);
+  border-bottom: solid 1px #cc6666;
+  text-shadow: 0 1px #cc6666;
+}
+
+/* line 232, ../../app/stylesheets/partials/_typography.scss */
+.fieldWithErrors {
+  display: inline;
+}
+
+/* line 236, ../../app/stylesheets/partials/_typography.scss */
+.error_messages {
+  width: 400px;
+  border: 2px solid #cf0000;
+  padding: 0;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  font-size: 12px;
+}
+
+/* line 245, ../../app/stylesheets/partials/_typography.scss */
+.error_messages h2 {
+  text-align: left;
+  padding: 5px 5px 5px 15px;
+  margin: 0;
+  font-weight: bold;
+  font-size: 12px;
+  background-color: #cc0000;
+}
+
+/* line 253, ../../app/stylesheets/partials/_typography.scss */
+.error_messages p {
+  margin: 8px 10px;
+}
+
+/* line 256, ../../app/stylesheets/partials/_typography.scss */
+.error_messages ul {
+  margin: 0;
+}
+
+/* line 259, ../../app/stylesheets/partials/_typography.scss */
+.bottom_notification {
+  background-color: rgba(16, 127, 201, 0.8);
+  bottom: 0;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  left: 0;
+  padding: 12px 12px 10px;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
+
 /* line 3, ../../app/stylesheets/partials/_layout.scss */
 header {
   *zoom: 1;

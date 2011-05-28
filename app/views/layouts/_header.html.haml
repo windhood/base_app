@@ -1,6 +1,5 @@
 #notification
-  - flash.each do |name, msg|
-    = content_tag :div, msg, :id => "flash_#{name}"
+  = render 'layouts/flashes'
 #header
   %h1= link_to t('app_name'), root_path
   - if !current_user 

@@ -63,8 +63,7 @@ private
   end
   
   def render_error(exception)
-    Rails.logger.error "Exception #{exception.class}: #{exception.message}"
-    Rails.logger.error(exception.backtrace.join("\n"))
+    log_stack_trace exception
     respond_to do |format|
       format.html { 
         flash.now[:error] = exception.message
@@ -78,7 +77,10 @@ private
       format.json { head 500 }
     end
   end
-  
+  def log_stack_trace(exception)
+    Rails.logger.error "Exception #{exception.class}: #{exception.message}"
+    Rails.logger.error(exception.backtrace.join("\n"))
+  end
   def catch_errors
     begin
       yield

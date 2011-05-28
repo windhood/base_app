@@ -13,15 +13,21 @@ class WowosController  < ApplicationController
   def preview
   end
   
-  def create
-    #@comment = Comment.create!(params[:comment])
-    @wowo = Wowo.create(params[:wowo])
-    flash[:notice] = "Publish successful!"
-    respond_to do |format|
-      format.html { redirect_to wowos_path }
-      format.js
+  def create    
+    @wowo = Wowo.new(params[:wowo])
+    respond_to do |format| 
+      if @wowo.save
+        flash[:notice] = I18n.t 'wowos.create.wowo_created'
+        format.html { redirect_to @wowo }
+        format.js 
+      else
+        flash[:error] = I18n.t 'wowos.create.save_error'
+        format.html { render :action => 'new' }
+        format.js {render :error_create}
+      end
     end
-    
+    rescue Exception => exc
+      save_error exc
   end
   
   ################### Private functions ############################
@@ -29,5 +35,11 @@ class WowosController  < ApplicationController
   def new_wowo_with_guid
     @wowo = Wowo.new
     @wowo.set_guid
+  end
+  def save_error(exception)
+    log_stack_trace exception
+    respond_to do |format| 
+      format.js {render :error_create}
+    end
   end
 end
