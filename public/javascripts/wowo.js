@@ -193,17 +193,29 @@ var Editor = function(config) {
           dataType  : 'script'
         })
       },
+		publish_error :
+      function () {
+        if (publishing_overlay) {
+          publishing_overlay.hide();
+        }        
+        $('#publish_error')
+          .jqmShow();
+        
+        // since we may have changed layout, update component_action_panel position
+        self.componentActionPanel.insertionPoints.rebuild();
+        self.componentActionPanel.moveTo(self.componentActionPanel.insertionPoints.current, false);
+      },
     published :
       function (wowo) {
       
         var link;
 
         // publish wowo to networks
-        Networks.publish($('#share_message').val(), wowo);
+        //Networks.publish($('#share_message').val(), wowo);
 
         // link to show in "Your WoWo URL" and published popup
-        link = '<a href="http://' + wowo.domain_name + '" target="_blank">' + wowo.domain_name + '</a>';
-
+        //link = '<a href="http://' + wowo.domain_name + '" target="_blank">' + wowo.domain_name + '</a>';
+				link  = '<a href="http://' + wowo.com + '" target="_blank">' + wowo.com + '</a>';
         $('#wowo_url')
           .show()
           .find('a')
@@ -227,7 +239,7 @@ var Editor = function(config) {
   self.theme_scroller = new ThemeScroller();
   self.wowoActionPanel = new WoWoActionPanel(self);
 
-  $('#publish, #published').detach().appendTo('body').jqm();
+  $('#publish, #published, #publish_error').detach().appendTo('body').jqm();
 
 	//initialize
   $(function() {

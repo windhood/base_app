@@ -195,6 +195,9 @@ en:
     published_popup:
       your_wowo_url_is: 'Your WoWo URL is: <span id="published_url"></span>'
       success_title: 'Success!'
+    publish_error_popup:
+      publish_wowo_error: Failed!
+      publish_wowo_error_desc: Something wrong while publishing your WoWo!
     form:
       wowo_title_label: 'Give your Zap a title:'
       wowo_zap_url_instruction: 'Your WoWo URL: <a href="http://" target="_blank">http://</a>'

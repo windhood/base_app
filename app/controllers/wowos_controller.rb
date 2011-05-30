@@ -23,7 +23,7 @@ class WowosController  < ApplicationController
       else
         flash[:error] = I18n.t 'wowos.create.save_error'
         format.html { render :action => 'new' }
-        format.js {render :error_create}
+        format.js {render :create_error}
       end
     end
     rescue Exception => exc
@@ -39,7 +39,7 @@ class WowosController  < ApplicationController
   def save_error(exception)
     log_stack_trace exception
     respond_to do |format| 
-      format.js {render :error_create}
+      format.js {render :create_error}
     end
   end
 end
