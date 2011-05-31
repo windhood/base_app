@@ -1,4 +1,9 @@
 $('#content h1').html("WoWo Create Error");
-
+<% if @wowo.errors.any? %>
+$('#publish_error p#unexpected').hide();
+$('#publish_error p#validation_error').html('<%= escape_javascript(render("shared/error_messages", :target => @wowo)).html_safe %>');
+<% else %>
+$('#publish_error p#validation_error').html('');
+$('#publish_error p#unexpected').show();
+<% end %> 
 editor.publish_error();
- 

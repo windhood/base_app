@@ -1,5 +1,6 @@
 #publish_error.popup
   = link_to t('close'), '#', :onclick => "$('#publish_error').jqmHide(); return false;", :class => 'close'
   %h2= t('.publish_wowo_error')
-  %p 
+  %p#unexpected 
     = t('.publish_wowo_error_desc')
+  %p#validation_error
