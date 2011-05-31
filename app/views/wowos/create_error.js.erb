@@ -1,4 +1,5 @@
-$('#content h1').html("WoWo Create Error");
+//$('#content h1').html("WoWo Create Error");
+$('#notification').html('<%= escape_javascript(render("layouts/flashes")).html_safe %>')
 <% if @wowo.errors.any? %>
 $('#publish_error p#unexpected').hide();
 $('#publish_error p#validation_error').html('<%= escape_javascript(render("shared/error_messages", :target => @wowo)).html_safe %>');
