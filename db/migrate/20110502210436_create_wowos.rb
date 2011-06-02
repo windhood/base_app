@@ -6,7 +6,7 @@ class CreateWowos < ActiveRecord::Migration
       t.string :guid, :limit => 128, :null => false
       t.references :theme
       t.references :user
-      t.boolean :published, :null => false
+      t.boolean :published, :null => false, :default => false
 
       t.timestamps
     end

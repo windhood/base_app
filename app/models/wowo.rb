@@ -15,12 +15,22 @@
 #
 
 class Wowo < ActiveRecord::Base
-  include Wowo::Guid
+  include Wowo::Guid  
+  before_validation(:on => :create) do
+    make_data_complete
+  end
   
   has_one :theme
   belongs_to :user
   has_many :components
   #validates_uniqueness_of :name, :scope => :user_id, :case_sensitive => false
   has_friendly_id :guid
-  attr_accessible :name, :url, :theme, :published
+  attr_accessible :name, :url, :theme_id, :published, :profile_enabled, :comments_enabled
+  
+private 
+  def make_data_complete
+    self.set_guid
+    self.url = self.guid
+    self.published = true    
+  end
 end

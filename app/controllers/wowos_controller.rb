@@ -14,7 +14,7 @@ class WowosController  < ApplicationController
   end
   
   def create    
-    @wowo = Wowo.new(params[:wowo])
+    @wowo = Wowo.new(params[:wowo]) #will not save
     respond_to do |format| 
       if @wowo.save
         flash[:notice] = I18n.t 'wowos.create.wowo_created'
