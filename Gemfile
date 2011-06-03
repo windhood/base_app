@@ -47,19 +47,19 @@ gem 'rails_best_practices', '0.6.5', :group => :development
 gem 'hpricot', :group => :development #used for generating devise views
 
 group :test, :development do
+  gem 'rspec-rails', '>= 2.5.0'
   gem 'factory_girl_rails'
   gem 'factory_girl_generator', '>= 0.0.1'
   #gem 'ruby-debug19' if RUBY_VERSION.include? "1.9"
   #gem 'ruby-debug' if RUBY_VERSION.include? "1.8"
   gem 'launchy'
-  gem 'spork', '>=0.9.0.rc2'
+  gem 'spork', '>=0.9.0.rc5'
 end
 
 group :test do
   gem 'capybara', '>= 0.4.0'
   gem 'cucumber-rails', '>=0.4.0'
-  gem 'rspec', '>= 2.1.0'
-  gem 'rspec-rails', '>= 2.1.0'
+  gem 'rspec', '>= 2.5.0'  
   gem 'mocha'
   gem 'database_cleaner', '>=0.5.2'
   gem 'webmock', :require => false
