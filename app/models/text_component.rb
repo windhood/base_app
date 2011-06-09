@@ -14,4 +14,15 @@
 #
 
 class TextComponent < Component
+  validate :attributes_not_allowed
+  
+  private
+  
+  def attributes_not_allowed
+    errors.add(:uri, "can't have a uri") unless self.uri.blank?
+    errors.add(:title, "can't have a titile") unless self.title.blank?
+    if self.heading.blank? and self.content.blank?
+      errors.add(:cotent, "can't be empty if heading is blank") 
+    end
+  end
 end

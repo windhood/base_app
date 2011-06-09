@@ -28,6 +28,7 @@ class Wowo < ActiveRecord::Base
   #validates_uniqueness_of :name, :scope => :user_id, :case_sensitive => false
   validates :name, :presence => true
   validates :theme, :presence => true
+  validates :user, :presence => true
   validates :guid, :uniqueness => true
   validates :url, :uniqueness => true
   has_friendly_id :guid

@@ -31,6 +31,13 @@ describe Wowo do
       end      
     end
     
+    describe "of user" do
+      it "requires user" do
+        wowo = Factory.build(:wowo, :user => nil)
+        wowo.should_not be_valid
+      end      
+    end
+    
     describe "of guid" do
       it "will generate a guid after saving and the guid must be 24 characters" do
         wowo = Factory.build(:wowo, :guid => nil)
@@ -46,6 +53,25 @@ describe Wowo do
         duplicate_wowo.should_not be_valid
       end         
     end
+    
+    describe "of url" do
+      it "will have a url same as guid after creating if not set a url" do
+        wowo = Factory.build(:wowo, :url => nil)
+        wowo.url.should == wowo.guid
+      end
+      it "won't be same as guid if the url is set" do
+        wowo = Factory.build(:wowo)
+        wowo.url.should_not == wowo.guid
+      end
+      it "requires uniqueness" do
+        wowo = Factory(:wowo)
+        duplicate = clone_wowo(wowo)
+        duplicate.guid = nil
+        duplicate.save
+        duplicate.should_not be_valid
+      end
+    end
+    
     
   end
   
