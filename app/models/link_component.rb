@@ -15,4 +15,13 @@
 
 class LinkComponent < Component
   validates_presence_of :uri
+  
+  validate :attributes_not_allowed
+  
+  private
+  
+  def attributes_not_allowed
+    errors.add(:heading, "can't have a heading") unless self.heading.blank?
+    errors.add(:content, "can't have a content") unless self.content.blank?
+  end
 end
