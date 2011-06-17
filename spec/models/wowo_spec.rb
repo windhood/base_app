@@ -1,14 +1,14 @@
 require 'spec_helper'
 
 describe Wowo do
-  it "should create a new instance given valid attributes" do
-    wowo = make_wowo
-    wowo.should_not be_new_record
-    wowo.guid.should_not be_nil
-    wowo.theme.should_not be_new_record
-  end
-  
-  context "validation" do    
+  context "validation" do  
+    it "should create a new instance given valid attributes" do
+      wowo = make_wowo
+      wowo.should_not be_new_record
+      wowo.guid.should_not be_nil
+      wowo.theme.should_not be_new_record
+    end
+      
     describe "of name" do
       it "requires name" do
         wowo = Factory.build(:wowo, :name => nil)
