@@ -75,4 +75,13 @@ describe Wowo do
     
   end
   
+  context "set component_attributes" do
+    before(:each) do
+      text_component_attr = { :class_name => "TextComponent", :heading => "very cool heading", :content => "some cool text" }
+      link_component_attr = { :class_name => "LinkComponent", :uri => "http://something.com/", :title => "some cool title" }
+      component_attrs = [text_component_attr, link_component_attr]
+    end
+    it "should accept component_attributes array" do
+    end
+  end
 end
